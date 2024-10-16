@@ -1,0 +1,118 @@
+6.0333 	DEBUG 	Fullscreen settings ignored as running in pilot mode.
+6.0340 	INFO 	Loaded monitor calibration from ['2023_03_02 14:28']
+6.3090 	EXP 	Created window1 = Window(allowGUI=True, allowStencil=False, autoLog=True, backendConf=UNKNOWN, backgroundFit=<method-wrapper '__getattribute__' of attributeSetter object at 0x0000023D49743550>, backgroundImage=<method-wrapper '__getattribute__' of attributeSetter object at 0x0000023D497434F0>, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0, 0, 0]), colorSpace='rgb', depthBits=8, fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x0000023D49743340>, gamma=None, gammaErrorPolicy='raise', infoMsg=UNKNOWN, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x0000023D49A4A9A0>, multiSample=False, name='window1', numSamples=2, pos=[960.0, 540.0], screen=0, size=array([1920, 1080]), stencilBits=0, stereo=False, title='PsychoPy', units='height', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+6.3091 	EXP 	window1: mouseVisible = True
+6.3092 	EXP 	window1: backgroundImage = ''
+6.3092 	EXP 	window1: backgroundFit = 'none'
+6.3093 	EXP 	window1: mouseVisible = True
+6.3095 	EXP 	window1: mouseVisible = True
+6.3115 	EXP 	window1: mouseVisible = True
+6.3121 	EXP 	window1: mouseVisible = True
+6.3182 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+6.3202 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+6.3222 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+6.3248 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+6.3272 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+6.3285 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+6.3304 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+6.3329 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+6.3337 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+6.3347 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+6.3367 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+6.3385 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+6.3404 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+6.3422 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+6.3438 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+6.3459 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+6.3478 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+6.3488 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+6.3500 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+6.3525 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+6.3535 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+6.3538 	DEBUG 	Uploading Texture Font fontname to graphics card
+6.3638 	DEBUG 	Upload of Texture Font fontname complete
+6.3653 	EXP 	window1: mouseVisible = True
+6.3655 	EXP 	window1: mouseVisible = True
+6.3662 	EXP 	window1: mouseVisible = True
+6.3668 	EXP 	window1: mouseVisible = True
+6.3720 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+6.3746 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+6.3770 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+6.3772 	DEBUG 	Uploading Texture Font fontname to graphics card
+6.3784 	DEBUG 	Upload of Texture Font fontname complete
+6.3802 	EXP 	window1: Attempting to measure frame rate of screen (0) ...
+6.3802 	EXP 	window1: recordFrameIntervals = False
+6.6569 	EXP 	window1: recordFrameIntervals = True
+6.8403 	EXP 	Screen (0) actual frame rate measured at 60.03Hz
+6.8403 	EXP 	window1: recordFrameIntervals = False
+6.8404 	EXP 	window1: mouseVisible = False
+6.8415 	EXP 	window1: mouseVisible = True
+6.8418 	EXP 	window1: mouseVisible = True
+6.8425 	EXP 	window1: mouseVisible = True
+6.8431 	EXP 	window1: mouseVisible = True
+6.8482 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+6.8495 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+6.8517 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+6.8547 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+6.8573 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+6.8600 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+6.8612 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+6.8635 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+6.8660 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+6.8685 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+6.8688 	DEBUG 	Uploading Texture Font fontname to graphics card
+6.8695 	DEBUG 	Upload of Texture Font fontname complete
+6.8711 	EXP 	window1: mouseVisible = True
+6.8713 	EXP 	window1: mouseVisible = True
+6.8719 	EXP 	window1: mouseVisible = True
+6.8725 	EXP 	window1: mouseVisible = True
+6.9394 	WARNING 	launchHubServer: If using the iohub mouse or eyetracker devices, fullScr should be True.
+8.8197 	INFO 	keyboard.Keyboard is using iohub backend.
+8.8198 	INFO 	keyboard.Keyboard is using iohub backend.
+8.8198 	INFO 	keyboard.Keyboard is using iohub backend.
+8.8198 	INFO 	keyboard.Keyboard is using iohub backend.
+8.8199 	EXP 	AB: status = STARTED
+8.8201 	EXP 	window1: mouseVisible = True
+8.8633 	EXP 	Created text_instructions = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.02, italic=False, languageStyle='LTR', name='text_instructions', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+8.8896 	EXP 	window1: mouseVisible = True
+8.8908 	EXP 	Created context_word = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([-1., -1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='context_word', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+8.8909 	EXP 	window1: mouseVisible = True
+8.8924 	EXP 	Created blankContext = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='blankContext', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+8.8925 	EXP 	window1: mouseVisible = True
+8.8936 	EXP 	Created text_distractors_2 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([-1., -1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='text_distractors_2', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+8.8937 	EXP 	window1: mouseVisible = True
+8.8948 	EXP 	Created text_T1 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([ 1., -1., -1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='text_T1', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+8.8949 	EXP 	window1: mouseVisible = True
+8.8960 	EXP 	Created text_distractors = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([-1., -1.,  1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='text_distractors', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+8.8960 	EXP 	window1: mouseVisible = True
+8.8972 	EXP 	Created text_T2 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([ 1., -1., -1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='text_T2', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+8.8973 	EXP 	window1: mouseVisible = True
+8.8984 	EXP 	Created text_distractors_2 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([-1., -1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='text_distractors_2', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+8.8985 	EXP 	window1: mouseVisible = True
+8.8999 	EXP 	Created blankT1_1 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='blankT1_1', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+8.8999 	EXP 	window1: mouseVisible = True
+8.9083 	EXP 	Created text_T1ask = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([-1., -1.,  1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='text_T1ask', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='?\n\nOdd-F    Even-J', units='height', win=Window(...), wrapWidth=1)
+8.9084 	EXP 	window1: mouseVisible = True
+8.9099 	EXP 	Created blankT1_2 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='blankT1_2', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+8.9099 	EXP 	window1: mouseVisible = True
+8.9114 	EXP 	Created blankT2_1 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='blankT2_1', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+8.9114 	EXP 	window1: mouseVisible = True
+8.9169 	EXP 	Created text_T2ask = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([-1., -1.,  1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='text_T2ask', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='?\n\nRelated-F    Unrelated-J', units='height', win=Window(...), wrapWidth=1)
+8.9170 	EXP 	window1: mouseVisible = True
+8.9185 	EXP 	Created blankT2_2 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='blankT2_2', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+8.9185 	EXP 	window1: mouseVisible = True
+8.9214 	EXP 	Created text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='text', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='rest', units='height', win=Window(...), wrapWidth=1)
+0.0212 	EXP 	text_instructions: height = 0.02
+0.0212 	EXP 	text_instructions: height = 0.02
+0.0212 	EXP 	text_instructions: height = 0.02
+0.0212 	EXP 	text_instructions: text = 'Instructions\n\nIf you see an odd number, please press the F key on your keyboard.\nIf you see an even number, please press the J key on your keyboard.\nPlease focus your attention and try to respond as accurately and swiftly as possible. Once you are ready, we will begin the test.'
+0.0409 	INFO 	Keyboard events cleared
+0.0406 	EXP 	text_instructions: autoDraw = True
+3.4959 	DEBUG 	Read excel file with openpyxl: task_type.xlsx
+3.4964 	EXP 	Imported task_type.xlsx as conditions, 12 conditions, 2 params
+3.4968 	EXP 	Created sequence: sequential, trialTypes=12, nReps=1, seed=None
+3.4969 	EXP 	New trial (rep=0, index=0): {'task1': 'single', 'task2': 'dual'}
+3.5167 	EXP 	window1: mouseVisible = True
+3.5186 	DEBUG 	Saving data for AB ExperimentHandler
+3.5192 	INFO 	saved data to D:\GoogleDisk\scienceDocs\#eegmanylabs\ReplicationDocs\Luck1996\code\Luck1996AB_3\data/027614_AB_2024-06-21_10h08.12.735.psydat
+3.5195 	INFO 	saved data to 'D:\\GoogleDisk\\scienceDocs\\#eegmanylabs\\ReplicationDocs\\Luck1996\\code\\Luck1996AB_3\\data/027614_AB_2024-06-21_10h08.12.735.csv'
