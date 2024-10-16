@@ -7,7 +7,7 @@ This repository contains the Psychopy code for running the Luck 1996 attentional
 ### Requirements:
 
 Python 3.x
-Psychopy 2022.2.10 or later
+Psychopy 2024.1.1
 
 ### Installation:
 #### 1.Clone or download this repository to your computer.
