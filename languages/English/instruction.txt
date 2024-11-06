@@ -1,7 +1,0 @@
-Instructions
-
-If you see an odd number, please press the F key on your keyboard.
-If you see an even number, please press the J key on your keyboard.
-Please focus your attention and try to respond as accurately and swiftly as possible. Once you are ready, we will begin the test.
-
-In the dual-target condition, the participants were instructed to identify the number string and the red word when they appeared in the RSVP stream and to make 2 two-alternative forced-choice responses at the end of each trial. These responses indicated whether the number string was even or odd and whether the red word was semantically related or unrelated to the context word presented at the beginning of that trial.
