@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2023.1.3),
-    on November 06, 2024, at 18:38
+    on November 06, 2024, at 16:56
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -48,13 +48,7 @@ expName = 'AB'  # from the Builder filename that created this script
 expInfo = {
     'participant': f"{randint(0, 999999):06.0f}",
     'order [1: single-dual or 2: dual-single]': '1',
-    'refresh rate (Hz)': '60',
-    'language': 'en',
 }
-# --- Show participant info dialog --
-dlg = gui.DlgFromDict(dictionary=expInfo, sortKeys=False, title=expName)
-if dlg.OK == False:
-    core.quit()  # user pressed cancel
 expInfo['date'] = data.getDateStr()  # add a simple timestamp
 expInfo['expName'] = expName
 expInfo['psychopyVersion'] = psychopyVersion
@@ -65,7 +59,7 @@ filename = _thisDir + os.sep + u'data/%s_%s_%s' % (expInfo['participant'], expNa
 # An ExperimentHandler isn't essential but helps with data saving
 thisExp = data.ExperimentHandler(name=expName, version='',
     extraInfo=expInfo, runtimeInfo=None,
-    originPath='C:\\Users\\TuebingenLab\\Documents\\GitHub\\Luck1996_presentationCode\\Luck1996AB_lastrun.py',
+    originPath='C:\\Users\\TuebingenLab\\Documents\\GitHub\\Luck1996_presentationCode\\AB.py',
     savePickle=True, saveWideText=True,
     dataFileName=filename)
 # save a log file for detail verbose info
@@ -109,34 +103,26 @@ defaultKeyboard = keyboard.Keyboard(backend='iohub')
 
 # --- Initialize components for Routine "instructions" ---
 text_instructions = visual.TextStim(win=win, name='text_instructions',
-    text='',
+    text=None,
     font='Open Sans',
     pos=(0, 0), height=0.02, wrapWidth=None, ori=0.0, 
     color='white', colorSpace='rgb', opacity=None, 
     languageStyle='LTR',
     depth=0.0);
 # Run 'Begin Experiment' code from code_instr
-#local path to language
-local_path = 'languages/'+expInfo['language']
+# open file with instructions
+with open('instructions/instruction.txt', 'r') as file:
+    text = file.read()
 
-# open files with instructions
-with open(f'{local_path}/instruction.txt', 'r') as file:
-    txt_instructions = file.read()
-
-with open(f'{local_path}/rest.txt', 'r') as file:
-    txt_rest = file.read()
-
-with open(f'{local_path}/thanks.txt', 'r') as file:
-    txt_thanks = file.read()
+# add the text in the variable
+text_instructions.text = text
+a = '001'
 key_resp = keyboard.Keyboard()
 
 # --- Initialize components for Routine "settings" ---
 # Run 'Begin Experiment' code from settings_code
 import random
 import pandas as pd
-
-# duration in frames
-dur_frames = round(0.083 * int(expInfo['refresh rate (Hz)']))
 
 # set trials order
 related_idx = list(range(360))
@@ -149,9 +135,7 @@ distractors_df = pd.read_csv('distractors.csv')
 distractors_df = distractors_df.sample(frac = 1)
 dist_idx = 0
 
-# feedback counters
-counter_T1 = 0
-counter_T2 = 0
+
 
 # --- Initialize components for Routine "set_trial" ---
 
@@ -265,23 +249,14 @@ blankT2_2 = visual.TextStim(win=win, name='blankT2_2',
 key_resp_T2 = keyboard.Keyboard()
 
 # --- Initialize components for Routine "rest" ---
-text_rest = visual.TextStim(win=win, name='text_rest',
-    text='',
+text = visual.TextStim(win=win, name='text',
+    text='Please take a break. Press the spacebar to continue.',
     font='Open Sans',
     pos=(0, 0), height=0.05, wrapWidth=None, ori=0.0, 
     color='white', colorSpace='rgb', opacity=None, 
     languageStyle='LTR',
-    depth=-1.0);
-press_to_continue = keyboard.Keyboard()
-
-# --- Initialize components for Routine "end" ---
-text_thanks = visual.TextStim(win=win, name='text_thanks',
-    text='',
-    font='Arial',
-    pos=(0, 0), height=0.05, wrapWidth=None, ori=0.0, 
-    color='white', colorSpace='rgb', opacity=None, 
-    languageStyle='LTR',
     depth=0.0);
+press_to_continue = keyboard.Keyboard()
 
 # Create some handy timers
 globalClock = core.Clock()  # to track the time since experiment started
@@ -290,7 +265,6 @@ routineTimer = core.Clock()  # to track time remaining of each (possibly non-sli
 # --- Prepare to start Routine "instructions" ---
 continueRoutine = True
 # update component parameters for each repeat
-text_instructions.setText(txt_instructions)
 key_resp.keys = []
 key_resp.rt = []
 _key_resp_allKeys = []
@@ -428,14 +402,11 @@ for thisBlock in block:
     task = task1 if expInfo['order [1: single-dual or 2: dual-single]']=='1' else task2
     
     # choose rows for this trial
-    n = 1 # num of correct and incorrect trials
+    n = 30 # num of correct and incorrect trials
     trials_in_block = related_idx[-n:] + unrelated_idx[-n:]
     shuffle(trials_in_block)
     related_idx = related_idx[:len(related_idx)-n]
     unrelated_idx = unrelated_idx[:len(unrelated_idx)-n]
-    
-    
-    print(f'Block #{block.thisN+1}\n')
     
     # keep track of which components have finished
     settingsComponents = []
@@ -491,7 +462,7 @@ for thisBlock in block:
     # set up handler to look after randomisation of conditions etc
     trial = data.TrialHandler(nReps=1.0, method='sequential', 
         extraInfo=expInfo, originPath=-1,
-        trialList=data.importConditions(f'{local_path}/wordPairs.xlsx', selection=trials_in_block),
+        trialList=data.importConditions('wordPairs.xlsx', selection=trials_in_block),
         seed=None, name='trial')
     thisExp.addLoop(trial)  # add the loop to the experiment
     thisTrial = trial.trialList[0]  # so we can initialise stimuli with some values
@@ -513,7 +484,6 @@ for thisBlock in block:
         # Run 'Begin Routine' code from code_trial
         distractors_trial = list(distractors_df.dist[dist_idx:dist_idx+18])
         i = 0 # distractor index
-        print(f'\nTrial #{trial.thisN+1}\n')
         # keep track of which components have finished
         set_trialComponents = []
         for thisComponent in set_trialComponents:
@@ -713,8 +683,6 @@ for thisBlock in block:
             # --- Prepare to start Routine "distractors_T0" ---
             continueRoutine = True
             # update component parameters for each repeat
-            # Run 'Begin Routine' code from breakLoop_T0
-            thisExp.addData('distractor_T0',distractors_trial[i])
             text_distr_T0.setText(distractors_trial[i])
             # keep track of which components have finished
             distractors_T0Components = [text_distr_T0]
@@ -762,7 +730,7 @@ for thisBlock in block:
                 
                 # if text_distr_T0 is stopping this frame...
                 if text_distr_T0.status == STARTED:
-                    if frameN >= (text_distr_T0.frameNStart + dur_frames):
+                    if frameN >= (text_distr_T0.frameNStart + 5):
                         # keep track of stop time/frame for later
                         text_distr_T0.tStop = t  # not accounting for scr refresh
                         text_distr_T0.frameNStop = frameN  # exact frame index
@@ -858,7 +826,7 @@ for thisBlock in block:
             
             # if text_T1 is stopping this frame...
             if text_T1.status == STARTED:
-                if frameN >= (text_T1.frameNStart + dur_frames):
+                if frameN >= (text_T1.frameNStart + 5):
                     # keep track of stop time/frame for later
                     text_T1.tStop = t  # not accounting for scr refresh
                     text_T1.frameNStop = frameN  # exact frame index
@@ -920,10 +888,8 @@ for thisBlock in block:
             # Run 'Begin Routine' code from skipLoop_ifLag1
             if lagT1 == 1:
                  continueRoutine = False
-                 thisExp.addData('distractor_T1','')
             else:
                 i += 1
-                thisExp.addData('distractor_T1',distractors_trial[i])
             text_distr_T1.setText(distractors_trial[i])
             # keep track of which components have finished
             distractors_T1Components = [text_distr_T1]
@@ -971,7 +937,7 @@ for thisBlock in block:
                 
                 # if text_distr_T1 is stopping this frame...
                 if text_distr_T1.status == STARTED:
-                    if frameN >= (text_distr_T1.frameNStart + dur_frames):
+                    if frameN >= (text_distr_T1.frameNStart + 5):
                         # keep track of stop time/frame for later
                         text_distr_T1.tStop = t  # not accounting for scr refresh
                         text_distr_T1.frameNStop = frameN  # exact frame index
@@ -1066,7 +1032,7 @@ for thisBlock in block:
             
             # if text_T2 is stopping this frame...
             if text_T2.status == STARTED:
-                if frameN >= (text_T2.frameNStart + dur_frames):
+                if frameN >= (text_T2.frameNStart + 5):
                     # keep track of stop time/frame for later
                     text_T2.tStop = t  # not accounting for scr refresh
                     text_T2.frameNStop = frameN  # exact frame index
@@ -1126,7 +1092,9 @@ for thisBlock in block:
             continueRoutine = True
             # update component parameters for each repeat
             # Run 'Begin Routine' code from breakLoop_T2
-            thisExp.addData('distractor_T2',distractors_trial[i])
+            
+            
+            
             text_distr_T2.setText(distractors_trial[i])
             # keep track of which components have finished
             distractors_T2Components = [text_distr_T2]
@@ -1174,7 +1142,7 @@ for thisBlock in block:
                 
                 # if text_distr_T2 is stopping this frame...
                 if text_distr_T2.status == STARTED:
-                    if frameN >= (text_distr_T2.frameNStart + dur_frames):
+                    if frameN >= (text_distr_T2.frameNStart + 5):
                         # keep track of stop time/frame for later
                         text_distr_T2.tStop = t  # not accounting for scr refresh
                         text_distr_T2.frameNStop = frameN  # exact frame index
@@ -1436,16 +1404,6 @@ for thisBlock in block:
         if key_resp_T1.keys != None:  # we had a response
             trial.addData('key_resp_T1.rt', key_resp_T1.rt)
             trial.addData('key_resp_T1.duration', key_resp_T1.duration)
-        # Run 'End Routine' code from code_2
-        if task == 'dual':
-            print(f'Corr T1: {key_resp_T1.corr}')
-            if key_resp_T1.corr: 
-                counter_T1 += 1
-            if (trial.thisN+1)%10 == 0:
-                print(f'\n Accuracy T1: {counter_T1/10}\n')
-                counter_T1 = 0
-            
-            
         # using non-slip timing so subtract the expected duration of this Routine (unless ended on request)
         if routineForceEnded:
             routineTimer.reset()
@@ -1665,13 +1623,6 @@ for thisBlock in block:
         if key_resp_T2.keys != None:  # we had a response
             trial.addData('key_resp_T2.rt', key_resp_T2.rt)
             trial.addData('key_resp_T2.duration', key_resp_T2.duration)
-        # Run 'End Routine' code from code
-        print(f'Corr T2: {key_resp_T2.corr}')
-        if key_resp_T2.corr: 
-            counter_T2 += 1
-        if (trial.thisN+1)%10 == 0:
-            print(f'\n Accuracy T2: {counter_T2/10}')
-            counter_T2 = 0
         # using non-slip timing so subtract the expected duration of this Routine (unless ended on request)
         if routineForceEnded:
             routineTimer.reset()
@@ -1685,16 +1636,11 @@ for thisBlock in block:
     # --- Prepare to start Routine "rest" ---
     continueRoutine = True
     # update component parameters for each repeat
-    # Run 'Begin Routine' code from code_rest
-    # skip rest after last block
-    if block.thisN+1 == 12:
-        continueRoutine = False
-    text_rest.setText(txt_rest)
     press_to_continue.keys = []
     press_to_continue.rt = []
     _press_to_continue_allKeys = []
     # keep track of which components have finished
-    restComponents = [text_rest, press_to_continue]
+    restComponents = [text, press_to_continue]
     for thisComponent in restComponents:
         thisComponent.tStart = None
         thisComponent.tStop = None
@@ -1717,25 +1663,38 @@ for thisBlock in block:
         frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
         # update/draw components on each frame
         
-        # *text_rest* updates
+        # *text* updates
         
-        # if text_rest is starting this frame...
-        if text_rest.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # if text is starting this frame...
+        if text.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
             # keep track of start time/frame for later
-            text_rest.frameNStart = frameN  # exact frame index
-            text_rest.tStart = t  # local t and not account for scr refresh
-            text_rest.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(text_rest, 'tStartRefresh')  # time at next scr refresh
+            text.frameNStart = frameN  # exact frame index
+            text.tStart = t  # local t and not account for scr refresh
+            text.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(text, 'tStartRefresh')  # time at next scr refresh
             # add timestamp to datafile
-            thisExp.timestampOnFlip(win, 'text_rest.started')
+            thisExp.timestampOnFlip(win, 'text.started')
             # update status
-            text_rest.status = STARTED
-            text_rest.setAutoDraw(True)
+            text.status = STARTED
+            text.setAutoDraw(True)
         
-        # if text_rest is active this frame...
-        if text_rest.status == STARTED:
+        # if text is active this frame...
+        if text.status == STARTED:
             # update params
             pass
+        
+        # if text is stopping this frame...
+        if text.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > text.tStartRefresh + 1-frameTolerance:
+                # keep track of stop time/frame for later
+                text.tStop = t  # not accounting for scr refresh
+                text.frameNStop = frameN  # exact frame index
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'text.stopped')
+                # update status
+                text.status = FINISHED
+                text.setAutoDraw(False)
         
         # *press_to_continue* updates
         waitOnFlip = False
@@ -1802,97 +1761,6 @@ for thisBlock in block:
     
 # completed 1.0 repeats of 'block'
 
-
-# --- Prepare to start Routine "end" ---
-continueRoutine = True
-# update component parameters for each repeat
-text_thanks.setText(txt_thanks)
-# keep track of which components have finished
-endComponents = [text_thanks]
-for thisComponent in endComponents:
-    thisComponent.tStart = None
-    thisComponent.tStop = None
-    thisComponent.tStartRefresh = None
-    thisComponent.tStopRefresh = None
-    if hasattr(thisComponent, 'status'):
-        thisComponent.status = NOT_STARTED
-# reset timers
-t = 0
-_timeToFirstFrame = win.getFutureFlipTime(clock="now")
-frameN = -1
-
-# --- Run Routine "end" ---
-routineForceEnded = not continueRoutine
-while continueRoutine and routineTimer.getTime() < 2.0:
-    # get current time
-    t = routineTimer.getTime()
-    tThisFlip = win.getFutureFlipTime(clock=routineTimer)
-    tThisFlipGlobal = win.getFutureFlipTime(clock=None)
-    frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
-    # update/draw components on each frame
-    
-    # *text_thanks* updates
-    
-    # if text_thanks is starting this frame...
-    if text_thanks.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-        # keep track of start time/frame for later
-        text_thanks.frameNStart = frameN  # exact frame index
-        text_thanks.tStart = t  # local t and not account for scr refresh
-        text_thanks.tStartRefresh = tThisFlipGlobal  # on global time
-        win.timeOnFlip(text_thanks, 'tStartRefresh')  # time at next scr refresh
-        # add timestamp to datafile
-        thisExp.timestampOnFlip(win, 'text_thanks.started')
-        # update status
-        text_thanks.status = STARTED
-        text_thanks.setAutoDraw(True)
-    
-    # if text_thanks is active this frame...
-    if text_thanks.status == STARTED:
-        # update params
-        pass
-    
-    # if text_thanks is stopping this frame...
-    if text_thanks.status == STARTED:
-        # is it time to stop? (based on global clock, using actual start)
-        if tThisFlipGlobal > text_thanks.tStartRefresh + 2-frameTolerance:
-            # keep track of stop time/frame for later
-            text_thanks.tStop = t  # not accounting for scr refresh
-            text_thanks.frameNStop = frameN  # exact frame index
-            # add timestamp to datafile
-            thisExp.timestampOnFlip(win, 'text_thanks.stopped')
-            # update status
-            text_thanks.status = FINISHED
-            text_thanks.setAutoDraw(False)
-    
-    # check for quit (typically the Esc key)
-    if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
-        core.quit()
-        if eyetracker:
-            eyetracker.setConnectionState(False)
-    
-    # check if all components have finished
-    if not continueRoutine:  # a component has requested a forced-end of Routine
-        routineForceEnded = True
-        break
-    continueRoutine = False  # will revert to True if at least one component still running
-    for thisComponent in endComponents:
-        if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
-            continueRoutine = True
-            break  # at least one component has not yet finished
-    
-    # refresh the screen
-    if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
-        win.flip()
-
-# --- Ending Routine "end" ---
-for thisComponent in endComponents:
-    if hasattr(thisComponent, "setAutoDraw"):
-        thisComponent.setAutoDraw(False)
-# using non-slip timing so subtract the expected duration of this Routine (unless ended on request)
-if routineForceEnded:
-    routineTimer.reset()
-else:
-    routineTimer.addTime(-2.000000)
 
 # --- End experiment ---
 # Flip one final time so any remaining win.callOnFlip() 
