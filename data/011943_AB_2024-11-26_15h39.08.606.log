@@ -1,0 +1,2893 @@
+19.1123 	WARNING 	User requested fullscreen with size [1920 1080], but screen is actually [3840, 2160]. Using actual size
+20.2835 	EXP 	Created window1 = Window(allowGUI=True, allowStencil=False, autoLog=True, backendConf=UNKNOWN, backgroundFit=<method-wrapper '__getattribute__' of attributeSetter object at 0x0000021BBE6A74F0>, backgroundImage=<method-wrapper '__getattribute__' of attributeSetter object at 0x0000021BBE6A7490>, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0, 0, 0]), colorSpace='rgb', depthBits=8, fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x0000021BBE6A71C0>, gamma=None, gammaErrorPolicy='raise', lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x0000021BBF734B20>, multiSample=False, name='window1', numSamples=2, pos=(0, 0), screen=0, size=array([3840, 2160]), stencilBits=0, stereo=False, units='height', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+20.2836 	EXP 	window1: mouseVisible = True
+20.2836 	EXP 	window1: backgroundImage = ''
+20.2836 	EXP 	window1: backgroundFit = 'none'
+20.2837 	EXP 	window1: mouseVisible = False
+20.2837 	EXP 	window1: Attempting to measure frame rate of screen (0) ...
+20.2837 	EXP 	window1: recordFrameIntervals = False
+20.4501 	EXP 	window1: recordFrameIntervals = True
+21.0988 	EXP 	Screen (0) actual frame rate measured at 59.93Hz
+21.0988 	EXP 	window1: recordFrameIntervals = False
+23.0071 	EXP 	Created text_instructions = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.02, italic=False, languageStyle='LTR', name='text_instructions', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+23.0132 	EXP 	Created context_word = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([-1., -1.,  1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='context_word', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+23.0408 	EXP 	Created blankContext = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='blankContext', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+23.0418 	EXP 	Created text_distr_T0 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([-1., -1.,  1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='text_distr_T0', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+23.0432 	EXP 	Created text_blank_distractors_T0 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='text_blank_distractors_T0', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+23.0442 	EXP 	Created text_T1 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([ 1., -1., -1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='text_T1', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+23.0457 	EXP 	Created text_blank_number_T1 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='text_blank_number_T1', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+23.0467 	EXP 	Created text_distr_T1 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([-1., -1.,  1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='text_distr_T1', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+23.0480 	EXP 	Created text_blank_distractors_T1 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='text_blank_distractors_T1', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+23.0490 	EXP 	Created text_T2 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([ 1., -1., -1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='text_T2', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+23.0502 	EXP 	Created text_blank_T2_probe = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='text_blank_T2_probe', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+23.0512 	EXP 	Created text_distr_T2 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([-1., -1.,  1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='text_distr_T2', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+23.0525 	EXP 	Created text_blank_distractors_T2 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='text_blank_distractors_T2', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+23.0537 	EXP 	Created blankT1_1 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='blankT1_1', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+23.0691 	EXP 	Created text_T1ask = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([-1., -1.,  1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='text_T1ask', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='?\n\nOdd-F    Even-J', units='height', win=Window(...), wrapWidth=1)
+23.0705 	EXP 	Created blankT1_2 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='blankT1_2', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+23.0718 	EXP 	Created blankT2_1 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='blankT2_1', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+23.0805 	EXP 	Created text_T2ask = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([-1., -1.,  1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='text_T2ask', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='?\n\nRelated-F    Unrelated-J', units='height', win=Window(...), wrapWidth=1)
+23.0818 	EXP 	Created blankT2_2 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='blankT2_2', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+23.0829 	EXP 	Created text_rest = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='text_rest', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+23.0842 	EXP 	Created text_thanks = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='text_thanks', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+23.1232 	EXP 	text_instructions: height = 0.02
+23.1232 	EXP 	text_instructions: height = 0.02
+23.1232 	EXP 	text_instructions: height = 0.02
+23.1232 	EXP 	text_instructions: text = 'Instructions\n\nIf you see an odd number, please press the F key on your keyboard.\nIf you see an even number, please press the J key on your keyboard.\nPlease focus your attention and try to respond as accurately and swiftly as possible. Once you are ready, we will begin the test.\n\nIn the dual-target condition, the participants were instructed to identify the number string and the red word when they appeared in the RSVP stream and to make 2 two-alternative forced-choice responses at the end of each trial. These responses indicated whether the number string was even or odd and whether the red word was semantically related or unrelated to the context word presented at the beginning of that trial.'
+23.1232 	EXP 	text_instructions: autoDraw = True
+24.4883 	EXP 	Imported task_type.xlsx as conditions, 12 conditions, 2 params
+24.4887 	EXP 	Created sequence: sequential, trialTypes=12, nReps=1, seed=None
+24.4889 	EXP 	New trial (rep=0, index=0): {'task1': 'single', 'task2': 'dual'}
+24.6254 	EXP 	Imported languages/en/wordPairs.xlsx as conditions, 60 conditions, 9 params
+24.6262 	EXP 	Created sequence: sequential, trialTypes=60, nReps=1, seed=None
+24.6265 	EXP 	New trial (rep=0, index=0): {'T0': 'COMB', 'T2': 'XBRUSHX', 'T1': 4444444.0, 'lagT0': 10, 'lagT1': 3, 'lagT2': 7, 'responseT1': 'j', 'responseT2': 'f', 'related': 1}
+24.6343 	DATA 	Keypress: space
+24.6356 	EXP 	text_instructions: autoDraw = False
+24.6356 	EXP 	context_word: height = 0.05
+24.6356 	EXP 	context_word: height = 0.05
+24.6356 	EXP 	context_word: height = 0.05
+24.6356 	EXP 	context_word: text = 'COMB'
+24.6356 	EXP 	context_word: autoDraw = True
+25.6319 	EXP 	blankContext: autoDraw = True
+25.6486 	EXP 	context_word: autoDraw = False
+26.6160 	EXP 	Created sequence: sequential, trialTypes=1, nReps=10, seed=None
+26.6162 	EXP 	New trial (rep=0, index=0): None
+26.6320 	EXP 	blankContext: autoDraw = False
+26.6320 	EXP 	context_word: autoDraw = False
+26.6320 	EXP 	blankContext: autoDraw = False
+26.6320 	EXP 	text_distr_T0: height = 0.05
+26.6320 	EXP 	text_distr_T0: height = 0.05
+26.6320 	EXP 	text_distr_T0: height = 0.05
+26.6320 	EXP 	text_distr_T0: text = 'CLJVTPK'
+26.6320 	EXP 	text_distr_T0: autoDraw = True
+26.6676 	EXP 	text_distr_T0: autoDraw = False
+26.6676 	EXP 	text_blank_distractors_T0: autoDraw = True
+26.7015 	EXP 	New trial (rep=1, index=0): None
+26.7153 	EXP 	text_blank_distractors_T0: autoDraw = False
+26.7153 	EXP 	text_distr_T0: autoDraw = False
+26.7153 	EXP 	text_blank_distractors_T0: autoDraw = False
+26.7153 	EXP 	text_distr_T0: height = 0.05
+26.7153 	EXP 	text_distr_T0: height = 0.05
+26.7153 	EXP 	text_distr_T0: height = 0.05
+26.7153 	EXP 	text_distr_T0: text = 'KLNCWRM'
+26.7153 	EXP 	text_distr_T0: autoDraw = True
+26.7487 	EXP 	text_distr_T0: autoDraw = False
+26.7487 	EXP 	text_blank_distractors_T0: autoDraw = True
+26.7828 	EXP 	New trial (rep=2, index=0): None
+26.7987 	EXP 	text_blank_distractors_T0: autoDraw = False
+26.7987 	EXP 	text_distr_T0: autoDraw = False
+26.7987 	EXP 	text_blank_distractors_T0: autoDraw = False
+26.7987 	EXP 	text_distr_T0: height = 0.05
+26.7987 	EXP 	text_distr_T0: height = 0.05
+26.7987 	EXP 	text_distr_T0: height = 0.05
+26.7987 	EXP 	text_distr_T0: text = 'QWYPRCL'
+26.7987 	EXP 	text_distr_T0: autoDraw = True
+26.8321 	EXP 	text_distr_T0: autoDraw = False
+26.8321 	EXP 	text_blank_distractors_T0: autoDraw = True
+26.8664 	EXP 	New trial (rep=3, index=0): None
+26.8820 	EXP 	text_blank_distractors_T0: autoDraw = False
+26.8820 	EXP 	text_distr_T0: autoDraw = False
+26.8820 	EXP 	text_blank_distractors_T0: autoDraw = False
+26.8820 	EXP 	text_distr_T0: height = 0.05
+26.8820 	EXP 	text_distr_T0: height = 0.05
+26.8820 	EXP 	text_distr_T0: height = 0.05
+26.8820 	EXP 	text_distr_T0: text = 'NLJDHGQ'
+26.8820 	EXP 	text_distr_T0: autoDraw = True
+26.9155 	EXP 	text_distr_T0: autoDraw = False
+26.9155 	EXP 	text_blank_distractors_T0: autoDraw = True
+26.9493 	EXP 	New trial (rep=4, index=0): None
+26.9654 	EXP 	text_blank_distractors_T0: autoDraw = False
+26.9654 	EXP 	text_distr_T0: autoDraw = False
+26.9654 	EXP 	text_blank_distractors_T0: autoDraw = False
+26.9654 	EXP 	text_distr_T0: height = 0.05
+26.9654 	EXP 	text_distr_T0: height = 0.05
+26.9654 	EXP 	text_distr_T0: height = 0.05
+26.9654 	EXP 	text_distr_T0: text = 'VSGFLTW'
+26.9654 	EXP 	text_distr_T0: autoDraw = True
+26.9987 	EXP 	text_distr_T0: autoDraw = False
+26.9987 	EXP 	text_blank_distractors_T0: autoDraw = True
+27.0329 	EXP 	New trial (rep=5, index=0): None
+27.0487 	EXP 	text_blank_distractors_T0: autoDraw = False
+27.0487 	EXP 	text_distr_T0: autoDraw = False
+27.0487 	EXP 	text_blank_distractors_T0: autoDraw = False
+27.0487 	EXP 	text_distr_T0: height = 0.05
+27.0487 	EXP 	text_distr_T0: height = 0.05
+27.0487 	EXP 	text_distr_T0: height = 0.05
+27.0487 	EXP 	text_distr_T0: text = 'DPHCXFS'
+27.0487 	EXP 	text_distr_T0: autoDraw = True
+27.0820 	EXP 	text_distr_T0: autoDraw = False
+27.0820 	EXP 	text_blank_distractors_T0: autoDraw = True
+27.1159 	EXP 	New trial (rep=6, index=0): None
+27.1320 	EXP 	text_blank_distractors_T0: autoDraw = False
+27.1320 	EXP 	text_distr_T0: autoDraw = False
+27.1320 	EXP 	text_blank_distractors_T0: autoDraw = False
+27.1320 	EXP 	text_distr_T0: height = 0.05
+27.1320 	EXP 	text_distr_T0: height = 0.05
+27.1320 	EXP 	text_distr_T0: height = 0.05
+27.1320 	EXP 	text_distr_T0: text = 'QSTFPBM'
+27.1320 	EXP 	text_distr_T0: autoDraw = True
+27.1654 	EXP 	text_distr_T0: autoDraw = False
+27.1654 	EXP 	text_blank_distractors_T0: autoDraw = True
+27.2017 	EXP 	New trial (rep=7, index=0): None
+27.2154 	EXP 	text_blank_distractors_T0: autoDraw = False
+27.2154 	EXP 	text_distr_T0: autoDraw = False
+27.2154 	EXP 	text_blank_distractors_T0: autoDraw = False
+27.2154 	EXP 	text_distr_T0: height = 0.05
+27.2154 	EXP 	text_distr_T0: height = 0.05
+27.2154 	EXP 	text_distr_T0: height = 0.05
+27.2154 	EXP 	text_distr_T0: text = 'QLWXVCK'
+27.2154 	EXP 	text_distr_T0: autoDraw = True
+27.2487 	EXP 	text_distr_T0: autoDraw = False
+27.2487 	EXP 	text_blank_distractors_T0: autoDraw = True
+27.2827 	EXP 	New trial (rep=8, index=0): None
+27.2987 	EXP 	text_blank_distractors_T0: autoDraw = False
+27.2987 	EXP 	text_distr_T0: autoDraw = False
+27.2987 	EXP 	text_blank_distractors_T0: autoDraw = False
+27.2987 	EXP 	text_distr_T0: height = 0.05
+27.2987 	EXP 	text_distr_T0: height = 0.05
+27.2987 	EXP 	text_distr_T0: height = 0.05
+27.2987 	EXP 	text_distr_T0: text = 'CYLPQKJ'
+27.2987 	EXP 	text_distr_T0: autoDraw = True
+27.3322 	EXP 	text_distr_T0: autoDraw = False
+27.3322 	EXP 	text_blank_distractors_T0: autoDraw = True
+27.3820 	EXP 	text_blank_distractors_T0: autoDraw = False
+27.3820 	EXP 	text_distr_T0: autoDraw = False
+27.3820 	EXP 	text_blank_distractors_T0: autoDraw = False
+27.3820 	EXP 	text_T1: height = 0.05
+27.3820 	EXP 	text_T1: height = 0.05
+27.3820 	EXP 	text_T1: height = 0.05
+27.3820 	EXP 	text_T1: text = '4444444'
+27.3820 	EXP 	text_T1: autoDraw = True
+27.4154 	EXP 	text_T1: autoDraw = False
+27.4154 	EXP 	text_blank_number_T1: autoDraw = True
+27.4494 	EXP 	Created sequence: sequential, trialTypes=1, nReps=7, seed=None
+27.4495 	EXP 	New trial (rep=0, index=0): None
+27.4654 	EXP 	text_blank_number_T1: autoDraw = False
+27.4654 	EXP 	text_T1: autoDraw = False
+27.4654 	EXP 	text_blank_number_T1: autoDraw = False
+27.4654 	EXP 	text_distr_T1: height = 0.05
+27.4654 	EXP 	text_distr_T1: height = 0.05
+27.4654 	EXP 	text_distr_T1: height = 0.05
+27.4654 	EXP 	text_distr_T1: text = 'QWRDYNX'
+27.4654 	EXP 	text_distr_T1: autoDraw = True
+27.4989 	EXP 	text_distr_T1: autoDraw = False
+27.4989 	EXP 	text_blank_distractors_T1: autoDraw = True
+27.5327 	EXP 	New trial (rep=1, index=0): None
+27.5487 	EXP 	text_blank_distractors_T1: autoDraw = False
+27.5487 	EXP 	text_distr_T1: autoDraw = False
+27.5487 	EXP 	text_blank_distractors_T1: autoDraw = False
+27.5487 	EXP 	text_distr_T1: height = 0.05
+27.5487 	EXP 	text_distr_T1: height = 0.05
+27.5487 	EXP 	text_distr_T1: height = 0.05
+27.5487 	EXP 	text_distr_T1: text = 'GXZTWPK'
+27.5487 	EXP 	text_distr_T1: autoDraw = True
+27.5820 	EXP 	text_distr_T1: autoDraw = False
+27.5820 	EXP 	text_blank_distractors_T1: autoDraw = True
+27.6320 	EXP 	text_blank_distractors_T1: autoDraw = False
+27.6320 	EXP 	text_distr_T1: autoDraw = False
+27.6320 	EXP 	text_blank_distractors_T1: autoDraw = False
+27.6320 	EXP 	text_T2: height = 0.05
+27.6320 	EXP 	text_T2: height = 0.05
+27.6320 	EXP 	text_T2: height = 0.05
+27.6320 	EXP 	text_T2: text = 'XBRUSHX'
+27.6320 	EXP 	text_T2: autoDraw = True
+27.6653 	EXP 	text_T2: autoDraw = False
+27.6653 	EXP 	text_blank_T2_probe: autoDraw = True
+27.6995 	EXP 	Created sequence: sequential, trialTypes=1, nReps=12, seed=None
+27.6997 	EXP 	New trial (rep=0, index=0): None
+27.7155 	EXP 	text_blank_T2_probe: autoDraw = False
+27.7155 	EXP 	text_T2: autoDraw = False
+27.7155 	EXP 	text_blank_T2_probe: autoDraw = False
+27.7155 	EXP 	text_distr_T2: height = 0.05
+27.7155 	EXP 	text_distr_T2: height = 0.05
+27.7155 	EXP 	text_distr_T2: height = 0.05
+27.7155 	EXP 	text_distr_T2: text = 'GXZTWPK'
+27.7155 	EXP 	text_distr_T2: autoDraw = True
+27.7489 	EXP 	text_distr_T2: autoDraw = False
+27.7489 	EXP 	text_blank_distractors_T2: autoDraw = True
+27.7827 	EXP 	New trial (rep=1, index=0): None
+27.7988 	EXP 	text_blank_distractors_T2: autoDraw = False
+27.7988 	EXP 	text_distr_T2: autoDraw = False
+27.7988 	EXP 	text_blank_distractors_T2: autoDraw = False
+27.7988 	EXP 	text_distr_T2: height = 0.05
+27.7988 	EXP 	text_distr_T2: height = 0.05
+27.7988 	EXP 	text_distr_T2: height = 0.05
+27.7988 	EXP 	text_distr_T2: text = 'ZHQSMYC'
+27.7988 	EXP 	text_distr_T2: autoDraw = True
+27.8321 	EXP 	text_distr_T2: autoDraw = False
+27.8321 	EXP 	text_blank_distractors_T2: autoDraw = True
+27.8683 	EXP 	New trial (rep=2, index=0): None
+27.8821 	EXP 	text_blank_distractors_T2: autoDraw = False
+27.8821 	EXP 	text_distr_T2: autoDraw = False
+27.8821 	EXP 	text_blank_distractors_T2: autoDraw = False
+27.8821 	EXP 	text_distr_T2: height = 0.05
+27.8821 	EXP 	text_distr_T2: height = 0.05
+27.8821 	EXP 	text_distr_T2: height = 0.05
+27.8821 	EXP 	text_distr_T2: text = 'PKMRFTL'
+27.8821 	EXP 	text_distr_T2: autoDraw = True
+27.9155 	EXP 	text_distr_T2: autoDraw = False
+27.9155 	EXP 	text_blank_distractors_T2: autoDraw = True
+27.9497 	EXP 	New trial (rep=3, index=0): None
+27.9655 	EXP 	text_blank_distractors_T2: autoDraw = False
+27.9655 	EXP 	text_distr_T2: autoDraw = False
+27.9655 	EXP 	text_blank_distractors_T2: autoDraw = False
+27.9655 	EXP 	text_distr_T2: height = 0.05
+27.9655 	EXP 	text_distr_T2: height = 0.05
+27.9655 	EXP 	text_distr_T2: height = 0.05
+27.9655 	EXP 	text_distr_T2: text = 'ZPMBNQR'
+27.9655 	EXP 	text_distr_T2: autoDraw = True
+27.9989 	EXP 	text_distr_T2: autoDraw = False
+27.9989 	EXP 	text_blank_distractors_T2: autoDraw = True
+28.0329 	EXP 	New trial (rep=4, index=0): None
+28.0487 	EXP 	text_blank_distractors_T2: autoDraw = False
+28.0487 	EXP 	text_distr_T2: autoDraw = False
+28.0487 	EXP 	text_blank_distractors_T2: autoDraw = False
+28.0487 	EXP 	text_distr_T2: height = 0.05
+28.0487 	EXP 	text_distr_T2: height = 0.05
+28.0487 	EXP 	text_distr_T2: height = 0.05
+28.0487 	EXP 	text_distr_T2: text = 'RWYTPZS'
+28.0487 	EXP 	text_distr_T2: autoDraw = True
+28.0823 	EXP 	text_distr_T2: autoDraw = False
+28.0823 	EXP 	text_blank_distractors_T2: autoDraw = True
+28.1162 	EXP 	New trial (rep=5, index=0): None
+28.1321 	EXP 	text_blank_distractors_T2: autoDraw = False
+28.1321 	EXP 	text_distr_T2: autoDraw = False
+28.1321 	EXP 	text_blank_distractors_T2: autoDraw = False
+28.1321 	EXP 	text_distr_T2: height = 0.05
+28.1321 	EXP 	text_distr_T2: height = 0.05
+28.1321 	EXP 	text_distr_T2: height = 0.05
+28.1321 	EXP 	text_distr_T2: text = 'XJZTKSP'
+28.1321 	EXP 	text_distr_T2: autoDraw = True
+28.1655 	EXP 	text_distr_T2: autoDraw = False
+28.1655 	EXP 	text_blank_distractors_T2: autoDraw = True
+28.1996 	EXP 	New trial (rep=6, index=0): None
+28.2154 	EXP 	text_blank_distractors_T2: autoDraw = False
+28.2154 	EXP 	text_distr_T2: autoDraw = False
+28.2154 	EXP 	text_blank_distractors_T2: autoDraw = False
+28.2154 	EXP 	text_distr_T2: height = 0.05
+28.2154 	EXP 	text_distr_T2: height = 0.05
+28.2154 	EXP 	text_distr_T2: height = 0.05
+28.2154 	EXP 	text_distr_T2: text = 'WDGTFPJ'
+28.2154 	EXP 	text_distr_T2: autoDraw = True
+28.2488 	EXP 	text_distr_T2: autoDraw = False
+28.2488 	EXP 	text_blank_distractors_T2: autoDraw = True
+28.2988 	EXP 	text_blank_distractors_T2: autoDraw = False
+28.2988 	EXP 	text_distr_T2: autoDraw = False
+28.2988 	EXP 	text_blank_distractors_T2: autoDraw = False
+28.2988 	EXP 	blankT1_1: autoDraw = False
+28.2988 	EXP 	text_T1ask: autoDraw = False
+28.2988 	EXP 	blankT1_2: autoDraw = False
+28.2988 	EXP 	blankT2_1: autoDraw = True
+29.2822 	EXP 	text_T2ask: autoDraw = True
+29.2990 	EXP 	blankT2_1: autoDraw = False
+31.2825 	EXP 	text_T2ask: autoDraw = False
+31.2825 	EXP 	blankT2_2: autoDraw = True
+32.2670 	EXP 	New trial (rep=0, index=1): {'T0': 'PLUMBER', 'T2': 'XWHITEX', 'T1': 2222222.0, 'lagT0': 10, 'lagT1': 1, 'lagT2': 9, 'responseT1': 'j', 'responseT2': 'j', 'related': 0}
+32.2824 	EXP 	blankT2_2: autoDraw = False
+32.2824 	EXP 	blankT2_1: autoDraw = False
+32.2824 	EXP 	text_T2ask: autoDraw = False
+32.2824 	EXP 	blankT2_2: autoDraw = False
+32.2824 	EXP 	context_word: height = 0.05
+32.2824 	EXP 	context_word: height = 0.05
+32.2824 	EXP 	context_word: height = 0.05
+32.2824 	EXP 	context_word: text = 'PLUMBER'
+32.2824 	EXP 	context_word: autoDraw = True
+33.2663 	EXP 	blankContext: autoDraw = True
+33.2824 	EXP 	context_word: autoDraw = False
+34.2498 	EXP 	Created sequence: sequential, trialTypes=1, nReps=10, seed=None
+34.2500 	EXP 	New trial (rep=0, index=0): None
+34.2658 	EXP 	blankContext: autoDraw = False
+34.2658 	EXP 	context_word: autoDraw = False
+34.2658 	EXP 	blankContext: autoDraw = False
+34.2658 	EXP 	text_distr_T0: height = 0.05
+34.2658 	EXP 	text_distr_T0: height = 0.05
+34.2658 	EXP 	text_distr_T0: height = 0.05
+34.2658 	EXP 	text_distr_T0: text = 'XTNLRHS'
+34.2851 	EXP 	text_distr_T0: autoDraw = True
+34.2992 	EXP 	text_blank_distractors_T0: autoDraw = True
+34.3167 	EXP 	text_distr_T0: autoDraw = False
+34.3333 	EXP 	New trial (rep=1, index=0): None
+34.3491 	EXP 	text_blank_distractors_T0: autoDraw = False
+34.3491 	EXP 	text_distr_T0: autoDraw = False
+34.3491 	EXP 	text_blank_distractors_T0: autoDraw = False
+34.3491 	EXP 	text_distr_T0: height = 0.05
+34.3491 	EXP 	text_distr_T0: height = 0.05
+34.3491 	EXP 	text_distr_T0: height = 0.05
+34.3491 	EXP 	text_distr_T0: text = 'CQFRDNS'
+34.3491 	EXP 	text_distr_T0: autoDraw = True
+34.3825 	EXP 	text_distr_T0: autoDraw = False
+34.3825 	EXP 	text_blank_distractors_T0: autoDraw = True
+34.4190 	EXP 	New trial (rep=2, index=0): None
+34.4325 	EXP 	text_blank_distractors_T0: autoDraw = False
+34.4325 	EXP 	text_distr_T0: autoDraw = False
+34.4325 	EXP 	text_blank_distractors_T0: autoDraw = False
+34.4325 	EXP 	text_distr_T0: height = 0.05
+34.4325 	EXP 	text_distr_T0: height = 0.05
+34.4325 	EXP 	text_distr_T0: height = 0.05
+34.4325 	EXP 	text_distr_T0: text = 'PJZHMYV'
+34.4325 	EXP 	text_distr_T0: autoDraw = True
+34.4660 	EXP 	text_distr_T0: autoDraw = False
+34.4660 	EXP 	text_blank_distractors_T0: autoDraw = True
+34.4998 	EXP 	New trial (rep=3, index=0): None
+34.5159 	EXP 	text_blank_distractors_T0: autoDraw = False
+34.5159 	EXP 	text_distr_T0: autoDraw = False
+34.5159 	EXP 	text_blank_distractors_T0: autoDraw = False
+34.5159 	EXP 	text_distr_T0: height = 0.05
+34.5159 	EXP 	text_distr_T0: height = 0.05
+34.5159 	EXP 	text_distr_T0: height = 0.05
+34.5159 	EXP 	text_distr_T0: text = 'CJNHXDL'
+34.5159 	EXP 	text_distr_T0: autoDraw = True
+34.5517 	EXP 	text_distr_T0: autoDraw = False
+34.5517 	EXP 	text_blank_distractors_T0: autoDraw = True
+34.5858 	EXP 	New trial (rep=4, index=0): None
+34.5992 	EXP 	text_blank_distractors_T0: autoDraw = False
+34.5992 	EXP 	text_distr_T0: autoDraw = False
+34.5992 	EXP 	text_blank_distractors_T0: autoDraw = False
+34.5992 	EXP 	text_distr_T0: height = 0.05
+34.5992 	EXP 	text_distr_T0: height = 0.05
+34.5992 	EXP 	text_distr_T0: height = 0.05
+34.5992 	EXP 	text_distr_T0: text = 'QWGVDKF'
+34.5992 	EXP 	text_distr_T0: autoDraw = True
+34.6350 	EXP 	text_distr_T0: autoDraw = False
+34.6350 	EXP 	text_blank_distractors_T0: autoDraw = True
+34.6667 	EXP 	New trial (rep=5, index=0): None
+34.6825 	EXP 	text_blank_distractors_T0: autoDraw = False
+34.6825 	EXP 	text_distr_T0: autoDraw = False
+34.6825 	EXP 	text_blank_distractors_T0: autoDraw = False
+34.6825 	EXP 	text_distr_T0: height = 0.05
+34.6825 	EXP 	text_distr_T0: height = 0.05
+34.6825 	EXP 	text_distr_T0: height = 0.05
+34.6825 	EXP 	text_distr_T0: text = 'KYRFZGC'
+34.6825 	EXP 	text_distr_T0: autoDraw = True
+34.7158 	EXP 	text_distr_T0: autoDraw = False
+34.7158 	EXP 	text_blank_distractors_T0: autoDraw = True
+34.7498 	EXP 	New trial (rep=6, index=0): None
+34.7661 	EXP 	text_blank_distractors_T0: autoDraw = False
+34.7661 	EXP 	text_distr_T0: autoDraw = False
+34.7661 	EXP 	text_blank_distractors_T0: autoDraw = False
+34.7661 	EXP 	text_distr_T0: height = 0.05
+34.7661 	EXP 	text_distr_T0: height = 0.05
+34.7661 	EXP 	text_distr_T0: height = 0.05
+34.7661 	EXP 	text_distr_T0: text = 'SHCNMLG'
+34.7661 	EXP 	text_distr_T0: autoDraw = True
+34.7993 	EXP 	text_distr_T0: autoDraw = False
+34.7993 	EXP 	text_blank_distractors_T0: autoDraw = True
+34.8331 	EXP 	New trial (rep=7, index=0): None
+34.8497 	EXP 	text_blank_distractors_T0: autoDraw = False
+34.8497 	EXP 	text_distr_T0: autoDraw = False
+34.8497 	EXP 	text_blank_distractors_T0: autoDraw = False
+34.8497 	EXP 	text_distr_T0: height = 0.05
+34.8497 	EXP 	text_distr_T0: height = 0.05
+34.8497 	EXP 	text_distr_T0: height = 0.05
+34.8497 	EXP 	text_distr_T0: text = 'JSVBGNM'
+34.8497 	EXP 	text_distr_T0: autoDraw = True
+34.8827 	EXP 	text_distr_T0: autoDraw = False
+34.8827 	EXP 	text_blank_distractors_T0: autoDraw = True
+34.9169 	EXP 	New trial (rep=8, index=0): None
+34.9325 	EXP 	text_blank_distractors_T0: autoDraw = False
+34.9325 	EXP 	text_distr_T0: autoDraw = False
+34.9325 	EXP 	text_blank_distractors_T0: autoDraw = False
+34.9325 	EXP 	text_distr_T0: height = 0.05
+34.9325 	EXP 	text_distr_T0: height = 0.05
+34.9325 	EXP 	text_distr_T0: height = 0.05
+34.9325 	EXP 	text_distr_T0: text = 'DBHVZFM'
+34.9325 	EXP 	text_distr_T0: autoDraw = True
+34.9660 	EXP 	text_distr_T0: autoDraw = False
+34.9660 	EXP 	text_blank_distractors_T0: autoDraw = True
+35.0159 	EXP 	text_blank_distractors_T0: autoDraw = False
+35.0159 	EXP 	text_distr_T0: autoDraw = False
+35.0159 	EXP 	text_blank_distractors_T0: autoDraw = False
+35.0159 	EXP 	text_T1: height = 0.05
+35.0159 	EXP 	text_T1: height = 0.05
+35.0159 	EXP 	text_T1: height = 0.05
+35.0159 	EXP 	text_T1: text = '2222222'
+35.0159 	EXP 	text_T1: autoDraw = True
+35.0494 	EXP 	text_T1: autoDraw = False
+35.0494 	EXP 	text_blank_number_T1: autoDraw = True
+35.0831 	EXP 	Created sequence: sequential, trialTypes=1, nReps=7, seed=None
+35.0833 	EXP 	New trial (rep=0, index=0): None
+35.0992 	EXP 	text_blank_number_T1: autoDraw = False
+35.0992 	EXP 	text_T1: autoDraw = False
+35.0992 	EXP 	text_blank_number_T1: autoDraw = False
+35.0992 	EXP 	text_distr_T1: height = 0.05
+35.0992 	EXP 	text_distr_T1: height = 0.05
+35.0992 	EXP 	text_distr_T1: height = 0.05
+35.0992 	EXP 	text_distr_T1: text = 'JLRXNQD'
+35.0992 	EXP 	text_distr_T1: autoDraw = False
+35.0992 	EXP 	text_blank_distractors_T1: autoDraw = False
+35.0992 	EXP 	text_T2: height = 0.05
+35.0992 	EXP 	text_T2: height = 0.05
+35.0992 	EXP 	text_T2: height = 0.05
+35.0992 	EXP 	text_T2: text = 'XWHITEX'
+35.0992 	EXP 	text_T2: autoDraw = True
+35.1327 	EXP 	text_T2: autoDraw = False
+35.1327 	EXP 	text_blank_T2_probe: autoDraw = True
+35.1665 	EXP 	Created sequence: sequential, trialTypes=1, nReps=12, seed=None
+35.1667 	EXP 	New trial (rep=0, index=0): None
+35.1826 	EXP 	text_blank_T2_probe: autoDraw = False
+35.1826 	EXP 	text_T2: autoDraw = False
+35.1826 	EXP 	text_blank_T2_probe: autoDraw = False
+35.1826 	EXP 	text_distr_T2: height = 0.05
+35.1826 	EXP 	text_distr_T2: height = 0.05
+35.1826 	EXP 	text_distr_T2: height = 0.05
+35.1826 	EXP 	text_distr_T2: text = 'JLRXNQD'
+35.1826 	EXP 	text_distr_T2: autoDraw = True
+35.2186 	EXP 	text_distr_T2: autoDraw = False
+35.2186 	EXP 	text_blank_distractors_T2: autoDraw = True
+35.2499 	EXP 	New trial (rep=1, index=0): None
+35.2659 	EXP 	text_blank_distractors_T2: autoDraw = False
+35.2659 	EXP 	text_distr_T2: autoDraw = False
+35.2659 	EXP 	text_blank_distractors_T2: autoDraw = False
+35.2659 	EXP 	text_distr_T2: height = 0.05
+35.2659 	EXP 	text_distr_T2: height = 0.05
+35.2659 	EXP 	text_distr_T2: height = 0.05
+35.2659 	EXP 	text_distr_T2: text = 'NTWMHPZ'
+35.2659 	EXP 	text_distr_T2: autoDraw = True
+35.2993 	EXP 	text_distr_T2: autoDraw = False
+35.2993 	EXP 	text_blank_distractors_T2: autoDraw = True
+35.3336 	EXP 	New trial (rep=2, index=0): None
+35.3492 	EXP 	text_blank_distractors_T2: autoDraw = False
+35.3492 	EXP 	text_distr_T2: autoDraw = False
+35.3492 	EXP 	text_blank_distractors_T2: autoDraw = False
+35.3492 	EXP 	text_distr_T2: height = 0.05
+35.3492 	EXP 	text_distr_T2: height = 0.05
+35.3492 	EXP 	text_distr_T2: height = 0.05
+35.3492 	EXP 	text_distr_T2: text = 'VWGYPRK'
+35.3492 	EXP 	text_distr_T2: autoDraw = True
+35.3828 	EXP 	text_distr_T2: autoDraw = False
+35.3828 	EXP 	text_blank_distractors_T2: autoDraw = True
+35.4165 	EXP 	New trial (rep=3, index=0): None
+35.4326 	EXP 	text_blank_distractors_T2: autoDraw = False
+35.4326 	EXP 	text_distr_T2: autoDraw = False
+35.4326 	EXP 	text_blank_distractors_T2: autoDraw = False
+35.4326 	EXP 	text_distr_T2: height = 0.05
+35.4326 	EXP 	text_distr_T2: height = 0.05
+35.4326 	EXP 	text_distr_T2: height = 0.05
+35.4326 	EXP 	text_distr_T2: text = 'JLCFKWZ'
+35.4326 	EXP 	text_distr_T2: autoDraw = True
+35.4659 	EXP 	text_distr_T2: autoDraw = False
+35.4659 	EXP 	text_blank_distractors_T2: autoDraw = True
+35.4999 	EXP 	New trial (rep=4, index=0): None
+35.5159 	EXP 	text_blank_distractors_T2: autoDraw = False
+35.5159 	EXP 	text_distr_T2: autoDraw = False
+35.5159 	EXP 	text_blank_distractors_T2: autoDraw = False
+35.5159 	EXP 	text_distr_T2: height = 0.05
+35.5159 	EXP 	text_distr_T2: height = 0.05
+35.5159 	EXP 	text_distr_T2: height = 0.05
+35.5159 	EXP 	text_distr_T2: text = 'PVSRKTZ'
+35.5159 	EXP 	text_distr_T2: autoDraw = True
+35.5492 	EXP 	text_distr_T2: autoDraw = False
+35.5492 	EXP 	text_blank_distractors_T2: autoDraw = True
+35.5835 	EXP 	New trial (rep=5, index=0): None
+35.5992 	EXP 	text_blank_distractors_T2: autoDraw = False
+35.5992 	EXP 	text_distr_T2: autoDraw = False
+35.5992 	EXP 	text_blank_distractors_T2: autoDraw = False
+35.5992 	EXP 	text_distr_T2: height = 0.05
+35.5992 	EXP 	text_distr_T2: height = 0.05
+35.5992 	EXP 	text_distr_T2: height = 0.05
+35.5992 	EXP 	text_distr_T2: text = 'XCFKBQH'
+35.5992 	EXP 	text_distr_T2: autoDraw = True
+35.6327 	EXP 	text_distr_T2: autoDraw = False
+35.6327 	EXP 	text_blank_distractors_T2: autoDraw = True
+35.6666 	EXP 	New trial (rep=6, index=0): None
+35.6826 	EXP 	text_blank_distractors_T2: autoDraw = False
+35.6826 	EXP 	text_distr_T2: autoDraw = False
+35.6826 	EXP 	text_blank_distractors_T2: autoDraw = False
+35.6826 	EXP 	text_distr_T2: height = 0.05
+35.6826 	EXP 	text_distr_T2: height = 0.05
+35.6826 	EXP 	text_distr_T2: height = 0.05
+35.6826 	EXP 	text_distr_T2: text = 'XHNTVQF'
+35.6826 	EXP 	text_distr_T2: autoDraw = True
+35.7185 	EXP 	text_distr_T2: autoDraw = False
+35.7185 	EXP 	text_blank_distractors_T2: autoDraw = True
+35.7524 	EXP 	New trial (rep=7, index=0): None
+35.7661 	EXP 	text_blank_distractors_T2: autoDraw = False
+35.7661 	EXP 	text_distr_T2: autoDraw = False
+35.7661 	EXP 	text_blank_distractors_T2: autoDraw = False
+35.7661 	EXP 	text_distr_T2: height = 0.05
+35.7661 	EXP 	text_distr_T2: height = 0.05
+35.7661 	EXP 	text_distr_T2: height = 0.05
+35.7661 	EXP 	text_distr_T2: text = 'DWVTQMF'
+35.7661 	EXP 	text_distr_T2: autoDraw = True
+35.7992 	EXP 	text_distr_T2: autoDraw = False
+35.7992 	EXP 	text_blank_distractors_T2: autoDraw = True
+35.8357 	EXP 	New trial (rep=8, index=0): None
+35.8492 	EXP 	text_blank_distractors_T2: autoDraw = False
+35.8492 	EXP 	text_distr_T2: autoDraw = False
+35.8492 	EXP 	text_blank_distractors_T2: autoDraw = False
+35.8492 	EXP 	text_distr_T2: height = 0.05
+35.8492 	EXP 	text_distr_T2: height = 0.05
+35.8492 	EXP 	text_distr_T2: height = 0.05
+35.8492 	EXP 	text_distr_T2: text = 'LFKMHDZ'
+35.8492 	EXP 	text_distr_T2: autoDraw = True
+35.8826 	EXP 	text_distr_T2: autoDraw = False
+35.8826 	EXP 	text_blank_distractors_T2: autoDraw = True
+35.9326 	EXP 	text_blank_distractors_T2: autoDraw = False
+35.9326 	EXP 	text_distr_T2: autoDraw = False
+35.9326 	EXP 	text_blank_distractors_T2: autoDraw = False
+35.9326 	EXP 	blankT1_1: autoDraw = False
+35.9326 	EXP 	text_T1ask: autoDraw = False
+35.9326 	EXP 	blankT1_2: autoDraw = False
+35.9326 	EXP 	blankT2_1: autoDraw = True
+36.9160 	EXP 	text_T2ask: autoDraw = True
+36.9326 	EXP 	blankT2_1: autoDraw = False
+38.9161 	EXP 	text_T2ask: autoDraw = False
+38.9161 	EXP 	blankT2_2: autoDraw = True
+39.9002 	EXP 	New trial (rep=0, index=2): {'T0': 'DIRT', 'T2': 'XXMUDXX', 'T1': 2222222.0, 'lagT0': 7, 'lagT1': 3, 'lagT2': 10, 'responseT1': 'j', 'responseT2': 'f', 'related': 1}
+39.9162 	EXP 	blankT2_2: autoDraw = False
+39.9162 	EXP 	blankT2_1: autoDraw = False
+39.9162 	EXP 	text_T2ask: autoDraw = False
+39.9162 	EXP 	blankT2_2: autoDraw = False
+39.9162 	EXP 	context_word: height = 0.05
+39.9162 	EXP 	context_word: height = 0.05
+39.9162 	EXP 	context_word: height = 0.05
+39.9162 	EXP 	context_word: text = 'DIRT'
+39.9162 	EXP 	context_word: autoDraw = True
+40.9163 	EXP 	context_word: autoDraw = False
+40.9163 	EXP 	blankContext: autoDraw = True
+41.9002 	EXP 	Created sequence: sequential, trialTypes=1, nReps=10, seed=None
+41.9004 	EXP 	New trial (rep=0, index=0): None
+41.9163 	EXP 	blankContext: autoDraw = False
+41.9163 	EXP 	context_word: autoDraw = False
+41.9163 	EXP 	blankContext: autoDraw = False
+41.9163 	EXP 	text_distr_T0: height = 0.05
+41.9163 	EXP 	text_distr_T0: height = 0.05
+41.9163 	EXP 	text_distr_T0: height = 0.05
+41.9163 	EXP 	text_distr_T0: text = 'VBSXHCG'
+41.9163 	EXP 	text_distr_T0: autoDraw = True
+41.9495 	EXP 	text_distr_T0: autoDraw = False
+41.9495 	EXP 	text_blank_distractors_T0: autoDraw = True
+41.9837 	EXP 	New trial (rep=1, index=0): None
+41.9999 	EXP 	text_blank_distractors_T0: autoDraw = False
+41.9999 	EXP 	text_distr_T0: autoDraw = False
+41.9999 	EXP 	text_blank_distractors_T0: autoDraw = False
+41.9999 	EXP 	text_distr_T0: height = 0.05
+41.9999 	EXP 	text_distr_T0: height = 0.05
+41.9999 	EXP 	text_distr_T0: height = 0.05
+41.9999 	EXP 	text_distr_T0: text = 'LGPQNDV'
+41.9999 	EXP 	text_distr_T0: autoDraw = True
+42.0329 	EXP 	text_distr_T0: autoDraw = False
+42.0329 	EXP 	text_blank_distractors_T0: autoDraw = True
+42.0671 	EXP 	New trial (rep=2, index=0): None
+42.0829 	EXP 	text_blank_distractors_T0: autoDraw = False
+42.0829 	EXP 	text_distr_T0: autoDraw = False
+42.0829 	EXP 	text_blank_distractors_T0: autoDraw = False
+42.0829 	EXP 	text_distr_T0: height = 0.05
+42.0829 	EXP 	text_distr_T0: height = 0.05
+42.0829 	EXP 	text_distr_T0: height = 0.05
+42.0829 	EXP 	text_distr_T0: text = 'JRKNVZB'
+42.0829 	EXP 	text_distr_T0: autoDraw = True
+42.1165 	EXP 	text_distr_T0: autoDraw = False
+42.1165 	EXP 	text_blank_distractors_T0: autoDraw = True
+42.1501 	EXP 	New trial (rep=3, index=0): None
+42.1662 	EXP 	text_blank_distractors_T0: autoDraw = False
+42.1662 	EXP 	text_distr_T0: autoDraw = False
+42.1662 	EXP 	text_blank_distractors_T0: autoDraw = False
+42.1662 	EXP 	text_distr_T0: height = 0.05
+42.1662 	EXP 	text_distr_T0: height = 0.05
+42.1662 	EXP 	text_distr_T0: height = 0.05
+42.1662 	EXP 	text_distr_T0: text = 'MGBTXRS'
+42.1662 	EXP 	text_distr_T0: autoDraw = True
+42.1996 	EXP 	text_distr_T0: autoDraw = False
+42.1996 	EXP 	text_blank_distractors_T0: autoDraw = True
+42.2336 	EXP 	New trial (rep=4, index=0): None
+42.2496 	EXP 	text_blank_distractors_T0: autoDraw = False
+42.2496 	EXP 	text_distr_T0: autoDraw = False
+42.2496 	EXP 	text_blank_distractors_T0: autoDraw = False
+42.2496 	EXP 	text_distr_T0: height = 0.05
+42.2496 	EXP 	text_distr_T0: height = 0.05
+42.2496 	EXP 	text_distr_T0: height = 0.05
+42.2496 	EXP 	text_distr_T0: text = 'ZKXYGVN'
+42.2496 	EXP 	text_distr_T0: autoDraw = True
+42.2855 	EXP 	text_distr_T0: autoDraw = False
+42.2855 	EXP 	text_blank_distractors_T0: autoDraw = True
+42.3171 	EXP 	New trial (rep=5, index=0): None
+42.3329 	EXP 	text_blank_distractors_T0: autoDraw = False
+42.3329 	EXP 	text_distr_T0: autoDraw = False
+42.3329 	EXP 	text_blank_distractors_T0: autoDraw = False
+42.3329 	EXP 	text_distr_T0: height = 0.05
+42.3329 	EXP 	text_distr_T0: height = 0.05
+42.3329 	EXP 	text_distr_T0: height = 0.05
+42.3329 	EXP 	text_distr_T0: text = 'NJWZFVS'
+42.3329 	EXP 	text_distr_T0: autoDraw = True
+42.3663 	EXP 	text_distr_T0: autoDraw = False
+42.3663 	EXP 	text_blank_distractors_T0: autoDraw = True
+42.4162 	EXP 	text_blank_distractors_T0: autoDraw = False
+42.4162 	EXP 	text_distr_T0: autoDraw = False
+42.4162 	EXP 	text_blank_distractors_T0: autoDraw = False
+42.4162 	EXP 	text_T1: text = '2222222'
+42.4162 	EXP 	text_T1: autoDraw = True
+42.4496 	EXP 	text_T1: autoDraw = False
+42.4496 	EXP 	text_blank_number_T1: autoDraw = True
+42.4836 	EXP 	Created sequence: sequential, trialTypes=1, nReps=7, seed=None
+42.4837 	EXP 	New trial (rep=0, index=0): None
+42.4996 	EXP 	text_blank_number_T1: autoDraw = False
+42.4996 	EXP 	text_T1: autoDraw = False
+42.4996 	EXP 	text_blank_number_T1: autoDraw = False
+42.4996 	EXP 	text_distr_T1: height = 0.05
+42.4996 	EXP 	text_distr_T1: height = 0.05
+42.4996 	EXP 	text_distr_T1: height = 0.05
+42.4996 	EXP 	text_distr_T1: text = 'PGKSFVR'
+42.4996 	EXP 	text_distr_T1: autoDraw = True
+42.5330 	EXP 	text_distr_T1: autoDraw = False
+42.5330 	EXP 	text_blank_distractors_T1: autoDraw = True
+42.5669 	EXP 	New trial (rep=1, index=0): None
+42.5829 	EXP 	text_blank_distractors_T1: autoDraw = False
+42.5829 	EXP 	text_distr_T1: autoDraw = False
+42.5829 	EXP 	text_blank_distractors_T1: autoDraw = False
+42.5829 	EXP 	text_distr_T1: height = 0.05
+42.5829 	EXP 	text_distr_T1: height = 0.05
+42.5829 	EXP 	text_distr_T1: height = 0.05
+42.5829 	EXP 	text_distr_T1: text = 'VZFKJNR'
+42.5829 	EXP 	text_distr_T1: autoDraw = True
+42.6163 	EXP 	text_distr_T1: autoDraw = False
+42.6163 	EXP 	text_blank_distractors_T1: autoDraw = True
+42.6664 	EXP 	text_blank_distractors_T1: autoDraw = False
+42.6664 	EXP 	text_distr_T1: autoDraw = False
+42.6664 	EXP 	text_blank_distractors_T1: autoDraw = False
+42.6664 	EXP 	text_T2: height = 0.05
+42.6664 	EXP 	text_T2: height = 0.05
+42.6664 	EXP 	text_T2: height = 0.05
+42.6664 	EXP 	text_T2: text = 'XXMUDXX'
+42.6664 	EXP 	text_T2: autoDraw = True
+42.6996 	EXP 	text_T2: autoDraw = False
+42.6996 	EXP 	text_blank_T2_probe: autoDraw = True
+42.7337 	EXP 	Created sequence: sequential, trialTypes=1, nReps=12, seed=None
+42.7339 	EXP 	New trial (rep=0, index=0): None
+42.7496 	EXP 	text_blank_T2_probe: autoDraw = False
+42.7496 	EXP 	text_T2: autoDraw = False
+42.7496 	EXP 	text_blank_T2_probe: autoDraw = False
+42.7496 	EXP 	text_distr_T2: height = 0.05
+42.7496 	EXP 	text_distr_T2: height = 0.05
+42.7496 	EXP 	text_distr_T2: height = 0.05
+42.7496 	EXP 	text_distr_T2: text = 'VZFKJNR'
+42.7496 	EXP 	text_distr_T2: autoDraw = True
+42.7830 	EXP 	text_distr_T2: autoDraw = False
+42.7830 	EXP 	text_blank_distractors_T2: autoDraw = True
+42.8173 	EXP 	New trial (rep=1, index=0): None
+42.8330 	EXP 	text_blank_distractors_T2: autoDraw = False
+42.8330 	EXP 	text_distr_T2: autoDraw = False
+42.8330 	EXP 	text_blank_distractors_T2: autoDraw = False
+42.8330 	EXP 	text_distr_T2: height = 0.05
+42.8330 	EXP 	text_distr_T2: height = 0.05
+42.8330 	EXP 	text_distr_T2: height = 0.05
+42.8330 	EXP 	text_distr_T2: text = 'QDTMGPH'
+42.8330 	EXP 	text_distr_T2: autoDraw = True
+42.8667 	EXP 	text_distr_T2: autoDraw = False
+42.8667 	EXP 	text_blank_distractors_T2: autoDraw = True
+42.9003 	EXP 	New trial (rep=2, index=0): None
+42.9163 	EXP 	text_blank_distractors_T2: autoDraw = False
+42.9163 	EXP 	text_distr_T2: autoDraw = False
+42.9163 	EXP 	text_blank_distractors_T2: autoDraw = False
+42.9163 	EXP 	text_distr_T2: height = 0.05
+42.9163 	EXP 	text_distr_T2: height = 0.05
+42.9163 	EXP 	text_distr_T2: height = 0.05
+42.9163 	EXP 	text_distr_T2: text = 'KZMJSVG'
+42.9163 	EXP 	text_distr_T2: autoDraw = True
+42.9496 	EXP 	text_distr_T2: autoDraw = False
+42.9496 	EXP 	text_blank_distractors_T2: autoDraw = True
+42.9837 	EXP 	New trial (rep=3, index=0): None
+42.9997 	EXP 	text_blank_distractors_T2: autoDraw = False
+42.9997 	EXP 	text_distr_T2: autoDraw = False
+42.9997 	EXP 	text_blank_distractors_T2: autoDraw = False
+42.9997 	EXP 	text_distr_T2: height = 0.05
+42.9997 	EXP 	text_distr_T2: height = 0.05
+42.9997 	EXP 	text_distr_T2: height = 0.05
+42.9997 	EXP 	text_distr_T2: text = 'CZLHYFT'
+42.9997 	EXP 	text_distr_T2: autoDraw = True
+43.0354 	EXP 	text_distr_T2: autoDraw = False
+43.0354 	EXP 	text_blank_distractors_T2: autoDraw = True
+43.0673 	EXP 	New trial (rep=4, index=0): None
+43.0829 	EXP 	text_blank_distractors_T2: autoDraw = False
+43.0829 	EXP 	text_distr_T2: autoDraw = False
+43.0829 	EXP 	text_blank_distractors_T2: autoDraw = False
+43.0829 	EXP 	text_distr_T2: height = 0.05
+43.0829 	EXP 	text_distr_T2: height = 0.05
+43.0829 	EXP 	text_distr_T2: height = 0.05
+43.0829 	EXP 	text_distr_T2: text = 'PYWBCXK'
+43.0829 	EXP 	text_distr_T2: autoDraw = True
+43.1163 	EXP 	text_distr_T2: autoDraw = False
+43.1163 	EXP 	text_blank_distractors_T2: autoDraw = True
+43.1505 	EXP 	New trial (rep=5, index=0): None
+43.1664 	EXP 	text_blank_distractors_T2: autoDraw = False
+43.1664 	EXP 	text_distr_T2: autoDraw = False
+43.1664 	EXP 	text_blank_distractors_T2: autoDraw = False
+43.1664 	EXP 	text_distr_T2: height = 0.05
+43.1664 	EXP 	text_distr_T2: height = 0.05
+43.1664 	EXP 	text_distr_T2: height = 0.05
+43.1664 	EXP 	text_distr_T2: text = 'PTZVNLX'
+43.1664 	EXP 	text_distr_T2: autoDraw = True
+43.1996 	EXP 	text_distr_T2: autoDraw = False
+43.1996 	EXP 	text_blank_distractors_T2: autoDraw = True
+43.2361 	EXP 	New trial (rep=6, index=0): None
+43.2497 	EXP 	text_blank_distractors_T2: autoDraw = False
+43.2497 	EXP 	text_distr_T2: autoDraw = False
+43.2497 	EXP 	text_blank_distractors_T2: autoDraw = False
+43.2497 	EXP 	text_distr_T2: height = 0.05
+43.2497 	EXP 	text_distr_T2: height = 0.05
+43.2497 	EXP 	text_distr_T2: height = 0.05
+43.2497 	EXP 	text_distr_T2: text = 'FTNMDKZ'
+43.2497 	EXP 	text_distr_T2: autoDraw = True
+43.2830 	EXP 	text_distr_T2: autoDraw = False
+43.2830 	EXP 	text_blank_distractors_T2: autoDraw = True
+43.3194 	EXP 	New trial (rep=7, index=0): None
+43.3343 	EXP 	text_blank_distractors_T2: autoDraw = False
+43.3343 	EXP 	text_distr_T2: autoDraw = False
+43.3343 	EXP 	text_blank_distractors_T2: autoDraw = False
+43.3343 	EXP 	text_distr_T2: height = 0.05
+43.3343 	EXP 	text_distr_T2: height = 0.05
+43.3343 	EXP 	text_distr_T2: height = 0.05
+43.3343 	EXP 	text_distr_T2: text = 'TVBDFKY'
+43.3343 	EXP 	text_distr_T2: autoDraw = True
+43.3663 	EXP 	text_distr_T2: autoDraw = False
+43.3663 	EXP 	text_blank_distractors_T2: autoDraw = True
+43.4004 	EXP 	New trial (rep=8, index=0): None
+43.4164 	EXP 	text_blank_distractors_T2: autoDraw = False
+43.4164 	EXP 	text_distr_T2: autoDraw = False
+43.4164 	EXP 	text_blank_distractors_T2: autoDraw = False
+43.4164 	EXP 	text_distr_T2: height = 0.05
+43.4164 	EXP 	text_distr_T2: height = 0.05
+43.4164 	EXP 	text_distr_T2: height = 0.05
+43.4164 	EXP 	text_distr_T2: text = 'RWBNKTL'
+43.4164 	EXP 	text_distr_T2: autoDraw = True
+43.4498 	EXP 	text_distr_T2: autoDraw = False
+43.4498 	EXP 	text_blank_distractors_T2: autoDraw = True
+43.4839 	EXP 	New trial (rep=9, index=0): None
+43.4997 	EXP 	text_blank_distractors_T2: autoDraw = False
+43.4997 	EXP 	text_distr_T2: autoDraw = False
+43.4997 	EXP 	text_blank_distractors_T2: autoDraw = False
+43.4997 	EXP 	text_distr_T2: height = 0.05
+43.4997 	EXP 	text_distr_T2: height = 0.05
+43.4997 	EXP 	text_distr_T2: height = 0.05
+43.4997 	EXP 	text_distr_T2: text = 'TBFCNXQ'
+43.4997 	EXP 	text_distr_T2: autoDraw = True
+43.5331 	EXP 	text_distr_T2: autoDraw = False
+43.5331 	EXP 	text_blank_distractors_T2: autoDraw = True
+43.5830 	EXP 	text_blank_distractors_T2: autoDraw = False
+43.5830 	EXP 	text_distr_T2: autoDraw = False
+43.5830 	EXP 	text_blank_distractors_T2: autoDraw = False
+43.5830 	EXP 	blankT1_1: autoDraw = False
+43.5830 	EXP 	text_T1ask: autoDraw = False
+43.5830 	EXP 	blankT1_2: autoDraw = False
+43.5830 	EXP 	blankT2_1: autoDraw = True
+44.5667 	EXP 	text_T2ask: autoDraw = True
+44.5830 	EXP 	blankT2_1: autoDraw = False
+46.5665 	EXP 	text_T2ask: autoDraw = False
+46.5665 	EXP 	blankT2_2: autoDraw = True
+47.5510 	EXP 	New trial (rep=0, index=3): {'T0': 'CHALK', 'T2': 'XFOGGYX', 'T1': 2222222.0, 'lagT0': 10, 'lagT1': 7, 'lagT2': 3, 'responseT1': 'j', 'responseT2': 'j', 'related': 0}
+47.5666 	EXP 	blankT2_2: autoDraw = False
+47.5666 	EXP 	blankT2_1: autoDraw = False
+47.5666 	EXP 	text_T2ask: autoDraw = False
+47.5666 	EXP 	blankT2_2: autoDraw = False
+47.5666 	EXP 	context_word: height = 0.05
+47.5666 	EXP 	context_word: height = 0.05
+47.5666 	EXP 	context_word: height = 0.05
+47.5666 	EXP 	context_word: text = 'CHALK'
+47.5666 	EXP 	context_word: autoDraw = True
+48.5666 	EXP 	context_word: autoDraw = False
+48.5666 	EXP 	blankContext: autoDraw = True
+49.5507 	EXP 	Created sequence: sequential, trialTypes=1, nReps=10, seed=None
+49.5508 	EXP 	New trial (rep=0, index=0): None
+49.5667 	EXP 	blankContext: autoDraw = False
+49.5667 	EXP 	context_word: autoDraw = False
+49.5667 	EXP 	blankContext: autoDraw = False
+49.5667 	EXP 	text_distr_T0: height = 0.05
+49.5667 	EXP 	text_distr_T0: height = 0.05
+49.5667 	EXP 	text_distr_T0: height = 0.05
+49.5667 	EXP 	text_distr_T0: text = 'HNDKTFB'
+49.5667 	EXP 	text_distr_T0: autoDraw = True
+49.6000 	EXP 	text_distr_T0: autoDraw = False
+49.6000 	EXP 	text_blank_distractors_T0: autoDraw = True
+49.6339 	EXP 	New trial (rep=1, index=0): None
+49.6500 	EXP 	text_blank_distractors_T0: autoDraw = False
+49.6500 	EXP 	text_distr_T0: autoDraw = False
+49.6500 	EXP 	text_blank_distractors_T0: autoDraw = False
+49.6500 	EXP 	text_distr_T0: height = 0.05
+49.6500 	EXP 	text_distr_T0: height = 0.05
+49.6500 	EXP 	text_distr_T0: height = 0.05
+49.6500 	EXP 	text_distr_T0: text = 'MDXCGTB'
+49.6500 	EXP 	text_distr_T0: autoDraw = True
+49.6834 	EXP 	text_distr_T0: autoDraw = False
+49.6834 	EXP 	text_blank_distractors_T0: autoDraw = True
+49.7175 	EXP 	New trial (rep=2, index=0): None
+49.7333 	EXP 	text_blank_distractors_T0: autoDraw = False
+49.7333 	EXP 	text_distr_T0: autoDraw = False
+49.7333 	EXP 	text_blank_distractors_T0: autoDraw = False
+49.7333 	EXP 	text_distr_T0: height = 0.05
+49.7333 	EXP 	text_distr_T0: height = 0.05
+49.7333 	EXP 	text_distr_T0: height = 0.05
+49.7333 	EXP 	text_distr_T0: text = 'KYDCWQT'
+49.7333 	EXP 	text_distr_T0: autoDraw = True
+49.7668 	EXP 	text_distr_T0: autoDraw = False
+49.7668 	EXP 	text_blank_distractors_T0: autoDraw = True
+49.8007 	EXP 	New trial (rep=3, index=0): None
+49.8167 	EXP 	text_blank_distractors_T0: autoDraw = False
+49.8167 	EXP 	text_distr_T0: autoDraw = False
+49.8167 	EXP 	text_blank_distractors_T0: autoDraw = False
+49.8167 	EXP 	text_distr_T0: height = 0.05
+49.8167 	EXP 	text_distr_T0: height = 0.05
+49.8167 	EXP 	text_distr_T0: height = 0.05
+49.8167 	EXP 	text_distr_T0: text = 'VSCQJZB'
+49.8167 	EXP 	text_distr_T0: autoDraw = True
+49.8501 	EXP 	text_distr_T0: autoDraw = False
+49.8501 	EXP 	text_blank_distractors_T0: autoDraw = True
+49.8841 	EXP 	New trial (rep=4, index=0): None
+49.9000 	EXP 	text_blank_distractors_T0: autoDraw = False
+49.9000 	EXP 	text_distr_T0: autoDraw = False
+49.9000 	EXP 	text_blank_distractors_T0: autoDraw = False
+49.9000 	EXP 	text_distr_T0: height = 0.05
+49.9000 	EXP 	text_distr_T0: height = 0.05
+49.9000 	EXP 	text_distr_T0: height = 0.05
+49.9000 	EXP 	text_distr_T0: text = 'LKFRMJN'
+49.9000 	EXP 	text_distr_T0: autoDraw = True
+49.9334 	EXP 	text_distr_T0: autoDraw = False
+49.9334 	EXP 	text_blank_distractors_T0: autoDraw = True
+49.9675 	EXP 	New trial (rep=5, index=0): None
+49.9834 	EXP 	text_blank_distractors_T0: autoDraw = False
+49.9834 	EXP 	text_distr_T0: autoDraw = False
+49.9834 	EXP 	text_blank_distractors_T0: autoDraw = False
+49.9834 	EXP 	text_distr_T0: height = 0.05
+49.9834 	EXP 	text_distr_T0: height = 0.05
+49.9834 	EXP 	text_distr_T0: height = 0.05
+49.9834 	EXP 	text_distr_T0: text = 'XKJLPCV'
+49.9834 	EXP 	text_distr_T0: autoDraw = True
+50.0168 	EXP 	text_distr_T0: autoDraw = False
+50.0168 	EXP 	text_blank_distractors_T0: autoDraw = True
+50.0510 	EXP 	New trial (rep=6, index=0): None
+50.0667 	EXP 	text_blank_distractors_T0: autoDraw = False
+50.0667 	EXP 	text_distr_T0: autoDraw = False
+50.0667 	EXP 	text_blank_distractors_T0: autoDraw = False
+50.0667 	EXP 	text_distr_T0: height = 0.05
+50.0667 	EXP 	text_distr_T0: height = 0.05
+50.0667 	EXP 	text_distr_T0: height = 0.05
+50.0667 	EXP 	text_distr_T0: text = 'CVNKWFQ'
+50.0667 	EXP 	text_distr_T0: autoDraw = True
+50.1000 	EXP 	text_distr_T0: autoDraw = False
+50.1000 	EXP 	text_blank_distractors_T0: autoDraw = True
+50.1340 	EXP 	New trial (rep=7, index=0): None
+50.1500 	EXP 	text_blank_distractors_T0: autoDraw = False
+50.1500 	EXP 	text_distr_T0: autoDraw = False
+50.1500 	EXP 	text_blank_distractors_T0: autoDraw = False
+50.1500 	EXP 	text_distr_T0: height = 0.05
+50.1500 	EXP 	text_distr_T0: height = 0.05
+50.1500 	EXP 	text_distr_T0: height = 0.05
+50.1500 	EXP 	text_distr_T0: text = 'XSWVFGQ'
+50.1500 	EXP 	text_distr_T0: autoDraw = True
+50.1835 	EXP 	text_distr_T0: autoDraw = False
+50.1835 	EXP 	text_blank_distractors_T0: autoDraw = True
+50.2175 	EXP 	New trial (rep=8, index=0): None
+50.2336 	EXP 	text_blank_distractors_T0: autoDraw = False
+50.2336 	EXP 	text_distr_T0: autoDraw = False
+50.2336 	EXP 	text_blank_distractors_T0: autoDraw = False
+50.2336 	EXP 	text_distr_T0: height = 0.05
+50.2336 	EXP 	text_distr_T0: height = 0.05
+50.2336 	EXP 	text_distr_T0: height = 0.05
+50.2336 	EXP 	text_distr_T0: text = 'BWTFXRC'
+50.2336 	EXP 	text_distr_T0: autoDraw = True
+50.2668 	EXP 	text_distr_T0: autoDraw = False
+50.2668 	EXP 	text_blank_distractors_T0: autoDraw = True
+50.3167 	EXP 	text_blank_distractors_T0: autoDraw = False
+50.3167 	EXP 	text_distr_T0: autoDraw = False
+50.3167 	EXP 	text_blank_distractors_T0: autoDraw = False
+50.3167 	EXP 	text_T1: text = '2222222'
+50.3167 	EXP 	text_T1: autoDraw = True
+50.3502 	EXP 	text_T1: autoDraw = False
+50.3502 	EXP 	text_blank_number_T1: autoDraw = True
+50.3841 	EXP 	Created sequence: sequential, trialTypes=1, nReps=7, seed=None
+50.3843 	EXP 	New trial (rep=0, index=0): None
+50.4001 	EXP 	text_blank_number_T1: autoDraw = False
+50.4001 	EXP 	text_T1: autoDraw = False
+50.4001 	EXP 	text_blank_number_T1: autoDraw = False
+50.4001 	EXP 	text_distr_T1: height = 0.05
+50.4001 	EXP 	text_distr_T1: height = 0.05
+50.4001 	EXP 	text_distr_T1: height = 0.05
+50.4001 	EXP 	text_distr_T1: text = 'KWBVCLT'
+50.4001 	EXP 	text_distr_T1: autoDraw = True
+50.4334 	EXP 	text_distr_T1: autoDraw = False
+50.4334 	EXP 	text_blank_distractors_T1: autoDraw = True
+50.4673 	EXP 	New trial (rep=1, index=0): None
+50.4834 	EXP 	text_blank_distractors_T1: autoDraw = False
+50.4834 	EXP 	text_distr_T1: autoDraw = False
+50.4834 	EXP 	text_blank_distractors_T1: autoDraw = False
+50.4834 	EXP 	text_distr_T1: height = 0.05
+50.4834 	EXP 	text_distr_T1: height = 0.05
+50.4834 	EXP 	text_distr_T1: height = 0.05
+50.4834 	EXP 	text_distr_T1: text = 'YWGMNSJ'
+50.4834 	EXP 	text_distr_T1: autoDraw = True
+50.5167 	EXP 	text_distr_T1: autoDraw = False
+50.5167 	EXP 	text_blank_distractors_T1: autoDraw = True
+50.5506 	EXP 	New trial (rep=2, index=0): None
+50.5669 	EXP 	text_blank_distractors_T1: autoDraw = False
+50.5669 	EXP 	text_distr_T1: autoDraw = False
+50.5669 	EXP 	text_blank_distractors_T1: autoDraw = False
+50.5669 	EXP 	text_distr_T1: height = 0.05
+50.5669 	EXP 	text_distr_T1: height = 0.05
+50.5669 	EXP 	text_distr_T1: height = 0.05
+50.5669 	EXP 	text_distr_T1: text = 'PRVMSGK'
+50.5669 	EXP 	text_distr_T1: autoDraw = True
+50.6000 	EXP 	text_distr_T1: autoDraw = False
+50.6000 	EXP 	text_blank_distractors_T1: autoDraw = True
+50.6340 	EXP 	New trial (rep=3, index=0): None
+50.6500 	EXP 	text_blank_distractors_T1: autoDraw = False
+50.6500 	EXP 	text_distr_T1: autoDraw = False
+50.6500 	EXP 	text_blank_distractors_T1: autoDraw = False
+50.6500 	EXP 	text_distr_T1: height = 0.05
+50.6500 	EXP 	text_distr_T1: height = 0.05
+50.6500 	EXP 	text_distr_T1: height = 0.05
+50.6500 	EXP 	text_distr_T1: text = 'JKSHCBQ'
+50.6500 	EXP 	text_distr_T1: autoDraw = True
+50.6834 	EXP 	text_distr_T1: autoDraw = False
+50.6834 	EXP 	text_blank_distractors_T1: autoDraw = True
+50.7199 	EXP 	New trial (rep=4, index=0): None
+50.7333 	EXP 	text_blank_distractors_T1: autoDraw = False
+50.7333 	EXP 	text_distr_T1: autoDraw = False
+50.7333 	EXP 	text_blank_distractors_T1: autoDraw = False
+50.7333 	EXP 	text_distr_T1: height = 0.05
+50.7333 	EXP 	text_distr_T1: height = 0.05
+50.7333 	EXP 	text_distr_T1: height = 0.05
+50.7333 	EXP 	text_distr_T1: text = 'WGYKVFC'
+50.7333 	EXP 	text_distr_T1: autoDraw = True
+50.7671 	EXP 	text_distr_T1: autoDraw = False
+50.7671 	EXP 	text_blank_distractors_T1: autoDraw = True
+50.8006 	EXP 	New trial (rep=5, index=0): None
+50.8167 	EXP 	text_blank_distractors_T1: autoDraw = False
+50.8167 	EXP 	text_distr_T1: autoDraw = False
+50.8167 	EXP 	text_blank_distractors_T1: autoDraw = False
+50.8167 	EXP 	text_distr_T1: height = 0.05
+50.8167 	EXP 	text_distr_T1: height = 0.05
+50.8167 	EXP 	text_distr_T1: height = 0.05
+50.8167 	EXP 	text_distr_T1: text = 'TDNZVCW'
+50.8167 	EXP 	text_distr_T1: autoDraw = True
+50.8502 	EXP 	text_distr_T1: autoDraw = False
+50.8502 	EXP 	text_blank_distractors_T1: autoDraw = True
+50.9000 	EXP 	text_blank_distractors_T1: autoDraw = False
+50.9000 	EXP 	text_distr_T1: autoDraw = False
+50.9000 	EXP 	text_blank_distractors_T1: autoDraw = False
+50.9000 	EXP 	text_T2: height = 0.05
+50.9000 	EXP 	text_T2: height = 0.05
+50.9000 	EXP 	text_T2: height = 0.05
+50.9000 	EXP 	text_T2: text = 'XFOGGYX'
+50.9000 	EXP 	text_T2: autoDraw = True
+50.9334 	EXP 	text_T2: autoDraw = False
+50.9334 	EXP 	text_blank_T2_probe: autoDraw = True
+50.9676 	EXP 	Created sequence: sequential, trialTypes=1, nReps=12, seed=None
+50.9678 	EXP 	New trial (rep=0, index=0): None
+50.9834 	EXP 	text_blank_T2_probe: autoDraw = False
+50.9834 	EXP 	text_T2: autoDraw = False
+50.9834 	EXP 	text_blank_T2_probe: autoDraw = False
+50.9834 	EXP 	text_distr_T2: height = 0.05
+50.9834 	EXP 	text_distr_T2: height = 0.05
+50.9834 	EXP 	text_distr_T2: height = 0.05
+50.9834 	EXP 	text_distr_T2: text = 'TDNZVCW'
+50.9834 	EXP 	text_distr_T2: autoDraw = True
+51.0167 	EXP 	text_distr_T2: autoDraw = False
+51.0167 	EXP 	text_blank_distractors_T2: autoDraw = True
+51.0507 	EXP 	New trial (rep=1, index=0): None
+51.0667 	EXP 	text_blank_distractors_T2: autoDraw = False
+51.0667 	EXP 	text_distr_T2: autoDraw = False
+51.0667 	EXP 	text_blank_distractors_T2: autoDraw = False
+51.0667 	EXP 	text_distr_T2: height = 0.05
+51.0667 	EXP 	text_distr_T2: height = 0.05
+51.0667 	EXP 	text_distr_T2: height = 0.05
+51.0667 	EXP 	text_distr_T2: text = 'KYCGXDT'
+51.0667 	EXP 	text_distr_T2: autoDraw = True
+51.1001 	EXP 	text_distr_T2: autoDraw = False
+51.1001 	EXP 	text_blank_distractors_T2: autoDraw = True
+51.1341 	EXP 	New trial (rep=2, index=0): None
+51.1501 	EXP 	text_blank_distractors_T2: autoDraw = False
+51.1501 	EXP 	text_distr_T2: autoDraw = False
+51.1501 	EXP 	text_blank_distractors_T2: autoDraw = False
+51.1501 	EXP 	text_distr_T2: height = 0.05
+51.1501 	EXP 	text_distr_T2: height = 0.05
+51.1501 	EXP 	text_distr_T2: height = 0.05
+51.1501 	EXP 	text_distr_T2: text = 'PZKHSTN'
+51.1501 	EXP 	text_distr_T2: autoDraw = True
+51.1834 	EXP 	text_distr_T2: autoDraw = False
+51.1834 	EXP 	text_blank_distractors_T2: autoDraw = True
+51.2335 	EXP 	text_blank_distractors_T2: autoDraw = False
+51.2335 	EXP 	text_distr_T2: autoDraw = False
+51.2335 	EXP 	text_blank_distractors_T2: autoDraw = False
+51.2335 	EXP 	blankT1_1: autoDraw = False
+51.2335 	EXP 	text_T1ask: autoDraw = False
+51.2335 	EXP 	blankT1_2: autoDraw = False
+51.2335 	EXP 	blankT2_1: autoDraw = True
+52.2168 	EXP 	text_T2ask: autoDraw = True
+52.2335 	EXP 	blankT2_1: autoDraw = False
+54.2169 	EXP 	text_T2ask: autoDraw = False
+54.2169 	EXP 	blankT2_2: autoDraw = True
+55.2013 	EXP 	New trial (rep=0, index=4): {'T0': 'STAB', 'T2': 'XXAGEXX', 'T1': 6666666.0, 'lagT0': 7, 'lagT1': 7, 'lagT2': 6, 'responseT1': 'j', 'responseT2': 'j', 'related': 0}
+55.2170 	EXP 	blankT2_2: autoDraw = False
+55.2170 	EXP 	blankT2_1: autoDraw = False
+55.2170 	EXP 	text_T2ask: autoDraw = False
+55.2170 	EXP 	blankT2_2: autoDraw = False
+55.2170 	EXP 	context_word: height = 0.05
+55.2170 	EXP 	context_word: height = 0.05
+55.2170 	EXP 	context_word: height = 0.05
+55.2170 	EXP 	context_word: text = 'STAB'
+55.2170 	EXP 	context_word: autoDraw = True
+56.2171 	EXP 	context_word: autoDraw = False
+56.2171 	EXP 	blankContext: autoDraw = True
+57.2012 	EXP 	Created sequence: sequential, trialTypes=1, nReps=10, seed=None
+57.2014 	EXP 	New trial (rep=0, index=0): None
+57.2171 	EXP 	blankContext: autoDraw = False
+57.2171 	EXP 	context_word: autoDraw = False
+57.2171 	EXP 	blankContext: autoDraw = False
+57.2171 	EXP 	text_distr_T0: height = 0.05
+57.2171 	EXP 	text_distr_T0: height = 0.05
+57.2171 	EXP 	text_distr_T0: height = 0.05
+57.2171 	EXP 	text_distr_T0: text = 'SYLCVHF'
+57.2171 	EXP 	text_distr_T0: autoDraw = True
+57.2504 	EXP 	text_distr_T0: autoDraw = False
+57.2504 	EXP 	text_blank_distractors_T0: autoDraw = True
+57.2843 	EXP 	New trial (rep=1, index=0): None
+57.3004 	EXP 	text_blank_distractors_T0: autoDraw = False
+57.3004 	EXP 	text_distr_T0: autoDraw = False
+57.3004 	EXP 	text_blank_distractors_T0: autoDraw = False
+57.3004 	EXP 	text_distr_T0: height = 0.05
+57.3004 	EXP 	text_distr_T0: height = 0.05
+57.3004 	EXP 	text_distr_T0: height = 0.05
+57.3004 	EXP 	text_distr_T0: text = 'RGXNBKS'
+57.3004 	EXP 	text_distr_T0: autoDraw = True
+57.3339 	EXP 	text_distr_T0: autoDraw = False
+57.3339 	EXP 	text_blank_distractors_T0: autoDraw = True
+57.3678 	EXP 	New trial (rep=2, index=0): None
+57.3837 	EXP 	text_blank_distractors_T0: autoDraw = False
+57.3837 	EXP 	text_distr_T0: autoDraw = False
+57.3837 	EXP 	text_blank_distractors_T0: autoDraw = False
+57.3837 	EXP 	text_distr_T0: height = 0.05
+57.3837 	EXP 	text_distr_T0: height = 0.05
+57.3837 	EXP 	text_distr_T0: height = 0.05
+57.3837 	EXP 	text_distr_T0: text = 'NLXGZRT'
+57.3837 	EXP 	text_distr_T0: autoDraw = True
+57.4171 	EXP 	text_distr_T0: autoDraw = False
+57.4171 	EXP 	text_blank_distractors_T0: autoDraw = True
+57.4511 	EXP 	New trial (rep=3, index=0): None
+57.4671 	EXP 	text_blank_distractors_T0: autoDraw = False
+57.4671 	EXP 	text_distr_T0: autoDraw = False
+57.4671 	EXP 	text_blank_distractors_T0: autoDraw = False
+57.4671 	EXP 	text_distr_T0: height = 0.05
+57.4671 	EXP 	text_distr_T0: height = 0.05
+57.4671 	EXP 	text_distr_T0: height = 0.05
+57.4671 	EXP 	text_distr_T0: text = 'FPXKNDH'
+57.4671 	EXP 	text_distr_T0: autoDraw = True
+57.5005 	EXP 	text_distr_T0: autoDraw = False
+57.5005 	EXP 	text_blank_distractors_T0: autoDraw = True
+57.5344 	EXP 	New trial (rep=4, index=0): None
+57.5504 	EXP 	text_blank_distractors_T0: autoDraw = False
+57.5504 	EXP 	text_distr_T0: autoDraw = False
+57.5504 	EXP 	text_blank_distractors_T0: autoDraw = False
+57.5504 	EXP 	text_distr_T0: height = 0.05
+57.5504 	EXP 	text_distr_T0: height = 0.05
+57.5504 	EXP 	text_distr_T0: height = 0.05
+57.5504 	EXP 	text_distr_T0: text = 'MLNGTPY'
+57.5504 	EXP 	text_distr_T0: autoDraw = True
+57.5838 	EXP 	text_distr_T0: autoDraw = False
+57.5838 	EXP 	text_blank_distractors_T0: autoDraw = True
+57.6177 	EXP 	New trial (rep=5, index=0): None
+57.6337 	EXP 	text_blank_distractors_T0: autoDraw = False
+57.6337 	EXP 	text_distr_T0: autoDraw = False
+57.6337 	EXP 	text_blank_distractors_T0: autoDraw = False
+57.6337 	EXP 	text_distr_T0: height = 0.05
+57.6337 	EXP 	text_distr_T0: height = 0.05
+57.6337 	EXP 	text_distr_T0: height = 0.05
+57.6337 	EXP 	text_distr_T0: text = 'FTJXDZS'
+57.6337 	EXP 	text_distr_T0: autoDraw = True
+57.6674 	EXP 	text_distr_T0: autoDraw = False
+57.6674 	EXP 	text_blank_distractors_T0: autoDraw = True
+57.7172 	EXP 	text_blank_distractors_T0: autoDraw = False
+57.7172 	EXP 	text_distr_T0: autoDraw = False
+57.7172 	EXP 	text_blank_distractors_T0: autoDraw = False
+57.7172 	EXP 	text_T1: height = 0.05
+57.7172 	EXP 	text_T1: height = 0.05
+57.7172 	EXP 	text_T1: height = 0.05
+57.7172 	EXP 	text_T1: text = '6666666'
+57.7172 	EXP 	text_T1: autoDraw = True
+57.7505 	EXP 	text_T1: autoDraw = False
+57.7505 	EXP 	text_blank_number_T1: autoDraw = True
+57.7845 	EXP 	Created sequence: sequential, trialTypes=1, nReps=7, seed=None
+57.7846 	EXP 	New trial (rep=0, index=0): None
+57.8004 	EXP 	text_blank_number_T1: autoDraw = False
+57.8004 	EXP 	text_T1: autoDraw = False
+57.8004 	EXP 	text_blank_number_T1: autoDraw = False
+57.8004 	EXP 	text_distr_T1: height = 0.05
+57.8004 	EXP 	text_distr_T1: height = 0.05
+57.8004 	EXP 	text_distr_T1: height = 0.05
+57.8004 	EXP 	text_distr_T1: text = 'XVNWLPB'
+57.8004 	EXP 	text_distr_T1: autoDraw = True
+57.8338 	EXP 	text_distr_T1: autoDraw = False
+57.8338 	EXP 	text_blank_distractors_T1: autoDraw = True
+57.8679 	EXP 	New trial (rep=1, index=0): None
+57.8838 	EXP 	text_blank_distractors_T1: autoDraw = False
+57.8838 	EXP 	text_distr_T1: autoDraw = False
+57.8838 	EXP 	text_blank_distractors_T1: autoDraw = False
+57.8838 	EXP 	text_distr_T1: height = 0.05
+57.8838 	EXP 	text_distr_T1: height = 0.05
+57.8838 	EXP 	text_distr_T1: height = 0.05
+57.8838 	EXP 	text_distr_T1: text = 'JHDVFBZ'
+57.8838 	EXP 	text_distr_T1: autoDraw = True
+57.9172 	EXP 	text_distr_T1: autoDraw = False
+57.9172 	EXP 	text_blank_distractors_T1: autoDraw = True
+57.9536 	EXP 	New trial (rep=2, index=0): None
+57.9671 	EXP 	text_blank_distractors_T1: autoDraw = False
+57.9671 	EXP 	text_distr_T1: autoDraw = False
+57.9671 	EXP 	text_blank_distractors_T1: autoDraw = False
+57.9671 	EXP 	text_distr_T1: height = 0.05
+57.9671 	EXP 	text_distr_T1: height = 0.05
+57.9671 	EXP 	text_distr_T1: height = 0.05
+57.9671 	EXP 	text_distr_T1: text = 'BXHZTJF'
+57.9671 	EXP 	text_distr_T1: autoDraw = True
+58.0005 	EXP 	text_distr_T1: autoDraw = False
+58.0005 	EXP 	text_blank_distractors_T1: autoDraw = True
+58.0346 	EXP 	New trial (rep=3, index=0): None
+58.0505 	EXP 	text_blank_distractors_T1: autoDraw = False
+58.0505 	EXP 	text_distr_T1: autoDraw = False
+58.0505 	EXP 	text_blank_distractors_T1: autoDraw = False
+58.0505 	EXP 	text_distr_T1: height = 0.05
+58.0505 	EXP 	text_distr_T1: height = 0.05
+58.0505 	EXP 	text_distr_T1: height = 0.05
+58.0505 	EXP 	text_distr_T1: text = 'MWSZHYT'
+58.0505 	EXP 	text_distr_T1: autoDraw = True
+58.0838 	EXP 	text_distr_T1: autoDraw = False
+58.0838 	EXP 	text_blank_distractors_T1: autoDraw = True
+58.1178 	EXP 	New trial (rep=4, index=0): None
+58.1338 	EXP 	text_blank_distractors_T1: autoDraw = False
+58.1338 	EXP 	text_distr_T1: autoDraw = False
+58.1338 	EXP 	text_blank_distractors_T1: autoDraw = False
+58.1338 	EXP 	text_distr_T1: height = 0.05
+58.1338 	EXP 	text_distr_T1: height = 0.05
+58.1338 	EXP 	text_distr_T1: height = 0.05
+58.1338 	EXP 	text_distr_T1: text = 'PTFSDBW'
+58.1338 	EXP 	text_distr_T1: autoDraw = True
+58.1671 	EXP 	text_distr_T1: autoDraw = False
+58.1671 	EXP 	text_blank_distractors_T1: autoDraw = True
+58.2015 	EXP 	New trial (rep=5, index=0): None
+58.2172 	EXP 	text_blank_distractors_T1: autoDraw = False
+58.2172 	EXP 	text_distr_T1: autoDraw = False
+58.2172 	EXP 	text_blank_distractors_T1: autoDraw = False
+58.2172 	EXP 	text_distr_T1: height = 0.05
+58.2172 	EXP 	text_distr_T1: height = 0.05
+58.2172 	EXP 	text_distr_T1: height = 0.05
+58.2172 	EXP 	text_distr_T1: text = 'WTYMBSL'
+58.2172 	EXP 	text_distr_T1: autoDraw = True
+58.2505 	EXP 	text_distr_T1: autoDraw = False
+58.2505 	EXP 	text_blank_distractors_T1: autoDraw = True
+58.3007 	EXP 	text_blank_distractors_T1: autoDraw = False
+58.3007 	EXP 	text_distr_T1: autoDraw = False
+58.3007 	EXP 	text_blank_distractors_T1: autoDraw = False
+58.3007 	EXP 	text_T2: height = 0.05
+58.3007 	EXP 	text_T2: height = 0.05
+58.3007 	EXP 	text_T2: height = 0.05
+58.3007 	EXP 	text_T2: text = 'XXAGEXX'
+58.3007 	EXP 	text_T2: autoDraw = True
+58.3338 	EXP 	text_T2: autoDraw = False
+58.3338 	EXP 	text_blank_T2_probe: autoDraw = True
+58.3679 	EXP 	Created sequence: sequential, trialTypes=1, nReps=12, seed=None
+58.3681 	EXP 	New trial (rep=0, index=0): None
+58.3838 	EXP 	text_blank_T2_probe: autoDraw = False
+58.3838 	EXP 	text_T2: autoDraw = False
+58.3838 	EXP 	text_blank_T2_probe: autoDraw = False
+58.3838 	EXP 	text_distr_T2: height = 0.05
+58.3838 	EXP 	text_distr_T2: height = 0.05
+58.3838 	EXP 	text_distr_T2: height = 0.05
+58.3838 	EXP 	text_distr_T2: text = 'WTYMBSL'
+58.3838 	EXP 	text_distr_T2: autoDraw = True
+58.4171 	EXP 	text_distr_T2: autoDraw = False
+58.4171 	EXP 	text_blank_distractors_T2: autoDraw = True
+58.4512 	EXP 	New trial (rep=1, index=0): None
+58.4672 	EXP 	text_blank_distractors_T2: autoDraw = False
+58.4672 	EXP 	text_distr_T2: autoDraw = False
+58.4672 	EXP 	text_blank_distractors_T2: autoDraw = False
+58.4672 	EXP 	text_distr_T2: height = 0.05
+58.4672 	EXP 	text_distr_T2: height = 0.05
+58.4672 	EXP 	text_distr_T2: height = 0.05
+58.4672 	EXP 	text_distr_T2: text = 'MKVWNCD'
+58.4672 	EXP 	text_distr_T2: autoDraw = True
+58.5005 	EXP 	text_distr_T2: autoDraw = False
+58.5005 	EXP 	text_blank_distractors_T2: autoDraw = True
+58.5344 	EXP 	New trial (rep=2, index=0): None
+58.5505 	EXP 	text_blank_distractors_T2: autoDraw = False
+58.5505 	EXP 	text_distr_T2: autoDraw = False
+58.5505 	EXP 	text_blank_distractors_T2: autoDraw = False
+58.5505 	EXP 	text_distr_T2: height = 0.05
+58.5505 	EXP 	text_distr_T2: height = 0.05
+58.5505 	EXP 	text_distr_T2: height = 0.05
+58.5505 	EXP 	text_distr_T2: text = 'HPGTWKV'
+58.5505 	EXP 	text_distr_T2: autoDraw = True
+58.5840 	EXP 	text_distr_T2: autoDraw = False
+58.5840 	EXP 	text_blank_distractors_T2: autoDraw = True
+58.6178 	EXP 	New trial (rep=3, index=0): None
+58.6338 	EXP 	text_blank_distractors_T2: autoDraw = False
+58.6338 	EXP 	text_distr_T2: autoDraw = False
+58.6338 	EXP 	text_blank_distractors_T2: autoDraw = False
+58.6338 	EXP 	text_distr_T2: height = 0.05
+58.6338 	EXP 	text_distr_T2: height = 0.05
+58.6338 	EXP 	text_distr_T2: height = 0.05
+58.6338 	EXP 	text_distr_T2: text = 'VZCKGNQ'
+58.6338 	EXP 	text_distr_T2: autoDraw = True
+58.6697 	EXP 	text_distr_T2: autoDraw = False
+58.6697 	EXP 	text_blank_distractors_T2: autoDraw = True
+58.7012 	EXP 	New trial (rep=4, index=0): None
+58.7174 	EXP 	text_blank_distractors_T2: autoDraw = False
+58.7174 	EXP 	text_distr_T2: autoDraw = False
+58.7174 	EXP 	text_blank_distractors_T2: autoDraw = False
+58.7174 	EXP 	text_distr_T2: height = 0.05
+58.7174 	EXP 	text_distr_T2: height = 0.05
+58.7174 	EXP 	text_distr_T2: height = 0.05
+58.7174 	EXP 	text_distr_T2: text = 'DCYRVXN'
+58.7174 	EXP 	text_distr_T2: autoDraw = True
+58.7506 	EXP 	text_distr_T2: autoDraw = False
+58.7506 	EXP 	text_blank_distractors_T2: autoDraw = True
+58.7845 	EXP 	New trial (rep=5, index=0): None
+58.8005 	EXP 	text_blank_distractors_T2: autoDraw = False
+58.8005 	EXP 	text_distr_T2: autoDraw = False
+58.8005 	EXP 	text_blank_distractors_T2: autoDraw = False
+58.8005 	EXP 	text_distr_T2: height = 0.05
+58.8005 	EXP 	text_distr_T2: height = 0.05
+58.8005 	EXP 	text_distr_T2: height = 0.05
+58.8005 	EXP 	text_distr_T2: text = 'FCKHQDJ'
+58.8005 	EXP 	text_distr_T2: autoDraw = True
+58.8338 	EXP 	text_distr_T2: autoDraw = False
+58.8338 	EXP 	text_blank_distractors_T2: autoDraw = True
+58.8840 	EXP 	text_blank_distractors_T2: autoDraw = False
+58.8840 	EXP 	text_distr_T2: autoDraw = False
+58.8840 	EXP 	text_blank_distractors_T2: autoDraw = False
+58.8840 	EXP 	blankT1_1: autoDraw = False
+58.8840 	EXP 	text_T1ask: autoDraw = False
+58.8840 	EXP 	blankT1_2: autoDraw = False
+58.8840 	EXP 	blankT2_1: autoDraw = True
+59.8674 	EXP 	text_T2ask: autoDraw = True
+59.8839 	EXP 	blankT2_1: autoDraw = False
+61.8674 	EXP 	text_T2ask: autoDraw = False
+61.8674 	EXP 	blankT2_2: autoDraw = True
+62.8520 	EXP 	New trial (rep=0, index=5): {'T0': 'LECTURE', 'T2': 'XXSEWXX', 'T1': 3333333.0, 'lagT0': 10, 'lagT1': 1, 'lagT2': 9, 'responseT1': 'f', 'responseT2': 'j', 'related': 0}
+62.8674 	EXP 	blankT2_2: autoDraw = False
+62.8674 	EXP 	blankT2_1: autoDraw = False
+62.8674 	EXP 	text_T2ask: autoDraw = False
+62.8674 	EXP 	blankT2_2: autoDraw = False
+62.8674 	EXP 	context_word: height = 0.05
+62.8674 	EXP 	context_word: height = 0.05
+62.8674 	EXP 	context_word: height = 0.05
+62.8674 	EXP 	context_word: text = 'LECTURE'
+62.8674 	EXP 	context_word: autoDraw = True
+63.8676 	EXP 	context_word: autoDraw = False
+63.8676 	EXP 	blankContext: autoDraw = True
+64.8537 	EXP 	Created sequence: sequential, trialTypes=1, nReps=10, seed=None
+64.8539 	EXP 	New trial (rep=0, index=0): None
+64.8677 	EXP 	context_word: autoDraw = False
+64.8677 	EXP 	blankContext: autoDraw = False
+64.8677 	EXP 	text_distr_T0: height = 0.05
+64.8677 	EXP 	text_distr_T0: height = 0.05
+64.8677 	EXP 	text_distr_T0: height = 0.05
+64.8677 	EXP 	text_distr_T0: text = 'DGKXSTW'
+64.8677 	EXP 	text_distr_T0: autoDraw = True
+64.9008 	EXP 	text_distr_T0: autoDraw = False
+64.9008 	EXP 	text_blank_distractors_T0: autoDraw = True
+64.9373 	EXP 	New trial (rep=1, index=0): None
+64.9509 	EXP 	text_blank_distractors_T0: autoDraw = False
+64.9509 	EXP 	text_distr_T0: autoDraw = False
+64.9509 	EXP 	text_blank_distractors_T0: autoDraw = False
+64.9509 	EXP 	text_distr_T0: height = 0.05
+64.9509 	EXP 	text_distr_T0: height = 0.05
+64.9509 	EXP 	text_distr_T0: height = 0.05
+64.9509 	EXP 	text_distr_T0: text = 'QGKCHLB'
+64.9509 	EXP 	text_distr_T0: autoDraw = True
+64.9842 	EXP 	text_distr_T0: autoDraw = False
+64.9842 	EXP 	text_blank_distractors_T0: autoDraw = True
+65.0181 	EXP 	New trial (rep=2, index=0): None
+65.0342 	EXP 	text_blank_distractors_T0: autoDraw = False
+65.0342 	EXP 	text_distr_T0: autoDraw = False
+65.0342 	EXP 	text_blank_distractors_T0: autoDraw = False
+65.0342 	EXP 	text_distr_T0: height = 0.05
+65.0342 	EXP 	text_distr_T0: height = 0.05
+65.0342 	EXP 	text_distr_T0: height = 0.05
+65.0342 	EXP 	text_distr_T0: text = 'QVBMFNH'
+65.0342 	EXP 	text_distr_T0: autoDraw = True
+65.0675 	EXP 	text_distr_T0: autoDraw = False
+65.0675 	EXP 	text_blank_distractors_T0: autoDraw = True
+65.1016 	EXP 	New trial (rep=3, index=0): None
+65.1176 	EXP 	text_blank_distractors_T0: autoDraw = False
+65.1176 	EXP 	text_distr_T0: autoDraw = False
+65.1176 	EXP 	text_blank_distractors_T0: autoDraw = False
+65.1176 	EXP 	text_distr_T0: height = 0.05
+65.1176 	EXP 	text_distr_T0: height = 0.05
+65.1176 	EXP 	text_distr_T0: height = 0.05
+65.1176 	EXP 	text_distr_T0: text = 'NHGJTLP'
+65.1176 	EXP 	text_distr_T0: autoDraw = True
+65.1510 	EXP 	text_distr_T0: autoDraw = False
+65.1510 	EXP 	text_blank_distractors_T0: autoDraw = True
+65.1849 	EXP 	New trial (rep=4, index=0): None
+65.2010 	EXP 	text_blank_distractors_T0: autoDraw = False
+65.2010 	EXP 	text_distr_T0: autoDraw = False
+65.2010 	EXP 	text_blank_distractors_T0: autoDraw = False
+65.2010 	EXP 	text_distr_T0: height = 0.05
+65.2010 	EXP 	text_distr_T0: height = 0.05
+65.2010 	EXP 	text_distr_T0: height = 0.05
+65.2010 	EXP 	text_distr_T0: text = 'BXCHNDG'
+65.2010 	EXP 	text_distr_T0: autoDraw = True
+65.2367 	EXP 	text_distr_T0: autoDraw = False
+65.2367 	EXP 	text_blank_distractors_T0: autoDraw = True
+65.2707 	EXP 	New trial (rep=5, index=0): None
+65.2843 	EXP 	text_blank_distractors_T0: autoDraw = False
+65.2843 	EXP 	text_distr_T0: autoDraw = False
+65.2843 	EXP 	text_blank_distractors_T0: autoDraw = False
+65.2843 	EXP 	text_distr_T0: height = 0.05
+65.2843 	EXP 	text_distr_T0: height = 0.05
+65.2843 	EXP 	text_distr_T0: height = 0.05
+65.2843 	EXP 	text_distr_T0: text = 'YKHJDFR'
+65.2843 	EXP 	text_distr_T0: autoDraw = True
+65.3175 	EXP 	text_distr_T0: autoDraw = False
+65.3175 	EXP 	text_blank_distractors_T0: autoDraw = True
+65.3515 	EXP 	New trial (rep=6, index=0): None
+65.3676 	EXP 	text_blank_distractors_T0: autoDraw = False
+65.3676 	EXP 	text_distr_T0: autoDraw = False
+65.3676 	EXP 	text_blank_distractors_T0: autoDraw = False
+65.3676 	EXP 	text_distr_T0: height = 0.05
+65.3676 	EXP 	text_distr_T0: height = 0.05
+65.3676 	EXP 	text_distr_T0: height = 0.05
+65.3676 	EXP 	text_distr_T0: text = 'FPQSBJD'
+65.3676 	EXP 	text_distr_T0: autoDraw = True
+65.4008 	EXP 	text_distr_T0: autoDraw = False
+65.4008 	EXP 	text_blank_distractors_T0: autoDraw = True
+65.4348 	EXP 	New trial (rep=7, index=0): None
+65.4509 	EXP 	text_blank_distractors_T0: autoDraw = False
+65.4509 	EXP 	text_distr_T0: autoDraw = False
+65.4509 	EXP 	text_blank_distractors_T0: autoDraw = False
+65.4509 	EXP 	text_distr_T0: height = 0.05
+65.4509 	EXP 	text_distr_T0: height = 0.05
+65.4509 	EXP 	text_distr_T0: height = 0.05
+65.4509 	EXP 	text_distr_T0: text = 'KSMZFTQ'
+65.4509 	EXP 	text_distr_T0: autoDraw = True
+65.4842 	EXP 	text_distr_T0: autoDraw = False
+65.4842 	EXP 	text_blank_distractors_T0: autoDraw = True
+65.5182 	EXP 	New trial (rep=8, index=0): None
+65.5342 	EXP 	text_blank_distractors_T0: autoDraw = False
+65.5342 	EXP 	text_distr_T0: autoDraw = False
+65.5342 	EXP 	text_blank_distractors_T0: autoDraw = False
+65.5342 	EXP 	text_distr_T0: height = 0.05
+65.5342 	EXP 	text_distr_T0: height = 0.05
+65.5342 	EXP 	text_distr_T0: height = 0.05
+65.5342 	EXP 	text_distr_T0: text = 'BKTDMQZ'
+65.5342 	EXP 	text_distr_T0: autoDraw = True
+65.5676 	EXP 	text_distr_T0: autoDraw = False
+65.5676 	EXP 	text_blank_distractors_T0: autoDraw = True
+65.6178 	EXP 	text_blank_distractors_T0: autoDraw = False
+65.6178 	EXP 	text_distr_T0: autoDraw = False
+65.6178 	EXP 	text_blank_distractors_T0: autoDraw = False
+65.6178 	EXP 	text_T1: height = 0.05
+65.6178 	EXP 	text_T1: height = 0.05
+65.6178 	EXP 	text_T1: height = 0.05
+65.6178 	EXP 	text_T1: text = '3333333'
+65.6178 	EXP 	text_T1: autoDraw = True
+65.6509 	EXP 	text_T1: autoDraw = False
+65.6509 	EXP 	text_blank_number_T1: autoDraw = True
+65.6849 	EXP 	Created sequence: sequential, trialTypes=1, nReps=7, seed=None
+65.6850 	EXP 	New trial (rep=0, index=0): None
+65.7009 	EXP 	text_blank_number_T1: autoDraw = False
+65.7009 	EXP 	text_T1: autoDraw = False
+65.7009 	EXP 	text_blank_number_T1: autoDraw = False
+65.7009 	EXP 	text_distr_T1: height = 0.05
+65.7009 	EXP 	text_distr_T1: height = 0.05
+65.7009 	EXP 	text_distr_T1: height = 0.05
+65.7009 	EXP 	text_distr_T1: text = 'NQZGKRL'
+65.7009 	EXP 	text_distr_T1: autoDraw = False
+65.7009 	EXP 	text_blank_distractors_T1: autoDraw = False
+65.7009 	EXP 	text_T2: height = 0.05
+65.7009 	EXP 	text_T2: height = 0.05
+65.7009 	EXP 	text_T2: height = 0.05
+65.7009 	EXP 	text_T2: text = 'XXSEWXX'
+65.7009 	EXP 	text_T2: autoDraw = True
+65.7343 	EXP 	text_T2: autoDraw = False
+65.7343 	EXP 	text_blank_T2_probe: autoDraw = True
+65.7684 	EXP 	Created sequence: sequential, trialTypes=1, nReps=12, seed=None
+65.7686 	EXP 	New trial (rep=0, index=0): None
+65.7842 	EXP 	text_blank_T2_probe: autoDraw = False
+65.7842 	EXP 	text_T2: autoDraw = False
+65.7842 	EXP 	text_blank_T2_probe: autoDraw = False
+65.7842 	EXP 	text_distr_T2: height = 0.05
+65.7842 	EXP 	text_distr_T2: height = 0.05
+65.7842 	EXP 	text_distr_T2: height = 0.05
+65.7842 	EXP 	text_distr_T2: text = 'NQZGKRL'
+65.7842 	EXP 	text_distr_T2: autoDraw = True
+65.8176 	EXP 	text_distr_T2: autoDraw = False
+65.8176 	EXP 	text_blank_distractors_T2: autoDraw = True
+65.8516 	EXP 	New trial (rep=1, index=0): None
+65.8677 	EXP 	text_blank_distractors_T2: autoDraw = False
+65.8677 	EXP 	text_distr_T2: autoDraw = False
+65.8677 	EXP 	text_blank_distractors_T2: autoDraw = False
+65.8677 	EXP 	text_distr_T2: height = 0.05
+65.8677 	EXP 	text_distr_T2: height = 0.05
+65.8677 	EXP 	text_distr_T2: height = 0.05
+65.8677 	EXP 	text_distr_T2: text = 'HDRFPGY'
+65.8677 	EXP 	text_distr_T2: autoDraw = True
+65.9009 	EXP 	text_distr_T2: autoDraw = False
+65.9009 	EXP 	text_blank_distractors_T2: autoDraw = True
+65.9348 	EXP 	New trial (rep=2, index=0): None
+65.9509 	EXP 	text_blank_distractors_T2: autoDraw = False
+65.9509 	EXP 	text_distr_T2: autoDraw = False
+65.9509 	EXP 	text_blank_distractors_T2: autoDraw = False
+65.9509 	EXP 	text_distr_T2: height = 0.05
+65.9509 	EXP 	text_distr_T2: height = 0.05
+65.9509 	EXP 	text_distr_T2: height = 0.05
+65.9509 	EXP 	text_distr_T2: text = 'QWPZCLT'
+65.9509 	EXP 	text_distr_T2: autoDraw = True
+65.9868 	EXP 	text_distr_T2: autoDraw = False
+65.9868 	EXP 	text_blank_distractors_T2: autoDraw = True
+66.0184 	EXP 	New trial (rep=3, index=0): None
+66.0342 	EXP 	text_blank_distractors_T2: autoDraw = False
+66.0342 	EXP 	text_distr_T2: autoDraw = False
+66.0342 	EXP 	text_blank_distractors_T2: autoDraw = False
+66.0342 	EXP 	text_distr_T2: height = 0.05
+66.0342 	EXP 	text_distr_T2: height = 0.05
+66.0342 	EXP 	text_distr_T2: height = 0.05
+66.0342 	EXP 	text_distr_T2: text = 'NLSRKMJ'
+66.0342 	EXP 	text_distr_T2: autoDraw = True
+66.0678 	EXP 	text_distr_T2: autoDraw = False
+66.0678 	EXP 	text_blank_distractors_T2: autoDraw = True
+66.1018 	EXP 	New trial (rep=4, index=0): None
+66.1176 	EXP 	text_blank_distractors_T2: autoDraw = False
+66.1176 	EXP 	text_distr_T2: autoDraw = False
+66.1176 	EXP 	text_blank_distractors_T2: autoDraw = False
+66.1176 	EXP 	text_distr_T2: height = 0.05
+66.1176 	EXP 	text_distr_T2: height = 0.05
+66.1176 	EXP 	text_distr_T2: height = 0.05
+66.1176 	EXP 	text_distr_T2: text = 'BMTDRKQ'
+66.1176 	EXP 	text_distr_T2: autoDraw = True
+66.1512 	EXP 	text_distr_T2: autoDraw = False
+66.1512 	EXP 	text_blank_distractors_T2: autoDraw = True
+66.1852 	EXP 	New trial (rep=5, index=0): None
+66.2009 	EXP 	text_blank_distractors_T2: autoDraw = False
+66.2009 	EXP 	text_distr_T2: autoDraw = False
+66.2009 	EXP 	text_blank_distractors_T2: autoDraw = False
+66.2009 	EXP 	text_distr_T2: height = 0.05
+66.2009 	EXP 	text_distr_T2: height = 0.05
+66.2009 	EXP 	text_distr_T2: height = 0.05
+66.2009 	EXP 	text_distr_T2: text = 'WNVXZQF'
+66.2009 	EXP 	text_distr_T2: autoDraw = True
+66.2342 	EXP 	text_distr_T2: autoDraw = False
+66.2342 	EXP 	text_blank_distractors_T2: autoDraw = True
+66.2682 	EXP 	New trial (rep=6, index=0): None
+66.2843 	EXP 	text_blank_distractors_T2: autoDraw = False
+66.2843 	EXP 	text_distr_T2: autoDraw = False
+66.2843 	EXP 	text_blank_distractors_T2: autoDraw = False
+66.2843 	EXP 	text_distr_T2: height = 0.05
+66.2843 	EXP 	text_distr_T2: height = 0.05
+66.2843 	EXP 	text_distr_T2: height = 0.05
+66.2843 	EXP 	text_distr_T2: text = 'WDMLJGC'
+66.2843 	EXP 	text_distr_T2: autoDraw = True
+66.3176 	EXP 	text_distr_T2: autoDraw = False
+66.3176 	EXP 	text_blank_distractors_T2: autoDraw = True
+66.3515 	EXP 	New trial (rep=7, index=0): None
+66.3701 	EXP 	text_blank_distractors_T2: autoDraw = False
+66.3701 	EXP 	text_distr_T2: autoDraw = False
+66.3701 	EXP 	text_blank_distractors_T2: autoDraw = False
+66.3701 	EXP 	text_distr_T2: height = 0.05
+66.3701 	EXP 	text_distr_T2: height = 0.05
+66.3701 	EXP 	text_distr_T2: height = 0.05
+66.3701 	EXP 	text_distr_T2: text = 'GXJBNWP'
+66.3701 	EXP 	text_distr_T2: autoDraw = True
+66.4009 	EXP 	text_distr_T2: autoDraw = False
+66.4009 	EXP 	text_blank_distractors_T2: autoDraw = True
+66.4349 	EXP 	New trial (rep=8, index=0): None
+66.4509 	EXP 	text_blank_distractors_T2: autoDraw = False
+66.4509 	EXP 	text_distr_T2: autoDraw = False
+66.4509 	EXP 	text_blank_distractors_T2: autoDraw = False
+66.4509 	EXP 	text_distr_T2: height = 0.05
+66.4509 	EXP 	text_distr_T2: height = 0.05
+66.4509 	EXP 	text_distr_T2: height = 0.05
+66.4509 	EXP 	text_distr_T2: text = 'YQZHDGF'
+66.4509 	EXP 	text_distr_T2: autoDraw = True
+66.4843 	EXP 	text_distr_T2: autoDraw = False
+66.4843 	EXP 	text_blank_distractors_T2: autoDraw = True
+66.5347 	EXP 	text_blank_distractors_T2: autoDraw = False
+66.5347 	EXP 	text_distr_T2: autoDraw = False
+66.5347 	EXP 	text_blank_distractors_T2: autoDraw = False
+66.5347 	EXP 	blankT1_1: autoDraw = False
+66.5347 	EXP 	text_T1ask: autoDraw = False
+66.5347 	EXP 	blankT1_2: autoDraw = False
+66.5347 	EXP 	blankT2_1: autoDraw = True
+67.5177 	EXP 	text_T2ask: autoDraw = True
+67.5343 	EXP 	blankT2_1: autoDraw = False
+69.5178 	EXP 	text_T2ask: autoDraw = False
+69.5178 	EXP 	blankT2_2: autoDraw = True
+70.5021 	EXP 	New trial (rep=0, index=6): {'T0': 'LEAVE', 'T2': 'SHALLOW', 'T1': 8888888.0, 'lagT0': 7, 'lagT1': 1, 'lagT2': 12, 'responseT1': 'j', 'responseT2': 'j', 'related': 0}
+70.5178 	EXP 	blankT2_2: autoDraw = False
+70.5178 	EXP 	blankT2_1: autoDraw = False
+70.5178 	EXP 	text_T2ask: autoDraw = False
+70.5178 	EXP 	blankT2_2: autoDraw = False
+70.5178 	EXP 	context_word: height = 0.05
+70.5178 	EXP 	context_word: height = 0.05
+70.5178 	EXP 	context_word: height = 0.05
+70.5178 	EXP 	context_word: text = 'LEAVE'
+70.5178 	EXP 	context_word: autoDraw = True
+71.5179 	EXP 	context_word: autoDraw = False
+71.5179 	EXP 	blankContext: autoDraw = True
+72.5020 	EXP 	Created sequence: sequential, trialTypes=1, nReps=10, seed=None
+72.5022 	EXP 	New trial (rep=0, index=0): None
+72.5179 	EXP 	blankContext: autoDraw = False
+72.5179 	EXP 	context_word: autoDraw = False
+72.5179 	EXP 	blankContext: autoDraw = False
+72.5179 	EXP 	text_distr_T0: height = 0.05
+72.5179 	EXP 	text_distr_T0: height = 0.05
+72.5179 	EXP 	text_distr_T0: height = 0.05
+72.5179 	EXP 	text_distr_T0: text = 'LNGJWFC'
+72.5179 	EXP 	text_distr_T0: autoDraw = True
+72.5513 	EXP 	text_distr_T0: autoDraw = False
+72.5513 	EXP 	text_blank_distractors_T0: autoDraw = True
+72.5853 	EXP 	New trial (rep=1, index=0): None
+72.6013 	EXP 	text_blank_distractors_T0: autoDraw = False
+72.6013 	EXP 	text_distr_T0: autoDraw = False
+72.6013 	EXP 	text_blank_distractors_T0: autoDraw = False
+72.6013 	EXP 	text_distr_T0: height = 0.05
+72.6013 	EXP 	text_distr_T0: height = 0.05
+72.6013 	EXP 	text_distr_T0: height = 0.05
+72.6013 	EXP 	text_distr_T0: text = 'YWZSJFC'
+72.6013 	EXP 	text_distr_T0: autoDraw = True
+72.6347 	EXP 	text_distr_T0: autoDraw = False
+72.6347 	EXP 	text_blank_distractors_T0: autoDraw = True
+72.6686 	EXP 	New trial (rep=2, index=0): None
+72.6846 	EXP 	text_blank_distractors_T0: autoDraw = False
+72.6846 	EXP 	text_distr_T0: autoDraw = False
+72.6846 	EXP 	text_blank_distractors_T0: autoDraw = False
+72.6846 	EXP 	text_distr_T0: height = 0.05
+72.6846 	EXP 	text_distr_T0: height = 0.05
+72.6846 	EXP 	text_distr_T0: height = 0.05
+72.6846 	EXP 	text_distr_T0: text = 'BFKMRNQ'
+72.6846 	EXP 	text_distr_T0: autoDraw = True
+72.7179 	EXP 	text_distr_T0: autoDraw = False
+72.7179 	EXP 	text_blank_distractors_T0: autoDraw = True
+72.7521 	EXP 	New trial (rep=3, index=0): None
+72.7680 	EXP 	text_blank_distractors_T0: autoDraw = False
+72.7680 	EXP 	text_distr_T0: autoDraw = False
+72.7680 	EXP 	text_blank_distractors_T0: autoDraw = False
+72.7680 	EXP 	text_distr_T0: height = 0.05
+72.7680 	EXP 	text_distr_T0: height = 0.05
+72.7680 	EXP 	text_distr_T0: height = 0.05
+72.7680 	EXP 	text_distr_T0: text = 'ZXHMSBC'
+72.7680 	EXP 	text_distr_T0: autoDraw = True
+72.8014 	EXP 	text_distr_T0: autoDraw = False
+72.8014 	EXP 	text_blank_distractors_T0: autoDraw = True
+72.8355 	EXP 	New trial (rep=4, index=0): None
+72.8513 	EXP 	text_blank_distractors_T0: autoDraw = False
+72.8513 	EXP 	text_distr_T0: autoDraw = False
+72.8513 	EXP 	text_blank_distractors_T0: autoDraw = False
+72.8513 	EXP 	text_distr_T0: height = 0.05
+72.8513 	EXP 	text_distr_T0: height = 0.05
+72.8513 	EXP 	text_distr_T0: height = 0.05
+72.8513 	EXP 	text_distr_T0: text = 'VFLXDBR'
+72.8513 	EXP 	text_distr_T0: autoDraw = True
+72.8848 	EXP 	text_distr_T0: autoDraw = False
+72.8848 	EXP 	text_blank_distractors_T0: autoDraw = True
+72.9186 	EXP 	New trial (rep=5, index=0): None
+72.9346 	EXP 	text_blank_distractors_T0: autoDraw = False
+72.9346 	EXP 	text_distr_T0: autoDraw = False
+72.9346 	EXP 	text_blank_distractors_T0: autoDraw = False
+72.9346 	EXP 	text_distr_T0: height = 0.05
+72.9346 	EXP 	text_distr_T0: height = 0.05
+72.9346 	EXP 	text_distr_T0: height = 0.05
+72.9346 	EXP 	text_distr_T0: text = 'CWFZPHX'
+72.9346 	EXP 	text_distr_T0: autoDraw = True
+72.9681 	EXP 	text_distr_T0: autoDraw = False
+72.9681 	EXP 	text_blank_distractors_T0: autoDraw = True
+73.0179 	EXP 	text_blank_distractors_T0: autoDraw = False
+73.0179 	EXP 	text_distr_T0: autoDraw = False
+73.0179 	EXP 	text_blank_distractors_T0: autoDraw = False
+73.0179 	EXP 	text_T1: height = 0.05
+73.0179 	EXP 	text_T1: height = 0.05
+73.0179 	EXP 	text_T1: height = 0.05
+73.0179 	EXP 	text_T1: text = '8888888'
+73.0179 	EXP 	text_T1: autoDraw = True
+73.0517 	EXP 	text_T1: autoDraw = False
+73.0517 	EXP 	text_blank_number_T1: autoDraw = True
+73.0880 	EXP 	Created sequence: sequential, trialTypes=1, nReps=7, seed=None
+73.0881 	EXP 	New trial (rep=0, index=0): None
+73.1013 	EXP 	text_blank_number_T1: autoDraw = False
+73.1013 	EXP 	text_T1: autoDraw = False
+73.1013 	EXP 	text_blank_number_T1: autoDraw = False
+73.1013 	EXP 	text_distr_T1: height = 0.05
+73.1013 	EXP 	text_distr_T1: height = 0.05
+73.1013 	EXP 	text_distr_T1: height = 0.05
+73.1013 	EXP 	text_distr_T1: text = 'FZCRNBM'
+73.1013 	EXP 	text_distr_T1: autoDraw = False
+73.1013 	EXP 	text_blank_distractors_T1: autoDraw = False
+73.1013 	EXP 	text_T2: height = 0.05
+73.1013 	EXP 	text_T2: height = 0.05
+73.1013 	EXP 	text_T2: height = 0.05
+73.1013 	EXP 	text_T2: text = 'SHALLOW'
+73.1013 	EXP 	text_T2: autoDraw = True
+73.1347 	EXP 	text_T2: autoDraw = False
+73.1347 	EXP 	text_blank_T2_probe: autoDraw = True
+73.1689 	EXP 	Created sequence: sequential, trialTypes=1, nReps=12, seed=None
+73.1691 	EXP 	New trial (rep=0, index=0): None
+73.1846 	EXP 	text_blank_T2_probe: autoDraw = False
+73.1846 	EXP 	text_T2: autoDraw = False
+73.1846 	EXP 	text_blank_T2_probe: autoDraw = False
+73.1846 	EXP 	text_distr_T2: height = 0.05
+73.1846 	EXP 	text_distr_T2: height = 0.05
+73.1846 	EXP 	text_distr_T2: height = 0.05
+73.1846 	EXP 	text_distr_T2: text = 'FZCRNBM'
+73.1846 	EXP 	text_distr_T2: autoDraw = True
+73.2179 	EXP 	text_distr_T2: autoDraw = False
+73.2179 	EXP 	text_blank_distractors_T2: autoDraw = True
+73.2545 	EXP 	New trial (rep=1, index=0): None
+73.2679 	EXP 	text_blank_distractors_T2: autoDraw = False
+73.2679 	EXP 	text_distr_T2: autoDraw = False
+73.2679 	EXP 	text_blank_distractors_T2: autoDraw = False
+73.2679 	EXP 	text_distr_T2: height = 0.05
+73.2679 	EXP 	text_distr_T2: height = 0.05
+73.2679 	EXP 	text_distr_T2: height = 0.05
+73.2679 	EXP 	text_distr_T2: text = 'FGWQYNS'
+73.2679 	EXP 	text_distr_T2: autoDraw = True
+73.3014 	EXP 	text_distr_T2: autoDraw = False
+73.3014 	EXP 	text_blank_distractors_T2: autoDraw = True
+73.3354 	EXP 	New trial (rep=2, index=0): None
+73.3540 	EXP 	text_blank_distractors_T2: autoDraw = False
+73.3540 	EXP 	text_distr_T2: autoDraw = False
+73.3540 	EXP 	text_blank_distractors_T2: autoDraw = False
+73.3540 	EXP 	text_distr_T2: height = 0.05
+73.3540 	EXP 	text_distr_T2: height = 0.05
+73.3540 	EXP 	text_distr_T2: height = 0.05
+73.3540 	EXP 	text_distr_T2: text = 'GTHXZVB'
+73.3540 	EXP 	text_distr_T2: autoDraw = True
+73.3848 	EXP 	text_distr_T2: autoDraw = False
+73.3848 	EXP 	text_blank_distractors_T2: autoDraw = True
+73.4187 	EXP 	New trial (rep=3, index=0): None
+73.4347 	EXP 	text_blank_distractors_T2: autoDraw = False
+73.4347 	EXP 	text_distr_T2: autoDraw = False
+73.4347 	EXP 	text_blank_distractors_T2: autoDraw = False
+73.4347 	EXP 	text_distr_T2: height = 0.05
+73.4347 	EXP 	text_distr_T2: height = 0.05
+73.4347 	EXP 	text_distr_T2: height = 0.05
+73.4347 	EXP 	text_distr_T2: text = 'CKTXDLB'
+73.4347 	EXP 	text_distr_T2: autoDraw = True
+73.4681 	EXP 	text_distr_T2: autoDraw = False
+73.4681 	EXP 	text_blank_distractors_T2: autoDraw = True
+73.5021 	EXP 	New trial (rep=4, index=0): None
+73.5180 	EXP 	text_blank_distractors_T2: autoDraw = False
+73.5180 	EXP 	text_distr_T2: autoDraw = False
+73.5180 	EXP 	text_blank_distractors_T2: autoDraw = False
+73.5180 	EXP 	text_distr_T2: height = 0.05
+73.5180 	EXP 	text_distr_T2: height = 0.05
+73.5180 	EXP 	text_distr_T2: height = 0.05
+73.5180 	EXP 	text_distr_T2: text = 'QBGSHNP'
+73.5180 	EXP 	text_distr_T2: autoDraw = True
+73.5513 	EXP 	text_distr_T2: autoDraw = False
+73.5513 	EXP 	text_blank_distractors_T2: autoDraw = True
+73.5856 	EXP 	New trial (rep=5, index=0): None
+73.6013 	EXP 	text_blank_distractors_T2: autoDraw = False
+73.6013 	EXP 	text_distr_T2: autoDraw = False
+73.6013 	EXP 	text_blank_distractors_T2: autoDraw = False
+73.6013 	EXP 	text_distr_T2: height = 0.05
+73.6013 	EXP 	text_distr_T2: height = 0.05
+73.6013 	EXP 	text_distr_T2: height = 0.05
+73.6013 	EXP 	text_distr_T2: text = 'CBPQLJR'
+73.6013 	EXP 	text_distr_T2: autoDraw = True
+73.6347 	EXP 	text_distr_T2: autoDraw = False
+73.6347 	EXP 	text_blank_distractors_T2: autoDraw = True
+73.6712 	EXP 	New trial (rep=6, index=0): None
+73.6847 	EXP 	text_blank_distractors_T2: autoDraw = False
+73.6847 	EXP 	text_distr_T2: autoDraw = False
+73.6847 	EXP 	text_blank_distractors_T2: autoDraw = False
+73.6847 	EXP 	text_distr_T2: height = 0.05
+73.6847 	EXP 	text_distr_T2: height = 0.05
+73.6847 	EXP 	text_distr_T2: height = 0.05
+73.6847 	EXP 	text_distr_T2: text = 'YLGCDWM'
+73.6847 	EXP 	text_distr_T2: autoDraw = True
+73.7181 	EXP 	text_distr_T2: autoDraw = False
+73.7181 	EXP 	text_blank_distractors_T2: autoDraw = True
+73.7521 	EXP 	New trial (rep=7, index=0): None
+73.7680 	EXP 	text_blank_distractors_T2: autoDraw = False
+73.7680 	EXP 	text_distr_T2: autoDraw = False
+73.7680 	EXP 	text_blank_distractors_T2: autoDraw = False
+73.7680 	EXP 	text_distr_T2: height = 0.05
+73.7680 	EXP 	text_distr_T2: height = 0.05
+73.7680 	EXP 	text_distr_T2: height = 0.05
+73.7680 	EXP 	text_distr_T2: text = 'SPYTCXJ'
+73.7680 	EXP 	text_distr_T2: autoDraw = True
+73.8014 	EXP 	text_distr_T2: autoDraw = False
+73.8014 	EXP 	text_blank_distractors_T2: autoDraw = True
+73.8355 	EXP 	New trial (rep=8, index=0): None
+73.8514 	EXP 	text_blank_distractors_T2: autoDraw = False
+73.8514 	EXP 	text_distr_T2: autoDraw = False
+73.8514 	EXP 	text_blank_distractors_T2: autoDraw = False
+73.8514 	EXP 	text_distr_T2: height = 0.05
+73.8514 	EXP 	text_distr_T2: height = 0.05
+73.8514 	EXP 	text_distr_T2: height = 0.05
+73.8514 	EXP 	text_distr_T2: text = 'GZXSTNQ'
+73.8514 	EXP 	text_distr_T2: autoDraw = True
+73.8848 	EXP 	text_distr_T2: autoDraw = False
+73.8848 	EXP 	text_blank_distractors_T2: autoDraw = True
+73.9186 	EXP 	New trial (rep=9, index=0): None
+73.9347 	EXP 	text_blank_distractors_T2: autoDraw = False
+73.9347 	EXP 	text_distr_T2: autoDraw = False
+73.9347 	EXP 	text_blank_distractors_T2: autoDraw = False
+73.9347 	EXP 	text_distr_T2: height = 0.05
+73.9347 	EXP 	text_distr_T2: height = 0.05
+73.9347 	EXP 	text_distr_T2: height = 0.05
+73.9347 	EXP 	text_distr_T2: text = 'LKCDJVH'
+73.9347 	EXP 	text_distr_T2: autoDraw = True
+73.9680 	EXP 	text_distr_T2: autoDraw = False
+73.9680 	EXP 	text_blank_distractors_T2: autoDraw = True
+74.0022 	EXP 	New trial (rep=10, index=0): None
+74.0180 	EXP 	text_blank_distractors_T2: autoDraw = False
+74.0180 	EXP 	text_distr_T2: autoDraw = False
+74.0180 	EXP 	text_blank_distractors_T2: autoDraw = False
+74.0180 	EXP 	text_distr_T2: height = 0.05
+74.0180 	EXP 	text_distr_T2: height = 0.05
+74.0180 	EXP 	text_distr_T2: height = 0.05
+74.0180 	EXP 	text_distr_T2: text = 'CZPNKDV'
+74.0180 	EXP 	text_distr_T2: autoDraw = True
+74.0515 	EXP 	text_distr_T2: autoDraw = False
+74.0515 	EXP 	text_blank_distractors_T2: autoDraw = True
+74.0853 	EXP 	New trial (rep=11, index=0): None
+74.1017 	EXP 	text_blank_distractors_T2: autoDraw = False
+74.1017 	EXP 	text_distr_T2: autoDraw = False
+74.1017 	EXP 	text_blank_distractors_T2: autoDraw = False
+74.1017 	EXP 	text_distr_T2: height = 0.05
+74.1017 	EXP 	text_distr_T2: height = 0.05
+74.1017 	EXP 	text_distr_T2: height = 0.05
+74.1017 	EXP 	text_distr_T2: text = 'HYZQFSX'
+74.1017 	EXP 	text_distr_T2: autoDraw = True
+74.1347 	EXP 	text_distr_T2: autoDraw = False
+74.1347 	EXP 	text_blank_distractors_T2: autoDraw = True
+74.1847 	EXP 	text_blank_distractors_T2: autoDraw = False
+74.1847 	EXP 	text_distr_T2: autoDraw = False
+74.1847 	EXP 	text_blank_distractors_T2: autoDraw = False
+74.1847 	EXP 	blankT1_1: autoDraw = False
+74.1847 	EXP 	text_T1ask: autoDraw = False
+74.1847 	EXP 	blankT1_2: autoDraw = False
+74.1847 	EXP 	blankT2_1: autoDraw = True
+75.1683 	EXP 	text_T2ask: autoDraw = True
+75.1850 	EXP 	blankT2_1: autoDraw = False
+77.1682 	EXP 	text_T2ask: autoDraw = False
+77.1682 	EXP 	blankT2_2: autoDraw = True
+78.1523 	EXP 	New trial (rep=0, index=7): {'T0': 'PLUS', 'T2': 'XXDAWNX', 'T1': 5555555.0, 'lagT0': 7, 'lagT1': 7, 'lagT2': 6, 'responseT1': 'f', 'responseT2': 'j', 'related': 0}
+78.1684 	EXP 	blankT2_2: autoDraw = False
+78.1684 	EXP 	blankT2_1: autoDraw = False
+78.1684 	EXP 	text_T2ask: autoDraw = False
+78.1684 	EXP 	blankT2_2: autoDraw = False
+78.1684 	EXP 	context_word: height = 0.05
+78.1684 	EXP 	context_word: height = 0.05
+78.1684 	EXP 	context_word: height = 0.05
+78.1684 	EXP 	context_word: text = 'PLUS'
+78.1684 	EXP 	context_word: autoDraw = True
+79.1684 	EXP 	context_word: autoDraw = False
+79.1684 	EXP 	blankContext: autoDraw = True
+80.1524 	EXP 	Created sequence: sequential, trialTypes=1, nReps=10, seed=None
+80.1526 	EXP 	New trial (rep=0, index=0): None
+80.1685 	EXP 	blankContext: autoDraw = False
+80.1685 	EXP 	context_word: autoDraw = False
+80.1685 	EXP 	blankContext: autoDraw = False
+80.1685 	EXP 	text_distr_T0: height = 0.05
+80.1685 	EXP 	text_distr_T0: height = 0.05
+80.1685 	EXP 	text_distr_T0: height = 0.05
+80.1685 	EXP 	text_distr_T0: text = 'YTRPNDK'
+80.1685 	EXP 	text_distr_T0: autoDraw = True
+80.2017 	EXP 	text_distr_T0: autoDraw = False
+80.2017 	EXP 	text_blank_distractors_T0: autoDraw = True
+80.2382 	EXP 	New trial (rep=1, index=0): None
+80.2517 	EXP 	text_blank_distractors_T0: autoDraw = False
+80.2517 	EXP 	text_distr_T0: autoDraw = False
+80.2517 	EXP 	text_blank_distractors_T0: autoDraw = False
+80.2517 	EXP 	text_distr_T0: height = 0.05
+80.2517 	EXP 	text_distr_T0: height = 0.05
+80.2517 	EXP 	text_distr_T0: height = 0.05
+80.2517 	EXP 	text_distr_T0: text = 'XKQNPCD'
+80.2517 	EXP 	text_distr_T0: autoDraw = True
+80.2851 	EXP 	text_distr_T0: autoDraw = False
+80.2851 	EXP 	text_blank_distractors_T0: autoDraw = True
+80.3190 	EXP 	New trial (rep=2, index=0): None
+80.3352 	EXP 	text_blank_distractors_T0: autoDraw = False
+80.3352 	EXP 	text_distr_T0: autoDraw = False
+80.3352 	EXP 	text_blank_distractors_T0: autoDraw = False
+80.3352 	EXP 	text_distr_T0: height = 0.05
+80.3352 	EXP 	text_distr_T0: height = 0.05
+80.3352 	EXP 	text_distr_T0: height = 0.05
+80.3352 	EXP 	text_distr_T0: text = 'TCJGRBM'
+80.3352 	EXP 	text_distr_T0: autoDraw = True
+80.3684 	EXP 	text_distr_T0: autoDraw = False
+80.3684 	EXP 	text_blank_distractors_T0: autoDraw = True
+80.4024 	EXP 	New trial (rep=3, index=0): None
+80.4184 	EXP 	text_blank_distractors_T0: autoDraw = False
+80.4184 	EXP 	text_distr_T0: autoDraw = False
+80.4184 	EXP 	text_blank_distractors_T0: autoDraw = False
+80.4184 	EXP 	text_distr_T0: height = 0.05
+80.4184 	EXP 	text_distr_T0: height = 0.05
+80.4184 	EXP 	text_distr_T0: height = 0.05
+80.4184 	EXP 	text_distr_T0: text = 'SLGHYPX'
+80.4184 	EXP 	text_distr_T0: autoDraw = True
+80.4517 	EXP 	text_distr_T0: autoDraw = False
+80.4517 	EXP 	text_blank_distractors_T0: autoDraw = True
+80.4883 	EXP 	New trial (rep=4, index=0): None
+80.5018 	EXP 	text_blank_distractors_T0: autoDraw = False
+80.5018 	EXP 	text_distr_T0: autoDraw = False
+80.5018 	EXP 	text_blank_distractors_T0: autoDraw = False
+80.5018 	EXP 	text_distr_T0: height = 0.05
+80.5018 	EXP 	text_distr_T0: height = 0.05
+80.5018 	EXP 	text_distr_T0: height = 0.05
+80.5018 	EXP 	text_distr_T0: text = 'XDSLCBT'
+80.5018 	EXP 	text_distr_T0: autoDraw = True
+80.5352 	EXP 	text_distr_T0: autoDraw = False
+80.5352 	EXP 	text_blank_distractors_T0: autoDraw = True
+80.5716 	EXP 	New trial (rep=5, index=0): None
+80.5850 	EXP 	text_blank_distractors_T0: autoDraw = False
+80.5850 	EXP 	text_distr_T0: autoDraw = False
+80.5850 	EXP 	text_blank_distractors_T0: autoDraw = False
+80.5850 	EXP 	text_distr_T0: height = 0.05
+80.5850 	EXP 	text_distr_T0: height = 0.05
+80.5850 	EXP 	text_distr_T0: height = 0.05
+80.5850 	EXP 	text_distr_T0: text = 'SZWMQBT'
+80.5850 	EXP 	text_distr_T0: autoDraw = True
+80.6185 	EXP 	text_distr_T0: autoDraw = False
+80.6185 	EXP 	text_blank_distractors_T0: autoDraw = True
+80.6686 	EXP 	text_blank_distractors_T0: autoDraw = False
+80.6686 	EXP 	text_distr_T0: autoDraw = False
+80.6686 	EXP 	text_blank_distractors_T0: autoDraw = False
+80.6686 	EXP 	text_T1: height = 0.05
+80.6686 	EXP 	text_T1: height = 0.05
+80.6686 	EXP 	text_T1: height = 0.05
+80.6686 	EXP 	text_T1: text = '5555555'
+80.6686 	EXP 	text_T1: autoDraw = True
+80.7017 	EXP 	text_T1: autoDraw = False
+80.7017 	EXP 	text_blank_number_T1: autoDraw = True
+80.7384 	EXP 	Created sequence: sequential, trialTypes=1, nReps=7, seed=None
+80.7385 	EXP 	New trial (rep=0, index=0): None
+80.7518 	EXP 	text_blank_number_T1: autoDraw = False
+80.7518 	EXP 	text_T1: autoDraw = False
+80.7518 	EXP 	text_blank_number_T1: autoDraw = False
+80.7518 	EXP 	text_distr_T1: height = 0.05
+80.7518 	EXP 	text_distr_T1: height = 0.05
+80.7518 	EXP 	text_distr_T1: height = 0.05
+80.7518 	EXP 	text_distr_T1: text = 'ZCWVJRL'
+80.7518 	EXP 	text_distr_T1: autoDraw = True
+80.7851 	EXP 	text_distr_T1: autoDraw = False
+80.7851 	EXP 	text_blank_distractors_T1: autoDraw = True
+80.8190 	EXP 	New trial (rep=1, index=0): None
+80.8351 	EXP 	text_blank_distractors_T1: autoDraw = False
+80.8351 	EXP 	text_distr_T1: autoDraw = False
+80.8351 	EXP 	text_blank_distractors_T1: autoDraw = False
+80.8351 	EXP 	text_distr_T1: height = 0.05
+80.8351 	EXP 	text_distr_T1: height = 0.05
+80.8351 	EXP 	text_distr_T1: height = 0.05
+80.8351 	EXP 	text_distr_T1: text = 'YCGTRZK'
+80.8351 	EXP 	text_distr_T1: autoDraw = True
+80.8684 	EXP 	text_distr_T1: autoDraw = False
+80.8684 	EXP 	text_blank_distractors_T1: autoDraw = True
+80.9024 	EXP 	New trial (rep=2, index=0): None
+80.9184 	EXP 	text_blank_distractors_T1: autoDraw = False
+80.9184 	EXP 	text_distr_T1: autoDraw = False
+80.9184 	EXP 	text_blank_distractors_T1: autoDraw = False
+80.9184 	EXP 	text_distr_T1: height = 0.05
+80.9184 	EXP 	text_distr_T1: height = 0.05
+80.9184 	EXP 	text_distr_T1: height = 0.05
+80.9184 	EXP 	text_distr_T1: text = 'DZCGTKS'
+80.9184 	EXP 	text_distr_T1: autoDraw = True
+80.9517 	EXP 	text_distr_T1: autoDraw = False
+80.9517 	EXP 	text_blank_distractors_T1: autoDraw = True
+80.9858 	EXP 	New trial (rep=3, index=0): None
+81.0018 	EXP 	text_blank_distractors_T1: autoDraw = False
+81.0018 	EXP 	text_distr_T1: autoDraw = False
+81.0018 	EXP 	text_blank_distractors_T1: autoDraw = False
+81.0018 	EXP 	text_distr_T1: height = 0.05
+81.0018 	EXP 	text_distr_T1: height = 0.05
+81.0018 	EXP 	text_distr_T1: height = 0.05
+81.0018 	EXP 	text_distr_T1: text = 'JGHRCZT'
+81.0018 	EXP 	text_distr_T1: autoDraw = True
+81.0351 	EXP 	text_distr_T1: autoDraw = False
+81.0351 	EXP 	text_blank_distractors_T1: autoDraw = True
+81.0692 	EXP 	New trial (rep=4, index=0): None
+81.0851 	EXP 	text_blank_distractors_T1: autoDraw = False
+81.0851 	EXP 	text_distr_T1: autoDraw = False
+81.0851 	EXP 	text_blank_distractors_T1: autoDraw = False
+81.0851 	EXP 	text_distr_T1: height = 0.05
+81.0851 	EXP 	text_distr_T1: height = 0.05
+81.0851 	EXP 	text_distr_T1: height = 0.05
+81.0851 	EXP 	text_distr_T1: text = 'CYPLBJH'
+81.0851 	EXP 	text_distr_T1: autoDraw = True
+81.1184 	EXP 	text_distr_T1: autoDraw = False
+81.1184 	EXP 	text_blank_distractors_T1: autoDraw = True
+81.1523 	EXP 	New trial (rep=5, index=0): None
+81.1685 	EXP 	text_blank_distractors_T1: autoDraw = False
+81.1685 	EXP 	text_distr_T1: autoDraw = False
+81.1685 	EXP 	text_blank_distractors_T1: autoDraw = False
+81.1685 	EXP 	text_distr_T1: height = 0.05
+81.1685 	EXP 	text_distr_T1: height = 0.05
+81.1685 	EXP 	text_distr_T1: height = 0.05
+81.1685 	EXP 	text_distr_T1: text = 'WLPKVSB'
+81.1685 	EXP 	text_distr_T1: autoDraw = True
+81.2019 	EXP 	text_distr_T1: autoDraw = False
+81.2019 	EXP 	text_blank_distractors_T1: autoDraw = True
+81.2517 	EXP 	text_blank_distractors_T1: autoDraw = False
+81.2517 	EXP 	text_distr_T1: autoDraw = False
+81.2517 	EXP 	text_blank_distractors_T1: autoDraw = False
+81.2517 	EXP 	text_T2: height = 0.05
+81.2517 	EXP 	text_T2: height = 0.05
+81.2517 	EXP 	text_T2: height = 0.05
+81.2517 	EXP 	text_T2: text = 'XXDAWNX'
+81.2517 	EXP 	text_T2: autoDraw = True
+81.2852 	EXP 	text_T2: autoDraw = False
+81.2852 	EXP 	text_blank_T2_probe: autoDraw = True
+81.3191 	EXP 	Created sequence: sequential, trialTypes=1, nReps=12, seed=None
+81.3193 	EXP 	New trial (rep=0, index=0): None
+81.3351 	EXP 	text_blank_T2_probe: autoDraw = False
+81.3351 	EXP 	text_T2: autoDraw = False
+81.3351 	EXP 	text_blank_T2_probe: autoDraw = False
+81.3351 	EXP 	text_distr_T2: height = 0.05
+81.3351 	EXP 	text_distr_T2: height = 0.05
+81.3351 	EXP 	text_distr_T2: height = 0.05
+81.3351 	EXP 	text_distr_T2: text = 'WLPKVSB'
+81.3351 	EXP 	text_distr_T2: autoDraw = True
+81.3685 	EXP 	text_distr_T2: autoDraw = False
+81.3685 	EXP 	text_blank_distractors_T2: autoDraw = True
+81.4050 	EXP 	New trial (rep=1, index=0): None
+81.4185 	EXP 	text_blank_distractors_T2: autoDraw = False
+81.4185 	EXP 	text_distr_T2: autoDraw = False
+81.4185 	EXP 	text_blank_distractors_T2: autoDraw = False
+81.4185 	EXP 	text_distr_T2: height = 0.05
+81.4185 	EXP 	text_distr_T2: height = 0.05
+81.4185 	EXP 	text_distr_T2: height = 0.05
+81.4185 	EXP 	text_distr_T2: text = 'QFVCYKJ'
+81.4185 	EXP 	text_distr_T2: autoDraw = True
+81.4518 	EXP 	text_distr_T2: autoDraw = False
+81.4518 	EXP 	text_blank_distractors_T2: autoDraw = True
+81.4859 	EXP 	New trial (rep=2, index=0): None
+81.5018 	EXP 	text_blank_distractors_T2: autoDraw = False
+81.5018 	EXP 	text_distr_T2: autoDraw = False
+81.5018 	EXP 	text_blank_distractors_T2: autoDraw = False
+81.5018 	EXP 	text_distr_T2: height = 0.05
+81.5018 	EXP 	text_distr_T2: height = 0.05
+81.5018 	EXP 	text_distr_T2: height = 0.05
+81.5018 	EXP 	text_distr_T2: text = 'CDMRVBX'
+81.5018 	EXP 	text_distr_T2: autoDraw = True
+81.5354 	EXP 	text_distr_T2: autoDraw = False
+81.5354 	EXP 	text_blank_distractors_T2: autoDraw = True
+81.5692 	EXP 	New trial (rep=3, index=0): None
+81.5851 	EXP 	text_blank_distractors_T2: autoDraw = False
+81.5851 	EXP 	text_distr_T2: autoDraw = False
+81.5851 	EXP 	text_blank_distractors_T2: autoDraw = False
+81.5851 	EXP 	text_distr_T2: height = 0.05
+81.5851 	EXP 	text_distr_T2: height = 0.05
+81.5851 	EXP 	text_distr_T2: height = 0.05
+81.5851 	EXP 	text_distr_T2: text = 'WDVYPQT'
+81.5851 	EXP 	text_distr_T2: autoDraw = True
+81.6184 	EXP 	text_distr_T2: autoDraw = False
+81.6184 	EXP 	text_blank_distractors_T2: autoDraw = True
+81.6525 	EXP 	New trial (rep=4, index=0): None
+81.6686 	EXP 	text_blank_distractors_T2: autoDraw = False
+81.6686 	EXP 	text_distr_T2: autoDraw = False
+81.6686 	EXP 	text_blank_distractors_T2: autoDraw = False
+81.6686 	EXP 	text_distr_T2: height = 0.05
+81.6686 	EXP 	text_distr_T2: height = 0.05
+81.6686 	EXP 	text_distr_T2: height = 0.05
+81.6686 	EXP 	text_distr_T2: text = 'WPRGZXV'
+81.6686 	EXP 	text_distr_T2: autoDraw = True
+81.7020 	EXP 	text_distr_T2: autoDraw = False
+81.7020 	EXP 	text_blank_distractors_T2: autoDraw = True
+81.7382 	EXP 	New trial (rep=5, index=0): None
+81.7519 	EXP 	text_blank_distractors_T2: autoDraw = False
+81.7519 	EXP 	text_distr_T2: autoDraw = False
+81.7519 	EXP 	text_blank_distractors_T2: autoDraw = False
+81.7519 	EXP 	text_distr_T2: height = 0.05
+81.7519 	EXP 	text_distr_T2: height = 0.05
+81.7519 	EXP 	text_distr_T2: height = 0.05
+81.7519 	EXP 	text_distr_T2: text = 'WNLZFTR'
+81.7519 	EXP 	text_distr_T2: autoDraw = True
+81.7852 	EXP 	text_distr_T2: autoDraw = False
+81.7852 	EXP 	text_blank_distractors_T2: autoDraw = True
+81.8354 	EXP 	text_blank_distractors_T2: autoDraw = False
+81.8354 	EXP 	text_distr_T2: autoDraw = False
+81.8354 	EXP 	text_blank_distractors_T2: autoDraw = False
+81.8354 	EXP 	blankT1_1: autoDraw = False
+81.8354 	EXP 	text_T1ask: autoDraw = False
+81.8354 	EXP 	blankT1_2: autoDraw = False
+81.8354 	EXP 	blankT2_1: autoDraw = True
+82.8185 	EXP 	text_T2ask: autoDraw = True
+82.8353 	EXP 	blankT2_1: autoDraw = False
+84.8189 	EXP 	text_T2ask: autoDraw = False
+84.8189 	EXP 	blankT2_2: autoDraw = True
+85.8028 	EXP 	New trial (rep=0, index=8): {'T0': 'MINUTE', 'T2': 'XOLDERX', 'T1': 5555555.0, 'lagT0': 10, 'lagT1': 1, 'lagT2': 9, 'responseT1': 'f', 'responseT2': 'j', 'related': 0}
+85.8187 	EXP 	blankT2_2: autoDraw = False
+85.8187 	EXP 	blankT2_1: autoDraw = False
+85.8187 	EXP 	text_T2ask: autoDraw = False
+85.8187 	EXP 	blankT2_2: autoDraw = False
+85.8187 	EXP 	context_word: height = 0.05
+85.8187 	EXP 	context_word: height = 0.05
+85.8187 	EXP 	context_word: height = 0.05
+85.8187 	EXP 	context_word: text = 'MINUTE'
+85.8187 	EXP 	context_word: autoDraw = True
+86.8021 	EXP 	blankContext: autoDraw = True
+86.8187 	EXP 	context_word: autoDraw = False
+87.7886 	EXP 	Created sequence: sequential, trialTypes=1, nReps=10, seed=None
+87.7888 	EXP 	New trial (rep=0, index=0): None
+87.8021 	EXP 	blankContext: autoDraw = False
+87.8021 	EXP 	context_word: autoDraw = False
+87.8021 	EXP 	blankContext: autoDraw = False
+87.8021 	EXP 	text_distr_T0: height = 0.05
+87.8021 	EXP 	text_distr_T0: height = 0.05
+87.8021 	EXP 	text_distr_T0: height = 0.05
+87.8021 	EXP 	text_distr_T0: text = 'XZKJSNR'
+87.8021 	EXP 	text_distr_T0: autoDraw = True
+87.8355 	EXP 	text_distr_T0: autoDraw = False
+87.8355 	EXP 	text_blank_distractors_T0: autoDraw = True
+87.8697 	EXP 	New trial (rep=1, index=0): None
+87.8855 	EXP 	text_blank_distractors_T0: autoDraw = False
+87.8855 	EXP 	text_distr_T0: autoDraw = False
+87.8855 	EXP 	text_blank_distractors_T0: autoDraw = False
+87.8855 	EXP 	text_distr_T0: height = 0.05
+87.8855 	EXP 	text_distr_T0: height = 0.05
+87.8855 	EXP 	text_distr_T0: height = 0.05
+87.8855 	EXP 	text_distr_T0: text = 'NKTWZFR'
+87.8855 	EXP 	text_distr_T0: autoDraw = True
+87.9188 	EXP 	text_distr_T0: autoDraw = False
+87.9188 	EXP 	text_blank_distractors_T0: autoDraw = True
+87.9530 	EXP 	New trial (rep=2, index=0): None
+87.9688 	EXP 	text_blank_distractors_T0: autoDraw = False
+87.9688 	EXP 	text_distr_T0: autoDraw = False
+87.9688 	EXP 	text_blank_distractors_T0: autoDraw = False
+87.9688 	EXP 	text_distr_T0: height = 0.05
+87.9688 	EXP 	text_distr_T0: height = 0.05
+87.9688 	EXP 	text_distr_T0: height = 0.05
+87.9688 	EXP 	text_distr_T0: text = 'YKLPQTF'
+87.9688 	EXP 	text_distr_T0: autoDraw = True
+88.0047 	EXP 	text_distr_T0: autoDraw = False
+88.0047 	EXP 	text_blank_distractors_T0: autoDraw = True
+88.0362 	EXP 	New trial (rep=3, index=0): None
+88.0521 	EXP 	text_blank_distractors_T0: autoDraw = False
+88.0521 	EXP 	text_distr_T0: autoDraw = False
+88.0521 	EXP 	text_blank_distractors_T0: autoDraw = False
+88.0521 	EXP 	text_distr_T0: height = 0.05
+88.0521 	EXP 	text_distr_T0: height = 0.05
+88.0521 	EXP 	text_distr_T0: height = 0.05
+88.0521 	EXP 	text_distr_T0: text = 'ZDPGRNB'
+88.0521 	EXP 	text_distr_T0: autoDraw = True
+88.0855 	EXP 	text_distr_T0: autoDraw = False
+88.0855 	EXP 	text_blank_distractors_T0: autoDraw = True
+88.1194 	EXP 	New trial (rep=4, index=0): None
+88.1355 	EXP 	text_blank_distractors_T0: autoDraw = False
+88.1355 	EXP 	text_distr_T0: autoDraw = False
+88.1355 	EXP 	text_blank_distractors_T0: autoDraw = False
+88.1355 	EXP 	text_distr_T0: height = 0.05
+88.1355 	EXP 	text_distr_T0: height = 0.05
+88.1355 	EXP 	text_distr_T0: height = 0.05
+88.1355 	EXP 	text_distr_T0: text = 'BPMHJXR'
+88.1355 	EXP 	text_distr_T0: autoDraw = True
+88.1689 	EXP 	text_distr_T0: autoDraw = False
+88.1689 	EXP 	text_blank_distractors_T0: autoDraw = True
+88.2054 	EXP 	New trial (rep=5, index=0): None
+88.2189 	EXP 	text_blank_distractors_T0: autoDraw = False
+88.2189 	EXP 	text_distr_T0: autoDraw = False
+88.2189 	EXP 	text_blank_distractors_T0: autoDraw = False
+88.2189 	EXP 	text_distr_T0: height = 0.05
+88.2189 	EXP 	text_distr_T0: height = 0.05
+88.2189 	EXP 	text_distr_T0: height = 0.05
+88.2189 	EXP 	text_distr_T0: text = 'NSFXBVP'
+88.2189 	EXP 	text_distr_T0: autoDraw = True
+88.2547 	EXP 	text_distr_T0: autoDraw = False
+88.2547 	EXP 	text_blank_distractors_T0: autoDraw = True
+88.2886 	EXP 	New trial (rep=6, index=0): None
+88.3022 	EXP 	text_blank_distractors_T0: autoDraw = False
+88.3022 	EXP 	text_distr_T0: autoDraw = False
+88.3022 	EXP 	text_blank_distractors_T0: autoDraw = False
+88.3022 	EXP 	text_distr_T0: height = 0.05
+88.3022 	EXP 	text_distr_T0: height = 0.05
+88.3022 	EXP 	text_distr_T0: height = 0.05
+88.3022 	EXP 	text_distr_T0: text = 'BVSHGFT'
+88.3022 	EXP 	text_distr_T0: autoDraw = True
+88.3356 	EXP 	text_distr_T0: autoDraw = False
+88.3356 	EXP 	text_blank_distractors_T0: autoDraw = True
+88.3696 	EXP 	New trial (rep=7, index=0): None
+88.3855 	EXP 	text_blank_distractors_T0: autoDraw = False
+88.3855 	EXP 	text_distr_T0: autoDraw = False
+88.3855 	EXP 	text_blank_distractors_T0: autoDraw = False
+88.3855 	EXP 	text_distr_T0: height = 0.05
+88.3855 	EXP 	text_distr_T0: height = 0.05
+88.3855 	EXP 	text_distr_T0: height = 0.05
+88.3855 	EXP 	text_distr_T0: text = 'HLWZCDV'
+88.3855 	EXP 	text_distr_T0: autoDraw = True
+88.4202 	EXP 	text_distr_T0: autoDraw = False
+88.4202 	EXP 	text_blank_distractors_T0: autoDraw = True
+88.4554 	EXP 	New trial (rep=8, index=0): None
+88.5248 	EXP 	text_blank_distractors_T0: autoDraw = False
+88.5248 	EXP 	text_distr_T0: autoDraw = False
+88.5248 	EXP 	text_blank_distractors_T0: autoDraw = False
+88.5248 	EXP 	text_distr_T0: height = 0.05
+88.5248 	EXP 	text_distr_T0: height = 0.05
+88.5248 	EXP 	text_distr_T0: height = 0.05
+88.5248 	EXP 	text_distr_T0: text = 'KBQVJMD'
+88.5248 	EXP 	text_distr_T0: autoDraw = True
+88.5523 	EXP 	text_distr_T0: autoDraw = False
+88.5523 	EXP 	text_blank_distractors_T0: autoDraw = True
+88.6022 	EXP 	text_blank_distractors_T0: autoDraw = False
+88.6022 	EXP 	text_distr_T0: autoDraw = False
+88.6022 	EXP 	text_blank_distractors_T0: autoDraw = False
+88.6022 	EXP 	text_T1: text = '5555555'
+88.6022 	EXP 	text_T1: autoDraw = True
+88.6355 	EXP 	text_T1: autoDraw = False
+88.6355 	EXP 	text_blank_number_T1: autoDraw = True
+88.6696 	EXP 	Created sequence: sequential, trialTypes=1, nReps=7, seed=None
+88.6697 	EXP 	New trial (rep=0, index=0): None
+88.6855 	EXP 	text_blank_number_T1: autoDraw = False
+88.6855 	EXP 	text_T1: autoDraw = False
+88.6855 	EXP 	text_blank_number_T1: autoDraw = False
+88.6855 	EXP 	text_distr_T1: height = 0.05
+88.6855 	EXP 	text_distr_T1: height = 0.05
+88.6855 	EXP 	text_distr_T1: height = 0.05
+88.6855 	EXP 	text_distr_T1: text = 'LYNCJBQ'
+88.6855 	EXP 	text_distr_T1: autoDraw = False
+88.6855 	EXP 	text_blank_distractors_T1: autoDraw = False
+88.6855 	EXP 	text_T2: height = 0.05
+88.6855 	EXP 	text_T2: height = 0.05
+88.6855 	EXP 	text_T2: height = 0.05
+88.6855 	EXP 	text_T2: text = 'XOLDERX'
+88.6855 	EXP 	text_T2: autoDraw = True
+88.7189 	EXP 	text_T2: autoDraw = False
+88.7189 	EXP 	text_blank_T2_probe: autoDraw = True
+88.7554 	EXP 	Created sequence: sequential, trialTypes=1, nReps=12, seed=None
+88.7555 	EXP 	New trial (rep=0, index=0): None
+88.7688 	EXP 	text_blank_T2_probe: autoDraw = False
+88.7688 	EXP 	text_T2: autoDraw = False
+88.7688 	EXP 	text_blank_T2_probe: autoDraw = False
+88.7688 	EXP 	text_distr_T2: height = 0.05
+88.7688 	EXP 	text_distr_T2: height = 0.05
+88.7688 	EXP 	text_distr_T2: height = 0.05
+88.7688 	EXP 	text_distr_T2: text = 'LYNCJBQ'
+88.7688 	EXP 	text_distr_T2: autoDraw = True
+88.8022 	EXP 	text_distr_T2: autoDraw = False
+88.8022 	EXP 	text_blank_distractors_T2: autoDraw = True
+88.8362 	EXP 	New trial (rep=1, index=0): None
+88.8523 	EXP 	text_blank_distractors_T2: autoDraw = False
+88.8523 	EXP 	text_distr_T2: autoDraw = False
+88.8523 	EXP 	text_blank_distractors_T2: autoDraw = False
+88.8523 	EXP 	text_distr_T2: height = 0.05
+88.8523 	EXP 	text_distr_T2: height = 0.05
+88.8523 	EXP 	text_distr_T2: height = 0.05
+88.8523 	EXP 	text_distr_T2: text = 'LJHGZPD'
+88.8523 	EXP 	text_distr_T2: autoDraw = True
+88.8856 	EXP 	text_distr_T2: autoDraw = False
+88.8856 	EXP 	text_blank_distractors_T2: autoDraw = True
+88.9195 	EXP 	New trial (rep=2, index=0): None
+88.9356 	EXP 	text_blank_distractors_T2: autoDraw = False
+88.9356 	EXP 	text_distr_T2: autoDraw = False
+88.9356 	EXP 	text_blank_distractors_T2: autoDraw = False
+88.9356 	EXP 	text_distr_T2: height = 0.05
+88.9356 	EXP 	text_distr_T2: height = 0.05
+88.9356 	EXP 	text_distr_T2: height = 0.05
+88.9356 	EXP 	text_distr_T2: text = 'WFRSTXZ'
+88.9356 	EXP 	text_distr_T2: autoDraw = True
+88.9689 	EXP 	text_distr_T2: autoDraw = False
+88.9689 	EXP 	text_blank_distractors_T2: autoDraw = True
+89.0029 	EXP 	New trial (rep=3, index=0): None
+89.0189 	EXP 	text_blank_distractors_T2: autoDraw = False
+89.0189 	EXP 	text_distr_T2: autoDraw = False
+89.0189 	EXP 	text_blank_distractors_T2: autoDraw = False
+89.0189 	EXP 	text_distr_T2: height = 0.05
+89.0189 	EXP 	text_distr_T2: height = 0.05
+89.0189 	EXP 	text_distr_T2: height = 0.05
+89.0189 	EXP 	text_distr_T2: text = 'FSGHWDX'
+89.0189 	EXP 	text_distr_T2: autoDraw = True
+89.0522 	EXP 	text_distr_T2: autoDraw = False
+89.0522 	EXP 	text_blank_distractors_T2: autoDraw = True
+89.0863 	EXP 	New trial (rep=4, index=0): None
+89.1022 	EXP 	text_blank_distractors_T2: autoDraw = False
+89.1022 	EXP 	text_distr_T2: autoDraw = False
+89.1022 	EXP 	text_blank_distractors_T2: autoDraw = False
+89.1022 	EXP 	text_distr_T2: height = 0.05
+89.1022 	EXP 	text_distr_T2: height = 0.05
+89.1022 	EXP 	text_distr_T2: height = 0.05
+89.1022 	EXP 	text_distr_T2: text = 'FRZNBYX'
+89.1022 	EXP 	text_distr_T2: autoDraw = True
+89.1355 	EXP 	text_distr_T2: autoDraw = False
+89.1355 	EXP 	text_blank_distractors_T2: autoDraw = True
+89.1719 	EXP 	New trial (rep=5, index=0): None
+89.1856 	EXP 	text_blank_distractors_T2: autoDraw = False
+89.1856 	EXP 	text_distr_T2: autoDraw = False
+89.1856 	EXP 	text_blank_distractors_T2: autoDraw = False
+89.1856 	EXP 	text_distr_T2: height = 0.05
+89.1856 	EXP 	text_distr_T2: height = 0.05
+89.1856 	EXP 	text_distr_T2: height = 0.05
+89.1856 	EXP 	text_distr_T2: text = 'LSDFPWB'
+89.1856 	EXP 	text_distr_T2: autoDraw = True
+89.2189 	EXP 	text_distr_T2: autoDraw = False
+89.2189 	EXP 	text_blank_distractors_T2: autoDraw = True
+89.2553 	EXP 	New trial (rep=6, index=0): None
+89.2689 	EXP 	text_blank_distractors_T2: autoDraw = False
+89.2689 	EXP 	text_distr_T2: autoDraw = False
+89.2689 	EXP 	text_blank_distractors_T2: autoDraw = False
+89.2689 	EXP 	text_distr_T2: height = 0.05
+89.2689 	EXP 	text_distr_T2: height = 0.05
+89.2689 	EXP 	text_distr_T2: height = 0.05
+89.2689 	EXP 	text_distr_T2: text = 'FJRLYCX'
+89.2689 	EXP 	text_distr_T2: autoDraw = True
+89.3022 	EXP 	text_distr_T2: autoDraw = False
+89.3022 	EXP 	text_blank_distractors_T2: autoDraw = True
+89.3389 	EXP 	New trial (rep=7, index=0): None
+89.3522 	EXP 	text_blank_distractors_T2: autoDraw = False
+89.3522 	EXP 	text_distr_T2: autoDraw = False
+89.3522 	EXP 	text_blank_distractors_T2: autoDraw = False
+89.3522 	EXP 	text_distr_T2: height = 0.05
+89.3522 	EXP 	text_distr_T2: height = 0.05
+89.3522 	EXP 	text_distr_T2: height = 0.05
+89.3522 	EXP 	text_distr_T2: text = 'SDTGXRZ'
+89.3522 	EXP 	text_distr_T2: autoDraw = True
+89.3882 	EXP 	text_distr_T2: autoDraw = False
+89.3882 	EXP 	text_blank_distractors_T2: autoDraw = True
+89.4201 	EXP 	New trial (rep=8, index=0): None
+89.4360 	EXP 	text_blank_distractors_T2: autoDraw = False
+89.4360 	EXP 	text_distr_T2: autoDraw = False
+89.4360 	EXP 	text_blank_distractors_T2: autoDraw = False
+89.4360 	EXP 	text_distr_T2: height = 0.05
+89.4360 	EXP 	text_distr_T2: height = 0.05
+89.4360 	EXP 	text_distr_T2: height = 0.05
+89.4360 	EXP 	text_distr_T2: text = 'RFKGNSV'
+89.4360 	EXP 	text_distr_T2: autoDraw = True
+89.4714 	EXP 	text_distr_T2: autoDraw = False
+89.4714 	EXP 	text_blank_distractors_T2: autoDraw = True
+89.5189 	EXP 	text_blank_distractors_T2: autoDraw = False
+89.5189 	EXP 	text_distr_T2: autoDraw = False
+89.5189 	EXP 	text_blank_distractors_T2: autoDraw = False
+89.5189 	EXP 	blankT1_1: autoDraw = False
+89.5189 	EXP 	text_T1ask: autoDraw = False
+89.5189 	EXP 	blankT1_2: autoDraw = False
+89.5189 	EXP 	blankT2_1: autoDraw = True
+90.5189 	EXP 	blankT2_1: autoDraw = False
+90.5189 	EXP 	text_T2ask: autoDraw = True
+92.5193 	EXP 	text_T2ask: autoDraw = False
+92.5193 	EXP 	blankT2_2: autoDraw = True
+93.5031 	EXP 	New trial (rep=0, index=9): {'T0': 'REPAIR', 'T2': 'XFALSEX', 'T1': 4444444.0, 'lagT0': 10, 'lagT1': 1, 'lagT2': 9, 'responseT1': 'j', 'responseT2': 'j', 'related': 0}
+93.5191 	EXP 	blankT2_2: autoDraw = False
+93.5191 	EXP 	blankT2_1: autoDraw = False
+93.5191 	EXP 	text_T2ask: autoDraw = False
+93.5191 	EXP 	blankT2_2: autoDraw = False
+93.5191 	EXP 	context_word: height = 0.05
+93.5191 	EXP 	context_word: height = 0.05
+93.5191 	EXP 	context_word: height = 0.05
+93.5191 	EXP 	context_word: text = 'REPAIR'
+93.5191 	EXP 	context_word: autoDraw = True
+94.5193 	EXP 	context_word: autoDraw = False
+94.5193 	EXP 	blankContext: autoDraw = True
+95.5054 	EXP 	Created sequence: sequential, trialTypes=1, nReps=10, seed=None
+95.5056 	EXP 	New trial (rep=0, index=0): None
+95.5192 	EXP 	context_word: autoDraw = False
+95.5192 	EXP 	blankContext: autoDraw = False
+95.5192 	EXP 	text_distr_T0: height = 0.05
+95.5192 	EXP 	text_distr_T0: height = 0.05
+95.5192 	EXP 	text_distr_T0: height = 0.05
+95.5192 	EXP 	text_distr_T0: text = 'BWDNVQZ'
+95.5192 	EXP 	text_distr_T0: autoDraw = True
+95.5526 	EXP 	text_distr_T0: autoDraw = False
+95.5526 	EXP 	text_blank_distractors_T0: autoDraw = True
+95.5866 	EXP 	New trial (rep=1, index=0): None
+95.6026 	EXP 	text_blank_distractors_T0: autoDraw = False
+95.6026 	EXP 	text_distr_T0: autoDraw = False
+95.6026 	EXP 	text_blank_distractors_T0: autoDraw = False
+95.6026 	EXP 	text_distr_T0: height = 0.05
+95.6026 	EXP 	text_distr_T0: height = 0.05
+95.6026 	EXP 	text_distr_T0: height = 0.05
+95.6026 	EXP 	text_distr_T0: text = 'YKRCWQS'
+95.6026 	EXP 	text_distr_T0: autoDraw = True
+95.6360 	EXP 	text_distr_T0: autoDraw = False
+95.6360 	EXP 	text_blank_distractors_T0: autoDraw = True
+95.6698 	EXP 	New trial (rep=2, index=0): None
+95.6859 	EXP 	text_blank_distractors_T0: autoDraw = False
+95.6859 	EXP 	text_distr_T0: autoDraw = False
+95.6859 	EXP 	text_blank_distractors_T0: autoDraw = False
+95.6859 	EXP 	text_distr_T0: height = 0.05
+95.6859 	EXP 	text_distr_T0: height = 0.05
+95.6859 	EXP 	text_distr_T0: height = 0.05
+95.6859 	EXP 	text_distr_T0: text = 'FKSBDGY'
+95.6859 	EXP 	text_distr_T0: autoDraw = True
+95.7192 	EXP 	text_distr_T0: autoDraw = False
+95.7192 	EXP 	text_blank_distractors_T0: autoDraw = True
+95.7532 	EXP 	New trial (rep=3, index=0): None
+95.7693 	EXP 	text_blank_distractors_T0: autoDraw = False
+95.7693 	EXP 	text_distr_T0: autoDraw = False
+95.7693 	EXP 	text_blank_distractors_T0: autoDraw = False
+95.7693 	EXP 	text_distr_T0: height = 0.05
+95.7693 	EXP 	text_distr_T0: height = 0.05
+95.7693 	EXP 	text_distr_T0: height = 0.05
+95.7693 	EXP 	text_distr_T0: text = 'HKFBWTD'
+95.7693 	EXP 	text_distr_T0: autoDraw = True
+95.8028 	EXP 	text_distr_T0: autoDraw = False
+95.8028 	EXP 	text_blank_distractors_T0: autoDraw = True
+95.8365 	EXP 	New trial (rep=4, index=0): None
+95.8529 	EXP 	text_blank_distractors_T0: autoDraw = False
+95.8529 	EXP 	text_distr_T0: autoDraw = False
+95.8529 	EXP 	text_blank_distractors_T0: autoDraw = False
+95.8529 	EXP 	text_distr_T0: height = 0.05
+95.8529 	EXP 	text_distr_T0: height = 0.05
+95.8529 	EXP 	text_distr_T0: height = 0.05
+95.8529 	EXP 	text_distr_T0: text = 'QFSTRZC'
+95.8529 	EXP 	text_distr_T0: autoDraw = True
+95.8859 	EXP 	text_distr_T0: autoDraw = False
+95.8859 	EXP 	text_blank_distractors_T0: autoDraw = True
+95.9201 	EXP 	New trial (rep=5, index=0): None
+95.9360 	EXP 	text_blank_distractors_T0: autoDraw = False
+95.9360 	EXP 	text_distr_T0: autoDraw = False
+95.9360 	EXP 	text_blank_distractors_T0: autoDraw = False
+95.9360 	EXP 	text_distr_T0: height = 0.05
+95.9360 	EXP 	text_distr_T0: height = 0.05
+95.9360 	EXP 	text_distr_T0: height = 0.05
+95.9360 	EXP 	text_distr_T0: text = 'KXSMNBL'
+95.9360 	EXP 	text_distr_T0: autoDraw = True
+95.9692 	EXP 	text_distr_T0: autoDraw = False
+95.9692 	EXP 	text_blank_distractors_T0: autoDraw = True
+96.0032 	EXP 	New trial (rep=6, index=0): None
+96.0193 	EXP 	text_blank_distractors_T0: autoDraw = False
+96.0193 	EXP 	text_distr_T0: autoDraw = False
+96.0193 	EXP 	text_blank_distractors_T0: autoDraw = False
+96.0193 	EXP 	text_distr_T0: height = 0.05
+96.0193 	EXP 	text_distr_T0: height = 0.05
+96.0193 	EXP 	text_distr_T0: height = 0.05
+96.0193 	EXP 	text_distr_T0: text = 'HJYWRSD'
+96.0193 	EXP 	text_distr_T0: autoDraw = True
+96.0527 	EXP 	text_distr_T0: autoDraw = False
+96.0527 	EXP 	text_blank_distractors_T0: autoDraw = True
+96.0868 	EXP 	New trial (rep=7, index=0): None
+96.1027 	EXP 	text_blank_distractors_T0: autoDraw = False
+96.1027 	EXP 	text_distr_T0: autoDraw = False
+96.1027 	EXP 	text_blank_distractors_T0: autoDraw = False
+96.1027 	EXP 	text_distr_T0: height = 0.05
+96.1027 	EXP 	text_distr_T0: height = 0.05
+96.1027 	EXP 	text_distr_T0: height = 0.05
+96.1027 	EXP 	text_distr_T0: text = 'TWMRQNZ'
+96.1027 	EXP 	text_distr_T0: autoDraw = True
+96.1384 	EXP 	text_distr_T0: autoDraw = False
+96.1384 	EXP 	text_blank_distractors_T0: autoDraw = True
+96.1724 	EXP 	New trial (rep=8, index=0): None
+96.1860 	EXP 	text_blank_distractors_T0: autoDraw = False
+96.1860 	EXP 	text_distr_T0: autoDraw = False
+96.1860 	EXP 	text_blank_distractors_T0: autoDraw = False
+96.1860 	EXP 	text_distr_T0: height = 0.05
+96.1860 	EXP 	text_distr_T0: height = 0.05
+96.1860 	EXP 	text_distr_T0: height = 0.05
+96.1860 	EXP 	text_distr_T0: text = 'ZVTJKNP'
+96.1860 	EXP 	text_distr_T0: autoDraw = True
+96.2193 	EXP 	text_distr_T0: autoDraw = False
+96.2193 	EXP 	text_blank_distractors_T0: autoDraw = True
+96.2693 	EXP 	text_blank_distractors_T0: autoDraw = False
+96.2693 	EXP 	text_distr_T0: autoDraw = False
+96.2693 	EXP 	text_blank_distractors_T0: autoDraw = False
+96.2693 	EXP 	text_T1: height = 0.05
+96.2693 	EXP 	text_T1: height = 0.05
+96.2693 	EXP 	text_T1: height = 0.05
+96.2693 	EXP 	text_T1: text = '4444444'
+96.2693 	EXP 	text_T1: autoDraw = True
+96.3026 	EXP 	text_T1: autoDraw = False
+96.3026 	EXP 	text_blank_number_T1: autoDraw = True
+96.3392 	EXP 	Created sequence: sequential, trialTypes=1, nReps=7, seed=None
+96.3393 	EXP 	New trial (rep=0, index=0): None
+96.3527 	EXP 	text_blank_number_T1: autoDraw = False
+96.3527 	EXP 	text_T1: autoDraw = False
+96.3527 	EXP 	text_blank_number_T1: autoDraw = False
+96.3527 	EXP 	text_distr_T1: height = 0.05
+96.3527 	EXP 	text_distr_T1: height = 0.05
+96.3527 	EXP 	text_distr_T1: height = 0.05
+96.3527 	EXP 	text_distr_T1: text = 'TFNCLSY'
+96.3527 	EXP 	text_distr_T1: autoDraw = False
+96.3527 	EXP 	text_blank_distractors_T1: autoDraw = False
+96.3527 	EXP 	text_T2: height = 0.05
+96.3527 	EXP 	text_T2: height = 0.05
+96.3527 	EXP 	text_T2: height = 0.05
+96.3527 	EXP 	text_T2: text = 'XFALSEX'
+96.3527 	EXP 	text_T2: autoDraw = True
+96.3862 	EXP 	text_T2: autoDraw = False
+96.3862 	EXP 	text_blank_T2_probe: autoDraw = True
+96.4199 	EXP 	Created sequence: sequential, trialTypes=1, nReps=12, seed=None
+96.4201 	EXP 	New trial (rep=0, index=0): None
+96.4359 	EXP 	text_blank_T2_probe: autoDraw = False
+96.4359 	EXP 	text_T2: autoDraw = False
+96.4359 	EXP 	text_blank_T2_probe: autoDraw = False
+96.4359 	EXP 	text_distr_T2: height = 0.05
+96.4359 	EXP 	text_distr_T2: height = 0.05
+96.4359 	EXP 	text_distr_T2: height = 0.05
+96.4359 	EXP 	text_distr_T2: text = 'TFNCLSY'
+96.4359 	EXP 	text_distr_T2: autoDraw = True
+96.4693 	EXP 	text_distr_T2: autoDraw = False
+96.4693 	EXP 	text_blank_distractors_T2: autoDraw = True
+96.5058 	EXP 	New trial (rep=1, index=0): None
+96.5193 	EXP 	text_blank_distractors_T2: autoDraw = False
+96.5193 	EXP 	text_distr_T2: autoDraw = False
+96.5193 	EXP 	text_blank_distractors_T2: autoDraw = False
+96.5193 	EXP 	text_distr_T2: height = 0.05
+96.5193 	EXP 	text_distr_T2: height = 0.05
+96.5193 	EXP 	text_distr_T2: height = 0.05
+96.5193 	EXP 	text_distr_T2: text = 'XVMPBZK'
+96.5193 	EXP 	text_distr_T2: autoDraw = True
+96.5527 	EXP 	text_distr_T2: autoDraw = False
+96.5527 	EXP 	text_blank_distractors_T2: autoDraw = True
+96.5868 	EXP 	New trial (rep=2, index=0): None
+96.6026 	EXP 	text_blank_distractors_T2: autoDraw = False
+96.6026 	EXP 	text_distr_T2: autoDraw = False
+96.6026 	EXP 	text_blank_distractors_T2: autoDraw = False
+96.6026 	EXP 	text_distr_T2: height = 0.05
+96.6026 	EXP 	text_distr_T2: height = 0.05
+96.6026 	EXP 	text_distr_T2: height = 0.05
+96.6026 	EXP 	text_distr_T2: text = 'KQJBHZR'
+96.6026 	EXP 	text_distr_T2: autoDraw = True
+96.6360 	EXP 	text_distr_T2: autoDraw = False
+96.6360 	EXP 	text_blank_distractors_T2: autoDraw = True
+96.6724 	EXP 	New trial (rep=3, index=0): None
+96.6860 	EXP 	text_blank_distractors_T2: autoDraw = False
+96.6860 	EXP 	text_distr_T2: autoDraw = False
+96.6860 	EXP 	text_blank_distractors_T2: autoDraw = False
+96.6860 	EXP 	text_distr_T2: height = 0.05
+96.6860 	EXP 	text_distr_T2: height = 0.05
+96.6860 	EXP 	text_distr_T2: height = 0.05
+96.6860 	EXP 	text_distr_T2: text = 'DNHWJRB'
+96.6860 	EXP 	text_distr_T2: autoDraw = True
+96.7193 	EXP 	text_distr_T2: autoDraw = False
+96.7193 	EXP 	text_blank_distractors_T2: autoDraw = True
+96.7532 	EXP 	New trial (rep=4, index=0): None
+96.7693 	EXP 	text_blank_distractors_T2: autoDraw = False
+96.7693 	EXP 	text_distr_T2: autoDraw = False
+96.7693 	EXP 	text_blank_distractors_T2: autoDraw = False
+96.7693 	EXP 	text_distr_T2: height = 0.05
+96.7693 	EXP 	text_distr_T2: height = 0.05
+96.7693 	EXP 	text_distr_T2: height = 0.05
+96.7693 	EXP 	text_distr_T2: text = 'CLHSZYG'
+96.7693 	EXP 	text_distr_T2: autoDraw = True
+96.8026 	EXP 	text_distr_T2: autoDraw = False
+96.8026 	EXP 	text_blank_distractors_T2: autoDraw = True
+96.8368 	EXP 	New trial (rep=5, index=0): None
+96.8527 	EXP 	text_blank_distractors_T2: autoDraw = False
+96.8527 	EXP 	text_distr_T2: autoDraw = False
+96.8527 	EXP 	text_blank_distractors_T2: autoDraw = False
+96.8527 	EXP 	text_distr_T2: height = 0.05
+96.8527 	EXP 	text_distr_T2: height = 0.05
+96.8527 	EXP 	text_distr_T2: height = 0.05
+96.8527 	EXP 	text_distr_T2: text = 'MSKNYCJ'
+96.8527 	EXP 	text_distr_T2: autoDraw = True
+96.8860 	EXP 	text_distr_T2: autoDraw = False
+96.8860 	EXP 	text_blank_distractors_T2: autoDraw = True
+96.9205 	EXP 	New trial (rep=6, index=0): None
+96.9361 	EXP 	text_blank_distractors_T2: autoDraw = False
+96.9361 	EXP 	text_distr_T2: autoDraw = False
+96.9361 	EXP 	text_blank_distractors_T2: autoDraw = False
+96.9361 	EXP 	text_distr_T2: height = 0.05
+96.9361 	EXP 	text_distr_T2: height = 0.05
+96.9361 	EXP 	text_distr_T2: height = 0.05
+96.9361 	EXP 	text_distr_T2: text = 'QBRSKLT'
+96.9361 	EXP 	text_distr_T2: autoDraw = True
+96.9693 	EXP 	text_distr_T2: autoDraw = False
+96.9693 	EXP 	text_blank_distractors_T2: autoDraw = True
+97.0034 	EXP 	New trial (rep=7, index=0): None
+97.0193 	EXP 	text_blank_distractors_T2: autoDraw = False
+97.0193 	EXP 	text_distr_T2: autoDraw = False
+97.0193 	EXP 	text_blank_distractors_T2: autoDraw = False
+97.0193 	EXP 	text_distr_T2: height = 0.05
+97.0193 	EXP 	text_distr_T2: height = 0.05
+97.0193 	EXP 	text_distr_T2: height = 0.05
+97.0193 	EXP 	text_distr_T2: text = 'LSVWYTH'
+97.0193 	EXP 	text_distr_T2: autoDraw = True
+97.0526 	EXP 	text_distr_T2: autoDraw = False
+97.0526 	EXP 	text_blank_distractors_T2: autoDraw = True
+97.0867 	EXP 	New trial (rep=8, index=0): None
+97.1026 	EXP 	text_blank_distractors_T2: autoDraw = False
+97.1026 	EXP 	text_distr_T2: autoDraw = False
+97.1026 	EXP 	text_blank_distractors_T2: autoDraw = False
+97.1026 	EXP 	text_distr_T2: height = 0.05
+97.1026 	EXP 	text_distr_T2: height = 0.05
+97.1026 	EXP 	text_distr_T2: height = 0.05
+97.1026 	EXP 	text_distr_T2: text = 'STPJMHX'
+97.1026 	EXP 	text_distr_T2: autoDraw = True
+97.1361 	EXP 	text_distr_T2: autoDraw = False
+97.1361 	EXP 	text_blank_distractors_T2: autoDraw = True
+97.1885 	EXP 	text_blank_distractors_T2: autoDraw = False
+97.1885 	EXP 	text_distr_T2: autoDraw = False
+97.1885 	EXP 	text_blank_distractors_T2: autoDraw = False
+97.1885 	EXP 	blankT1_1: autoDraw = False
+97.1885 	EXP 	text_T1ask: autoDraw = False
+97.1885 	EXP 	blankT1_2: autoDraw = False
+97.1885 	EXP 	blankT2_1: autoDraw = True
+98.1694 	EXP 	text_T2ask: autoDraw = True
+98.2027 	EXP 	blankT2_1: autoDraw = False
+100.1695 	EXP 	text_T2ask: autoDraw = False
+100.1695 	EXP 	blankT2_2: autoDraw = True
+101.1564 	EXP 	New trial (rep=0, index=10): {'T0': 'STEP', 'T2': 'XSTAIRX', 'T1': 8888888.0, 'lagT0': 10, 'lagT1': 3, 'lagT2': 7, 'responseT1': 'j', 'responseT2': 'f', 'related': 1}
+101.1695 	EXP 	blankT2_2: autoDraw = False
+101.1695 	EXP 	blankT2_1: autoDraw = False
+101.1695 	EXP 	text_T2ask: autoDraw = False
+101.1695 	EXP 	blankT2_2: autoDraw = False
+101.1695 	EXP 	context_word: height = 0.05
+101.1695 	EXP 	context_word: height = 0.05
+101.1695 	EXP 	context_word: height = 0.05
+101.1695 	EXP 	context_word: text = 'STEP'
+101.1695 	EXP 	context_word: autoDraw = True
+102.1696 	EXP 	context_word: autoDraw = False
+102.1696 	EXP 	blankContext: autoDraw = True
+103.1537 	EXP 	Created sequence: sequential, trialTypes=1, nReps=10, seed=None
+103.1539 	EXP 	New trial (rep=0, index=0): None
+103.1696 	EXP 	blankContext: autoDraw = False
+103.1696 	EXP 	context_word: autoDraw = False
+103.1696 	EXP 	blankContext: autoDraw = False
+103.1696 	EXP 	text_distr_T0: height = 0.05
+103.1696 	EXP 	text_distr_T0: height = 0.05
+103.1696 	EXP 	text_distr_T0: height = 0.05
+103.1696 	EXP 	text_distr_T0: text = 'LNSYBMZ'
+103.1696 	EXP 	text_distr_T0: autoDraw = True
+103.2030 	EXP 	text_distr_T0: autoDraw = False
+103.2030 	EXP 	text_blank_distractors_T0: autoDraw = True
+103.2369 	EXP 	New trial (rep=1, index=0): None
+103.2530 	EXP 	text_blank_distractors_T0: autoDraw = False
+103.2530 	EXP 	text_distr_T0: autoDraw = False
+103.2530 	EXP 	text_blank_distractors_T0: autoDraw = False
+103.2530 	EXP 	text_distr_T0: height = 0.05
+103.2530 	EXP 	text_distr_T0: height = 0.05
+103.2530 	EXP 	text_distr_T0: height = 0.05
+103.2530 	EXP 	text_distr_T0: text = 'JCLRGNX'
+103.2530 	EXP 	text_distr_T0: autoDraw = True
+103.2866 	EXP 	text_distr_T0: autoDraw = False
+103.2866 	EXP 	text_blank_distractors_T0: autoDraw = True
+103.3228 	EXP 	New trial (rep=2, index=0): None
+103.3363 	EXP 	text_blank_distractors_T0: autoDraw = False
+103.3363 	EXP 	text_distr_T0: autoDraw = False
+103.3363 	EXP 	text_blank_distractors_T0: autoDraw = False
+103.3363 	EXP 	text_distr_T0: height = 0.05
+103.3363 	EXP 	text_distr_T0: height = 0.05
+103.3363 	EXP 	text_distr_T0: height = 0.05
+103.3363 	EXP 	text_distr_T0: text = 'JQDFXNT'
+103.3363 	EXP 	text_distr_T0: autoDraw = True
+103.3696 	EXP 	text_distr_T0: autoDraw = False
+103.3696 	EXP 	text_blank_distractors_T0: autoDraw = True
+103.4036 	EXP 	New trial (rep=3, index=0): None
+103.4196 	EXP 	text_blank_distractors_T0: autoDraw = False
+103.4196 	EXP 	text_distr_T0: autoDraw = False
+103.4196 	EXP 	text_blank_distractors_T0: autoDraw = False
+103.4196 	EXP 	text_distr_T0: height = 0.05
+103.4196 	EXP 	text_distr_T0: height = 0.05
+103.4196 	EXP 	text_distr_T0: height = 0.05
+103.4196 	EXP 	text_distr_T0: text = 'FGTPKDX'
+103.4196 	EXP 	text_distr_T0: autoDraw = True
+103.4530 	EXP 	text_distr_T0: autoDraw = False
+103.4530 	EXP 	text_blank_distractors_T0: autoDraw = True
+103.4870 	EXP 	New trial (rep=4, index=0): None
+103.5030 	EXP 	text_blank_distractors_T0: autoDraw = False
+103.5030 	EXP 	text_distr_T0: autoDraw = False
+103.5030 	EXP 	text_blank_distractors_T0: autoDraw = False
+103.5030 	EXP 	text_distr_T0: height = 0.05
+103.5030 	EXP 	text_distr_T0: height = 0.05
+103.5030 	EXP 	text_distr_T0: height = 0.05
+103.5030 	EXP 	text_distr_T0: text = 'NKRWZVF'
+103.5030 	EXP 	text_distr_T0: autoDraw = True
+103.5363 	EXP 	text_distr_T0: autoDraw = False
+103.5363 	EXP 	text_blank_distractors_T0: autoDraw = True
+103.5704 	EXP 	New trial (rep=5, index=0): None
+103.5864 	EXP 	text_blank_distractors_T0: autoDraw = False
+103.5864 	EXP 	text_distr_T0: autoDraw = False
+103.5864 	EXP 	text_blank_distractors_T0: autoDraw = False
+103.5864 	EXP 	text_distr_T0: height = 0.05
+103.5864 	EXP 	text_distr_T0: height = 0.05
+103.5864 	EXP 	text_distr_T0: height = 0.05
+103.5864 	EXP 	text_distr_T0: text = 'NMHWYKJ'
+103.5864 	EXP 	text_distr_T0: autoDraw = True
+103.6197 	EXP 	text_distr_T0: autoDraw = False
+103.6197 	EXP 	text_blank_distractors_T0: autoDraw = True
+103.6536 	EXP 	New trial (rep=6, index=0): None
+103.6697 	EXP 	text_blank_distractors_T0: autoDraw = False
+103.6697 	EXP 	text_distr_T0: autoDraw = False
+103.6697 	EXP 	text_blank_distractors_T0: autoDraw = False
+103.6697 	EXP 	text_distr_T0: height = 0.05
+103.6697 	EXP 	text_distr_T0: height = 0.05
+103.6697 	EXP 	text_distr_T0: height = 0.05
+103.6697 	EXP 	text_distr_T0: text = 'JDPLFNY'
+103.6697 	EXP 	text_distr_T0: autoDraw = True
+103.7056 	EXP 	text_distr_T0: autoDraw = False
+103.7056 	EXP 	text_blank_distractors_T0: autoDraw = True
+103.7394 	EXP 	New trial (rep=7, index=0): None
+103.7531 	EXP 	text_blank_distractors_T0: autoDraw = False
+103.7531 	EXP 	text_distr_T0: autoDraw = False
+103.7531 	EXP 	text_blank_distractors_T0: autoDraw = False
+103.7531 	EXP 	text_distr_T0: height = 0.05
+103.7531 	EXP 	text_distr_T0: height = 0.05
+103.7531 	EXP 	text_distr_T0: height = 0.05
+103.7531 	EXP 	text_distr_T0: text = 'NZQTXBH'
+103.7531 	EXP 	text_distr_T0: autoDraw = True
+103.7864 	EXP 	text_distr_T0: autoDraw = False
+103.7864 	EXP 	text_blank_distractors_T0: autoDraw = True
+103.8205 	EXP 	New trial (rep=8, index=0): None
+103.8364 	EXP 	text_blank_distractors_T0: autoDraw = False
+103.8364 	EXP 	text_distr_T0: autoDraw = False
+103.8364 	EXP 	text_blank_distractors_T0: autoDraw = False
+103.8364 	EXP 	text_distr_T0: height = 0.05
+103.8364 	EXP 	text_distr_T0: height = 0.05
+103.8364 	EXP 	text_distr_T0: height = 0.05
+103.8364 	EXP 	text_distr_T0: text = 'HMQCVLJ'
+103.8364 	EXP 	text_distr_T0: autoDraw = True
+103.8697 	EXP 	text_distr_T0: autoDraw = False
+103.8697 	EXP 	text_blank_distractors_T0: autoDraw = True
+103.9198 	EXP 	text_blank_distractors_T0: autoDraw = False
+103.9198 	EXP 	text_distr_T0: autoDraw = False
+103.9198 	EXP 	text_blank_distractors_T0: autoDraw = False
+103.9198 	EXP 	text_T1: height = 0.05
+103.9198 	EXP 	text_T1: height = 0.05
+103.9198 	EXP 	text_T1: height = 0.05
+103.9198 	EXP 	text_T1: text = '8888888'
+103.9198 	EXP 	text_T1: autoDraw = True
+103.9534 	EXP 	text_T1: autoDraw = False
+103.9534 	EXP 	text_blank_number_T1: autoDraw = True
+103.9872 	EXP 	Created sequence: sequential, trialTypes=1, nReps=7, seed=None
+103.9874 	EXP 	New trial (rep=0, index=0): None
+104.0030 	EXP 	text_blank_number_T1: autoDraw = False
+104.0030 	EXP 	text_T1: autoDraw = False
+104.0030 	EXP 	text_blank_number_T1: autoDraw = False
+104.0030 	EXP 	text_distr_T1: height = 0.05
+104.0030 	EXP 	text_distr_T1: height = 0.05
+104.0030 	EXP 	text_distr_T1: height = 0.05
+104.0030 	EXP 	text_distr_T1: text = 'YQCBMTH'
+104.0030 	EXP 	text_distr_T1: autoDraw = True
+104.0364 	EXP 	text_distr_T1: autoDraw = False
+104.0364 	EXP 	text_blank_distractors_T1: autoDraw = True
+104.0705 	EXP 	New trial (rep=1, index=0): None
+104.0864 	EXP 	text_blank_distractors_T1: autoDraw = False
+104.0864 	EXP 	text_distr_T1: autoDraw = False
+104.0864 	EXP 	text_blank_distractors_T1: autoDraw = False
+104.0864 	EXP 	text_distr_T1: height = 0.05
+104.0864 	EXP 	text_distr_T1: height = 0.05
+104.0864 	EXP 	text_distr_T1: height = 0.05
+104.0864 	EXP 	text_distr_T1: text = 'JVNPZCR'
+104.0864 	EXP 	text_distr_T1: autoDraw = True
+104.1199 	EXP 	text_distr_T1: autoDraw = False
+104.1199 	EXP 	text_blank_distractors_T1: autoDraw = True
+104.1697 	EXP 	text_blank_distractors_T1: autoDraw = False
+104.1697 	EXP 	text_distr_T1: autoDraw = False
+104.1697 	EXP 	text_blank_distractors_T1: autoDraw = False
+104.1697 	EXP 	text_T2: height = 0.05
+104.1697 	EXP 	text_T2: height = 0.05
+104.1697 	EXP 	text_T2: height = 0.05
+104.1697 	EXP 	text_T2: text = 'XSTAIRX'
+104.1697 	EXP 	text_T2: autoDraw = True
+104.2031 	EXP 	text_T2: autoDraw = False
+104.2031 	EXP 	text_blank_T2_probe: autoDraw = True
+104.2395 	EXP 	Created sequence: sequential, trialTypes=1, nReps=12, seed=None
+104.2397 	EXP 	New trial (rep=0, index=0): None
+104.2530 	EXP 	text_blank_T2_probe: autoDraw = False
+104.2530 	EXP 	text_T2: autoDraw = False
+104.2530 	EXP 	text_blank_T2_probe: autoDraw = False
+104.2530 	EXP 	text_distr_T2: height = 0.05
+104.2530 	EXP 	text_distr_T2: height = 0.05
+104.2530 	EXP 	text_distr_T2: height = 0.05
+104.2530 	EXP 	text_distr_T2: text = 'JVNPZCR'
+104.2530 	EXP 	text_distr_T2: autoDraw = True
+104.2864 	EXP 	text_distr_T2: autoDraw = False
+104.2864 	EXP 	text_blank_distractors_T2: autoDraw = True
+104.3205 	EXP 	New trial (rep=1, index=0): None
+104.3367 	EXP 	text_blank_distractors_T2: autoDraw = False
+104.3367 	EXP 	text_distr_T2: autoDraw = False
+104.3367 	EXP 	text_blank_distractors_T2: autoDraw = False
+104.3367 	EXP 	text_distr_T2: height = 0.05
+104.3367 	EXP 	text_distr_T2: height = 0.05
+104.3367 	EXP 	text_distr_T2: height = 0.05
+104.3367 	EXP 	text_distr_T2: text = 'RDMNCSZ'
+104.3367 	EXP 	text_distr_T2: autoDraw = True
+104.3698 	EXP 	text_distr_T2: autoDraw = False
+104.3698 	EXP 	text_blank_distractors_T2: autoDraw = True
+104.4039 	EXP 	New trial (rep=2, index=0): None
+104.4197 	EXP 	text_blank_distractors_T2: autoDraw = False
+104.4197 	EXP 	text_distr_T2: autoDraw = False
+104.4197 	EXP 	text_blank_distractors_T2: autoDraw = False
+104.4197 	EXP 	text_distr_T2: height = 0.05
+104.4197 	EXP 	text_distr_T2: height = 0.05
+104.4197 	EXP 	text_distr_T2: height = 0.05
+104.4197 	EXP 	text_distr_T2: text = 'FJYBTCH'
+104.4197 	EXP 	text_distr_T2: autoDraw = True
+104.4530 	EXP 	text_distr_T2: autoDraw = False
+104.4530 	EXP 	text_blank_distractors_T2: autoDraw = True
+104.4872 	EXP 	New trial (rep=3, index=0): None
+104.5031 	EXP 	text_blank_distractors_T2: autoDraw = False
+104.5031 	EXP 	text_distr_T2: autoDraw = False
+104.5031 	EXP 	text_blank_distractors_T2: autoDraw = False
+104.5031 	EXP 	text_distr_T2: height = 0.05
+104.5031 	EXP 	text_distr_T2: height = 0.05
+104.5031 	EXP 	text_distr_T2: height = 0.05
+104.5031 	EXP 	text_distr_T2: text = 'KCGVTPR'
+104.5031 	EXP 	text_distr_T2: autoDraw = True
+104.5364 	EXP 	text_distr_T2: autoDraw = False
+104.5364 	EXP 	text_blank_distractors_T2: autoDraw = True
+104.5704 	EXP 	New trial (rep=4, index=0): None
+104.5864 	EXP 	text_blank_distractors_T2: autoDraw = False
+104.5864 	EXP 	text_distr_T2: autoDraw = False
+104.5864 	EXP 	text_blank_distractors_T2: autoDraw = False
+104.5864 	EXP 	text_distr_T2: height = 0.05
+104.5864 	EXP 	text_distr_T2: height = 0.05
+104.5864 	EXP 	text_distr_T2: height = 0.05
+104.5864 	EXP 	text_distr_T2: text = 'TQFWLYB'
+104.5864 	EXP 	text_distr_T2: autoDraw = True
+104.6197 	EXP 	text_distr_T2: autoDraw = False
+104.6197 	EXP 	text_blank_distractors_T2: autoDraw = True
+104.6537 	EXP 	New trial (rep=5, index=0): None
+104.6698 	EXP 	text_blank_distractors_T2: autoDraw = False
+104.6698 	EXP 	text_distr_T2: autoDraw = False
+104.6698 	EXP 	text_blank_distractors_T2: autoDraw = False
+104.6698 	EXP 	text_distr_T2: height = 0.05
+104.6698 	EXP 	text_distr_T2: height = 0.05
+104.6698 	EXP 	text_distr_T2: height = 0.05
+104.6698 	EXP 	text_distr_T2: text = 'YTPZQDK'
+104.6698 	EXP 	text_distr_T2: autoDraw = True
+104.7031 	EXP 	text_distr_T2: autoDraw = False
+104.7031 	EXP 	text_blank_distractors_T2: autoDraw = True
+104.7372 	EXP 	New trial (rep=6, index=0): None
+104.7533 	EXP 	text_blank_distractors_T2: autoDraw = False
+104.7533 	EXP 	text_distr_T2: autoDraw = False
+104.7533 	EXP 	text_blank_distractors_T2: autoDraw = False
+104.7533 	EXP 	text_distr_T2: height = 0.05
+104.7533 	EXP 	text_distr_T2: height = 0.05
+104.7533 	EXP 	text_distr_T2: height = 0.05
+104.7533 	EXP 	text_distr_T2: text = 'BPXVTGL'
+104.7533 	EXP 	text_distr_T2: autoDraw = True
+104.7864 	EXP 	text_distr_T2: autoDraw = False
+104.7864 	EXP 	text_blank_distractors_T2: autoDraw = True
+104.8364 	EXP 	text_blank_distractors_T2: autoDraw = False
+104.8364 	EXP 	text_distr_T2: autoDraw = False
+104.8364 	EXP 	text_blank_distractors_T2: autoDraw = False
+104.8364 	EXP 	blankT1_1: autoDraw = False
+104.8364 	EXP 	text_T1ask: autoDraw = False
+104.8364 	EXP 	blankT1_2: autoDraw = False
+104.8364 	EXP 	blankT2_1: autoDraw = True
+105.8198 	EXP 	text_T2ask: autoDraw = True
+105.8365 	EXP 	blankT2_1: autoDraw = False
+107.8200 	EXP 	text_T2ask: autoDraw = False
+107.8200 	EXP 	blankT2_2: autoDraw = True
+108.8042 	EXP 	New trial (rep=0, index=11): {'T0': 'BUG', 'T2': 'XCHOIRX', 'T1': 7777777.0, 'lagT0': 10, 'lagT1': 7, 'lagT2': 3, 'responseT1': 'f', 'responseT2': 'j', 'related': 0}
+108.8200 	EXP 	blankT2_2: autoDraw = False
+108.8200 	EXP 	blankT2_1: autoDraw = False
+108.8200 	EXP 	text_T2ask: autoDraw = False
+108.8200 	EXP 	blankT2_2: autoDraw = False
+108.8200 	EXP 	context_word: height = 0.05
+108.8200 	EXP 	context_word: height = 0.05
+108.8200 	EXP 	context_word: height = 0.05
+108.8200 	EXP 	context_word: text = 'BUG'
+108.8200 	EXP 	context_word: autoDraw = True
+109.8036 	EXP 	blankContext: autoDraw = True
+109.8202 	EXP 	context_word: autoDraw = False
+110.7875 	EXP 	Created sequence: sequential, trialTypes=1, nReps=10, seed=None
+110.7876 	EXP 	New trial (rep=0, index=0): None
+110.8034 	EXP 	blankContext: autoDraw = False
+110.8034 	EXP 	context_word: autoDraw = False
+110.8034 	EXP 	blankContext: autoDraw = False
+110.8034 	EXP 	text_distr_T0: height = 0.05
+110.8034 	EXP 	text_distr_T0: height = 0.05
+110.8034 	EXP 	text_distr_T0: height = 0.05
+110.8034 	EXP 	text_distr_T0: text = 'BFKRVNZ'
+110.8201 	EXP 	text_distr_T0: autoDraw = True
+110.8368 	EXP 	text_blank_distractors_T0: autoDraw = True
+110.8535 	EXP 	text_distr_T0: autoDraw = False
+110.8732 	EXP 	New trial (rep=1, index=0): None
+110.8868 	EXP 	text_blank_distractors_T0: autoDraw = False
+110.8868 	EXP 	text_distr_T0: autoDraw = False
+110.8868 	EXP 	text_blank_distractors_T0: autoDraw = False
+110.8868 	EXP 	text_distr_T0: height = 0.05
+110.8868 	EXP 	text_distr_T0: height = 0.05
+110.8868 	EXP 	text_distr_T0: height = 0.05
+110.8868 	EXP 	text_distr_T0: text = 'FXVDTNP'
+110.8868 	EXP 	text_distr_T0: autoDraw = True
+110.9201 	EXP 	text_distr_T0: autoDraw = False
+110.9201 	EXP 	text_blank_distractors_T0: autoDraw = True
+110.9542 	EXP 	New trial (rep=2, index=0): None
+110.9701 	EXP 	text_blank_distractors_T0: autoDraw = False
+110.9701 	EXP 	text_distr_T0: autoDraw = False
+110.9701 	EXP 	text_blank_distractors_T0: autoDraw = False
+110.9701 	EXP 	text_distr_T0: height = 0.05
+110.9701 	EXP 	text_distr_T0: height = 0.05
+110.9701 	EXP 	text_distr_T0: height = 0.05
+110.9701 	EXP 	text_distr_T0: text = 'FDCWPRN'
+110.9701 	EXP 	text_distr_T0: autoDraw = True
+111.0035 	EXP 	text_distr_T0: autoDraw = False
+111.0035 	EXP 	text_blank_distractors_T0: autoDraw = True
+111.0374 	EXP 	New trial (rep=3, index=0): None
+111.0559 	EXP 	text_blank_distractors_T0: autoDraw = False
+111.0559 	EXP 	text_distr_T0: autoDraw = False
+111.0559 	EXP 	text_blank_distractors_T0: autoDraw = False
+111.0559 	EXP 	text_distr_T0: height = 0.05
+111.0559 	EXP 	text_distr_T0: height = 0.05
+111.0559 	EXP 	text_distr_T0: height = 0.05
+111.0559 	EXP 	text_distr_T0: text = 'WRCHQDP'
+111.0559 	EXP 	text_distr_T0: autoDraw = True
+111.0869 	EXP 	text_distr_T0: autoDraw = False
+111.0869 	EXP 	text_blank_distractors_T0: autoDraw = True
+111.1207 	EXP 	New trial (rep=4, index=0): None
+111.1368 	EXP 	text_blank_distractors_T0: autoDraw = False
+111.1368 	EXP 	text_distr_T0: autoDraw = False
+111.1368 	EXP 	text_blank_distractors_T0: autoDraw = False
+111.1368 	EXP 	text_distr_T0: height = 0.05
+111.1368 	EXP 	text_distr_T0: height = 0.05
+111.1368 	EXP 	text_distr_T0: height = 0.05
+111.1368 	EXP 	text_distr_T0: text = 'FHTWPJD'
+111.1368 	EXP 	text_distr_T0: autoDraw = True
+111.1701 	EXP 	text_distr_T0: autoDraw = False
+111.1701 	EXP 	text_blank_distractors_T0: autoDraw = True
+111.2044 	EXP 	New trial (rep=5, index=0): None
+111.2201 	EXP 	text_blank_distractors_T0: autoDraw = False
+111.2201 	EXP 	text_distr_T0: autoDraw = False
+111.2201 	EXP 	text_blank_distractors_T0: autoDraw = False
+111.2201 	EXP 	text_distr_T0: height = 0.05
+111.2201 	EXP 	text_distr_T0: height = 0.05
+111.2201 	EXP 	text_distr_T0: height = 0.05
+111.2201 	EXP 	text_distr_T0: text = 'GWHTQNJ'
+111.2201 	EXP 	text_distr_T0: autoDraw = True
+111.2535 	EXP 	text_distr_T0: autoDraw = False
+111.2535 	EXP 	text_blank_distractors_T0: autoDraw = True
+111.2877 	EXP 	New trial (rep=6, index=0): None
+111.3034 	EXP 	text_blank_distractors_T0: autoDraw = False
+111.3034 	EXP 	text_distr_T0: autoDraw = False
+111.3034 	EXP 	text_blank_distractors_T0: autoDraw = False
+111.3034 	EXP 	text_distr_T0: height = 0.05
+111.3034 	EXP 	text_distr_T0: height = 0.05
+111.3034 	EXP 	text_distr_T0: height = 0.05
+111.3034 	EXP 	text_distr_T0: text = 'PRBKDMQ'
+111.3034 	EXP 	text_distr_T0: autoDraw = True
+111.3370 	EXP 	text_distr_T0: autoDraw = False
+111.3370 	EXP 	text_blank_distractors_T0: autoDraw = True
+111.3709 	EXP 	New trial (rep=7, index=0): None
+111.3868 	EXP 	text_blank_distractors_T0: autoDraw = False
+111.3868 	EXP 	text_distr_T0: autoDraw = False
+111.3868 	EXP 	text_blank_distractors_T0: autoDraw = False
+111.3868 	EXP 	text_distr_T0: height = 0.05
+111.3868 	EXP 	text_distr_T0: height = 0.05
+111.3868 	EXP 	text_distr_T0: height = 0.05
+111.3868 	EXP 	text_distr_T0: text = 'PYRLNFX'
+111.3868 	EXP 	text_distr_T0: autoDraw = True
+111.4201 	EXP 	text_distr_T0: autoDraw = False
+111.4201 	EXP 	text_blank_distractors_T0: autoDraw = True
+111.4541 	EXP 	New trial (rep=8, index=0): None
+111.4701 	EXP 	text_blank_distractors_T0: autoDraw = False
+111.4701 	EXP 	text_distr_T0: autoDraw = False
+111.4701 	EXP 	text_blank_distractors_T0: autoDraw = False
+111.4701 	EXP 	text_distr_T0: height = 0.05
+111.4701 	EXP 	text_distr_T0: height = 0.05
+111.4701 	EXP 	text_distr_T0: height = 0.05
+111.4701 	EXP 	text_distr_T0: text = 'KPYGTNC'
+111.4701 	EXP 	text_distr_T0: autoDraw = True
+111.5034 	EXP 	text_distr_T0: autoDraw = False
+111.5034 	EXP 	text_blank_distractors_T0: autoDraw = True
+111.5535 	EXP 	text_blank_distractors_T0: autoDraw = False
+111.5535 	EXP 	text_distr_T0: autoDraw = False
+111.5535 	EXP 	text_blank_distractors_T0: autoDraw = False
+111.5535 	EXP 	text_T1: height = 0.05
+111.5535 	EXP 	text_T1: height = 0.05
+111.5535 	EXP 	text_T1: height = 0.05
+111.5535 	EXP 	text_T1: text = '7777777'
+111.5535 	EXP 	text_T1: autoDraw = True
+111.5868 	EXP 	text_T1: autoDraw = False
+111.5868 	EXP 	text_blank_number_T1: autoDraw = True
+111.6207 	EXP 	Created sequence: sequential, trialTypes=1, nReps=7, seed=None
+111.6209 	EXP 	New trial (rep=0, index=0): None
+111.6368 	EXP 	text_blank_number_T1: autoDraw = False
+111.6368 	EXP 	text_T1: autoDraw = False
+111.6368 	EXP 	text_blank_number_T1: autoDraw = False
+111.6368 	EXP 	text_distr_T1: height = 0.05
+111.6368 	EXP 	text_distr_T1: height = 0.05
+111.6368 	EXP 	text_distr_T1: height = 0.05
+111.6368 	EXP 	text_distr_T1: text = 'GFKHVBP'
+111.6368 	EXP 	text_distr_T1: autoDraw = True
+111.6388 	DATA 	Keypress: escape
+111.6701 	EXP 	text_distr_T1: autoDraw = False
+111.6701 	EXP 	text_blank_distractors_T1: autoDraw = True
+111.7043 	EXP 	New trial (rep=1, index=0): None
+111.7201 	EXP 	text_blank_distractors_T1: autoDraw = False
+111.7201 	EXP 	text_distr_T1: autoDraw = False
+111.7201 	EXP 	text_blank_distractors_T1: autoDraw = False
+111.7201 	EXP 	text_distr_T1: height = 0.05
+111.7201 	EXP 	text_distr_T1: height = 0.05
+111.7201 	EXP 	text_distr_T1: height = 0.05
+111.7201 	EXP 	text_distr_T1: text = 'GZRKWYP'
+111.7201 	EXP 	text_distr_T1: autoDraw = True
+112.2220 	EXP 	window1: mouseVisible = True

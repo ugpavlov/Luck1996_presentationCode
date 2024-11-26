@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2023.1.3),
-    on November 06, 2024, at 18:38
+    on November 26, 2024, at 16:06
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -65,7 +65,7 @@ filename = _thisDir + os.sep + u'data/%s_%s_%s' % (expInfo['participant'], expNa
 # An ExperimentHandler isn't essential but helps with data saving
 thisExp = data.ExperimentHandler(name=expName, version='',
     extraInfo=expInfo, runtimeInfo=None,
-    originPath='C:\\Users\\TuebingenLab\\Documents\\GitHub\\Luck1996_presentationCode\\Luck1996AB_lastrun.py',
+    originPath='D:\\github\\Luck1996_presentationCode\\Luck1996AB_lastrun.py',
     savePickle=True, saveWideText=True,
     dataFileName=filename)
 # save a log file for detail verbose info
@@ -136,7 +136,10 @@ import random
 import pandas as pd
 
 # duration in frames
-dur_frames = round(0.083 * int(expInfo['refresh rate (Hz)']))
+#dur_frames = round(0.083 * int(expInfo['refresh rate (Hz)']))
+
+dur_frames_stim = round(0.033 * int(expInfo['refresh rate (Hz)']))
+dur_frames_blank = round(0.050 * int(expInfo['refresh rate (Hz)']))
 
 # set trials order
 related_idx = list(range(360))
@@ -179,15 +182,29 @@ text_distr_T0 = visual.TextStim(win=win, name='text_distr_T0',
     color='blue', colorSpace='rgb', opacity=None, 
     languageStyle='LTR',
     depth=-1.0);
+text_blank_distractors_T0 = visual.TextStim(win=win, name='text_blank_distractors_T0',
+    text=None,
+    font='Open Sans',
+    pos=(0, 0), height=0.05, wrapWidth=None, ori=0.0, 
+    color='white', colorSpace='rgb', opacity=None, 
+    languageStyle='LTR',
+    depth=-2.0);
 
 # --- Initialize components for Routine "T1_number" ---
 text_T1 = visual.TextStim(win=win, name='text_T1',
     text='',
     font='Open Sans',
     pos=(0, 0), height=0.05, wrapWidth=None, ori=0.0, 
-    color='red', colorSpace='rgb', opacity=None, 
+    color='blue', colorSpace='rgb', opacity=None, 
     languageStyle='LTR',
     depth=0.0);
+text_blank_number_T1 = visual.TextStim(win=win, name='text_blank_number_T1',
+    text=None,
+    font='Open Sans',
+    pos=(0, 0), height=0.05, wrapWidth=None, ori=0.0, 
+    color='white', colorSpace='rgb', opacity=None, 
+    languageStyle='LTR',
+    depth=-1.0);
 
 # --- Initialize components for Routine "distractors_T1" ---
 text_distr_T1 = visual.TextStim(win=win, name='text_distr_T1',
@@ -197,6 +214,13 @@ text_distr_T1 = visual.TextStim(win=win, name='text_distr_T1',
     color='blue', colorSpace='rgb', opacity=None, 
     languageStyle='LTR',
     depth=-1.0);
+text_blank_distractors_T1 = visual.TextStim(win=win, name='text_blank_distractors_T1',
+    text=None,
+    font='Open Sans',
+    pos=(0, 0), height=0.05, wrapWidth=None, ori=0.0, 
+    color='white', colorSpace='rgb', opacity=None, 
+    languageStyle='LTR',
+    depth=-2.0);
 
 # --- Initialize components for Routine "T2_probe" ---
 text_T2 = visual.TextStim(win=win, name='text_T2',
@@ -206,6 +230,13 @@ text_T2 = visual.TextStim(win=win, name='text_T2',
     color='red', colorSpace='rgb', opacity=None, 
     languageStyle='LTR',
     depth=0.0);
+text_blank_T2_probe = visual.TextStim(win=win, name='text_blank_T2_probe',
+    text=None,
+    font='Open Sans',
+    pos=(0, 0), height=0.05, wrapWidth=None, ori=0.0, 
+    color='white', colorSpace='rgb', opacity=None, 
+    languageStyle='LTR',
+    depth=-1.0);
 
 # --- Initialize components for Routine "distractors_T2" ---
 text_distr_T2 = visual.TextStim(win=win, name='text_distr_T2',
@@ -215,6 +246,13 @@ text_distr_T2 = visual.TextStim(win=win, name='text_distr_T2',
     color='blue', colorSpace='rgb', opacity=None, 
     languageStyle='LTR',
     depth=-1.0);
+text_blank_distractors_T2 = visual.TextStim(win=win, name='text_blank_distractors_T2',
+    text=None,
+    font='Open Sans',
+    pos=(0, 0), height=0.05, wrapWidth=None, ori=0.0, 
+    color='white', colorSpace='rgb', opacity=None, 
+    languageStyle='LTR',
+    depth=-2.0);
 
 # --- Initialize components for Routine "Ask_T1" ---
 blankT1_1 = visual.TextStim(win=win, name='blankT1_1',
@@ -428,14 +466,14 @@ for thisBlock in block:
     task = task1 if expInfo['order [1: single-dual or 2: dual-single]']=='1' else task2
     
     # choose rows for this trial
-    n = 1 # num of correct and incorrect trials
+    n = 30 # num of correct and incorrect trials
     trials_in_block = related_idx[-n:] + unrelated_idx[-n:]
     shuffle(trials_in_block)
     related_idx = related_idx[:len(related_idx)-n]
     unrelated_idx = unrelated_idx[:len(unrelated_idx)-n]
     
     
-    print(f'Block #{block.thisN+1}\n')
+    print(f'\nBlock #{block.thisN+1}\n')
     
     # keep track of which components have finished
     settingsComponents = []
@@ -717,7 +755,7 @@ for thisBlock in block:
             thisExp.addData('distractor_T0',distractors_trial[i])
             text_distr_T0.setText(distractors_trial[i])
             # keep track of which components have finished
-            distractors_T0Components = [text_distr_T0]
+            distractors_T0Components = [text_distr_T0, text_blank_distractors_T0]
             for thisComponent in distractors_T0Components:
                 thisComponent.tStart = None
                 thisComponent.tStop = None
@@ -762,7 +800,7 @@ for thisBlock in block:
                 
                 # if text_distr_T0 is stopping this frame...
                 if text_distr_T0.status == STARTED:
-                    if frameN >= (text_distr_T0.frameNStart + dur_frames):
+                    if frameN >= (text_distr_T0.frameNStart + dur_frames_stim):
                         # keep track of stop time/frame for later
                         text_distr_T0.tStop = t  # not accounting for scr refresh
                         text_distr_T0.frameNStop = frameN  # exact frame index
@@ -771,6 +809,38 @@ for thisBlock in block:
                         # update status
                         text_distr_T0.status = FINISHED
                         text_distr_T0.setAutoDraw(False)
+                
+                # *text_blank_distractors_T0* updates
+                
+                # if text_blank_distractors_T0 is starting this frame...
+                if text_blank_distractors_T0.status == NOT_STARTED and frameN >= dur_frames_stim:
+                    # keep track of start time/frame for later
+                    text_blank_distractors_T0.frameNStart = frameN  # exact frame index
+                    text_blank_distractors_T0.tStart = t  # local t and not account for scr refresh
+                    text_blank_distractors_T0.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(text_blank_distractors_T0, 'tStartRefresh')  # time at next scr refresh
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'text_blank_distractors_T0.started')
+                    # update status
+                    text_blank_distractors_T0.status = STARTED
+                    text_blank_distractors_T0.setAutoDraw(True)
+                
+                # if text_blank_distractors_T0 is active this frame...
+                if text_blank_distractors_T0.status == STARTED:
+                    # update params
+                    pass
+                
+                # if text_blank_distractors_T0 is stopping this frame...
+                if text_blank_distractors_T0.status == STARTED:
+                    if frameN >= (text_blank_distractors_T0.frameNStart + dur_frames_blank):
+                        # keep track of stop time/frame for later
+                        text_blank_distractors_T0.tStop = t  # not accounting for scr refresh
+                        text_blank_distractors_T0.frameNStop = frameN  # exact frame index
+                        # add timestamp to datafile
+                        thisExp.timestampOnFlip(win, 'text_blank_distractors_T0.stopped')
+                        # update status
+                        text_blank_distractors_T0.status = FINISHED
+                        text_blank_distractors_T0.setAutoDraw(False)
                 
                 # check for quit (typically the Esc key)
                 if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -813,7 +883,7 @@ for thisBlock in block:
         # update component parameters for each repeat
         text_T1.setText(str(int(T1)))
         # keep track of which components have finished
-        T1_numberComponents = [text_T1]
+        T1_numberComponents = [text_T1, text_blank_number_T1]
         for thisComponent in T1_numberComponents:
             thisComponent.tStart = None
             thisComponent.tStop = None
@@ -858,7 +928,7 @@ for thisBlock in block:
             
             # if text_T1 is stopping this frame...
             if text_T1.status == STARTED:
-                if frameN >= (text_T1.frameNStart + dur_frames):
+                if frameN >= (text_T1.frameNStart + dur_frames_stim):
                     # keep track of stop time/frame for later
                     text_T1.tStop = t  # not accounting for scr refresh
                     text_T1.frameNStop = frameN  # exact frame index
@@ -867,6 +937,38 @@ for thisBlock in block:
                     # update status
                     text_T1.status = FINISHED
                     text_T1.setAutoDraw(False)
+            
+            # *text_blank_number_T1* updates
+            
+            # if text_blank_number_T1 is starting this frame...
+            if text_blank_number_T1.status == NOT_STARTED and frameN >= dur_frames_stim:
+                # keep track of start time/frame for later
+                text_blank_number_T1.frameNStart = frameN  # exact frame index
+                text_blank_number_T1.tStart = t  # local t and not account for scr refresh
+                text_blank_number_T1.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(text_blank_number_T1, 'tStartRefresh')  # time at next scr refresh
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'text_blank_number_T1.started')
+                # update status
+                text_blank_number_T1.status = STARTED
+                text_blank_number_T1.setAutoDraw(True)
+            
+            # if text_blank_number_T1 is active this frame...
+            if text_blank_number_T1.status == STARTED:
+                # update params
+                pass
+            
+            # if text_blank_number_T1 is stopping this frame...
+            if text_blank_number_T1.status == STARTED:
+                if frameN >= (text_blank_number_T1.frameNStart + dur_frames_blank):
+                    # keep track of stop time/frame for later
+                    text_blank_number_T1.tStop = t  # not accounting for scr refresh
+                    text_blank_number_T1.frameNStop = frameN  # exact frame index
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'text_blank_number_T1.stopped')
+                    # update status
+                    text_blank_number_T1.status = FINISHED
+                    text_blank_number_T1.setAutoDraw(False)
             
             # check for quit (typically the Esc key)
             if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -926,7 +1028,7 @@ for thisBlock in block:
                 thisExp.addData('distractor_T1',distractors_trial[i])
             text_distr_T1.setText(distractors_trial[i])
             # keep track of which components have finished
-            distractors_T1Components = [text_distr_T1]
+            distractors_T1Components = [text_distr_T1, text_blank_distractors_T1]
             for thisComponent in distractors_T1Components:
                 thisComponent.tStart = None
                 thisComponent.tStop = None
@@ -971,7 +1073,7 @@ for thisBlock in block:
                 
                 # if text_distr_T1 is stopping this frame...
                 if text_distr_T1.status == STARTED:
-                    if frameN >= (text_distr_T1.frameNStart + dur_frames):
+                    if frameN >= (text_distr_T1.frameNStart + dur_frames_stim):
                         # keep track of stop time/frame for later
                         text_distr_T1.tStop = t  # not accounting for scr refresh
                         text_distr_T1.frameNStop = frameN  # exact frame index
@@ -980,6 +1082,38 @@ for thisBlock in block:
                         # update status
                         text_distr_T1.status = FINISHED
                         text_distr_T1.setAutoDraw(False)
+                
+                # *text_blank_distractors_T1* updates
+                
+                # if text_blank_distractors_T1 is starting this frame...
+                if text_blank_distractors_T1.status == NOT_STARTED and frameN >= dur_frames_stim:
+                    # keep track of start time/frame for later
+                    text_blank_distractors_T1.frameNStart = frameN  # exact frame index
+                    text_blank_distractors_T1.tStart = t  # local t and not account for scr refresh
+                    text_blank_distractors_T1.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(text_blank_distractors_T1, 'tStartRefresh')  # time at next scr refresh
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'text_blank_distractors_T1.started')
+                    # update status
+                    text_blank_distractors_T1.status = STARTED
+                    text_blank_distractors_T1.setAutoDraw(True)
+                
+                # if text_blank_distractors_T1 is active this frame...
+                if text_blank_distractors_T1.status == STARTED:
+                    # update params
+                    pass
+                
+                # if text_blank_distractors_T1 is stopping this frame...
+                if text_blank_distractors_T1.status == STARTED:
+                    if frameN >= (text_blank_distractors_T1.frameNStart + dur_frames_blank):
+                        # keep track of stop time/frame for later
+                        text_blank_distractors_T1.tStop = t  # not accounting for scr refresh
+                        text_blank_distractors_T1.frameNStop = frameN  # exact frame index
+                        # add timestamp to datafile
+                        thisExp.timestampOnFlip(win, 'text_blank_distractors_T1.stopped')
+                        # update status
+                        text_blank_distractors_T1.status = FINISHED
+                        text_blank_distractors_T1.setAutoDraw(False)
                 
                 # check for quit (typically the Esc key)
                 if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -1021,7 +1155,7 @@ for thisBlock in block:
         # update component parameters for each repeat
         text_T2.setText(T2)
         # keep track of which components have finished
-        T2_probeComponents = [text_T2]
+        T2_probeComponents = [text_T2, text_blank_T2_probe]
         for thisComponent in T2_probeComponents:
             thisComponent.tStart = None
             thisComponent.tStop = None
@@ -1066,7 +1200,7 @@ for thisBlock in block:
             
             # if text_T2 is stopping this frame...
             if text_T2.status == STARTED:
-                if frameN >= (text_T2.frameNStart + dur_frames):
+                if frameN >= (text_T2.frameNStart + dur_frames_stim):
                     # keep track of stop time/frame for later
                     text_T2.tStop = t  # not accounting for scr refresh
                     text_T2.frameNStop = frameN  # exact frame index
@@ -1075,6 +1209,38 @@ for thisBlock in block:
                     # update status
                     text_T2.status = FINISHED
                     text_T2.setAutoDraw(False)
+            
+            # *text_blank_T2_probe* updates
+            
+            # if text_blank_T2_probe is starting this frame...
+            if text_blank_T2_probe.status == NOT_STARTED and frameN >= dur_frames_stim:
+                # keep track of start time/frame for later
+                text_blank_T2_probe.frameNStart = frameN  # exact frame index
+                text_blank_T2_probe.tStart = t  # local t and not account for scr refresh
+                text_blank_T2_probe.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(text_blank_T2_probe, 'tStartRefresh')  # time at next scr refresh
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'text_blank_T2_probe.started')
+                # update status
+                text_blank_T2_probe.status = STARTED
+                text_blank_T2_probe.setAutoDraw(True)
+            
+            # if text_blank_T2_probe is active this frame...
+            if text_blank_T2_probe.status == STARTED:
+                # update params
+                pass
+            
+            # if text_blank_T2_probe is stopping this frame...
+            if text_blank_T2_probe.status == STARTED:
+                if frameN >= (text_blank_T2_probe.frameNStart + dur_frames_blank):
+                    # keep track of stop time/frame for later
+                    text_blank_T2_probe.tStop = t  # not accounting for scr refresh
+                    text_blank_T2_probe.frameNStop = frameN  # exact frame index
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'text_blank_T2_probe.stopped')
+                    # update status
+                    text_blank_T2_probe.status = FINISHED
+                    text_blank_T2_probe.setAutoDraw(False)
             
             # check for quit (typically the Esc key)
             if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -1129,7 +1295,7 @@ for thisBlock in block:
             thisExp.addData('distractor_T2',distractors_trial[i])
             text_distr_T2.setText(distractors_trial[i])
             # keep track of which components have finished
-            distractors_T2Components = [text_distr_T2]
+            distractors_T2Components = [text_distr_T2, text_blank_distractors_T2]
             for thisComponent in distractors_T2Components:
                 thisComponent.tStart = None
                 thisComponent.tStop = None
@@ -1174,7 +1340,7 @@ for thisBlock in block:
                 
                 # if text_distr_T2 is stopping this frame...
                 if text_distr_T2.status == STARTED:
-                    if frameN >= (text_distr_T2.frameNStart + dur_frames):
+                    if frameN >= (text_distr_T2.frameNStart + dur_frames_stim):
                         # keep track of stop time/frame for later
                         text_distr_T2.tStop = t  # not accounting for scr refresh
                         text_distr_T2.frameNStop = frameN  # exact frame index
@@ -1183,6 +1349,38 @@ for thisBlock in block:
                         # update status
                         text_distr_T2.status = FINISHED
                         text_distr_T2.setAutoDraw(False)
+                
+                # *text_blank_distractors_T2* updates
+                
+                # if text_blank_distractors_T2 is starting this frame...
+                if text_blank_distractors_T2.status == NOT_STARTED and frameN >= dur_frames_stim:
+                    # keep track of start time/frame for later
+                    text_blank_distractors_T2.frameNStart = frameN  # exact frame index
+                    text_blank_distractors_T2.tStart = t  # local t and not account for scr refresh
+                    text_blank_distractors_T2.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(text_blank_distractors_T2, 'tStartRefresh')  # time at next scr refresh
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'text_blank_distractors_T2.started')
+                    # update status
+                    text_blank_distractors_T2.status = STARTED
+                    text_blank_distractors_T2.setAutoDraw(True)
+                
+                # if text_blank_distractors_T2 is active this frame...
+                if text_blank_distractors_T2.status == STARTED:
+                    # update params
+                    pass
+                
+                # if text_blank_distractors_T2 is stopping this frame...
+                if text_blank_distractors_T2.status == STARTED:
+                    if frameN >= (text_blank_distractors_T2.frameNStart + dur_frames_blank):
+                        # keep track of stop time/frame for later
+                        text_blank_distractors_T2.tStop = t  # not accounting for scr refresh
+                        text_blank_distractors_T2.frameNStop = frameN  # exact frame index
+                        # add timestamp to datafile
+                        thisExp.timestampOnFlip(win, 'text_blank_distractors_T2.stopped')
+                        # update status
+                        text_blank_distractors_T2.status = FINISHED
+                        text_blank_distractors_T2.setAutoDraw(False)
                 
                 # check for quit (typically the Esc key)
                 if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
