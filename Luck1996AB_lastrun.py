@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2023.1.3),
-    on November 26, 2024, at 16:06
+    on December 09, 2024, at 16:44
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -49,7 +49,7 @@ expInfo = {
     'participant': f"{randint(0, 999999):06.0f}",
     'order [1: single-dual or 2: dual-single]': '1',
     'refresh rate (Hz)': '60',
-    'language': 'en',
+    'language': 'Dutch',
 }
 # --- Show participant info dialog --
 dlg = gui.DlgFromDict(dictionary=expInfo, sortKeys=False, title=expName)
