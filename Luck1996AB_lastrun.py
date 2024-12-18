@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2023.1.3),
-    on December 09, 2024, at 16:44
+    on December 18, 2024, at 10:06
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -49,7 +49,7 @@ expInfo = {
     'participant': f"{randint(0, 999999):06.0f}",
     'order [1: single-dual or 2: dual-single]': '1',
     'refresh rate (Hz)': '60',
-    'language': 'Dutch',
+    'language': 'en',
 }
 # --- Show participant info dialog --
 dlg = gui.DlgFromDict(dictionary=expInfo, sortKeys=False, title=expName)
@@ -81,7 +81,7 @@ frameTolerance = 0.001  # how close to onset before 'same' frame
 win = visual.Window(
     size=[1920, 1080], fullscr=True, screen=0, 
     winType='pyglet', allowStencil=False,
-    monitor='testMonitor', color=[0,0,0], colorSpace='rgb',
+    monitor='testMonitor', color=[-0.75,-0.75,-0.75], colorSpace='rgb',
     backgroundImage='', backgroundFit='none',
     blendMode='avg', useFBO=True, 
     units='height')
