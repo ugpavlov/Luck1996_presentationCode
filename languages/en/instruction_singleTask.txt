@@ -1,0 +1,10 @@
+Instructions
+
+You will see the stimulus stream in this task. 
+
+In this block we will ask you to identify the RED WORD as it appears in the stream and decide whether it is semantically related or unrelated to the context word presented at the beginning of the trial.
+
+If the RED WORD was semantically RELATED, please press the F key on your keyboard.
+If the RED WORD was semantically UNRELATED, please press J on your keyboard.
+
+Please focus your attention and try to answer as accurately and as quickly as possible. When you are ready, we will begin the test.
