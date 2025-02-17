@@ -1,0 +1,15 @@
+Instructions
+
+You will see the stimulus stream in this task. 
+
+In this block we will ask you to identify the NUMBER string and the RED WORD when they appear in the stimuli stream.
+
+You should decide if the RED WORD was semantically related or unrelated to the context word presented at the beginning of the trial.
+If the RED word was semantically RELATED, please press the F key on your keyboard.
+If the RED word was semantically UNRELATED, please press J on your keyboard.
+
+Also you should indicate whether the NUMBER string was even or odd.
+If you see an ODD NUMBER (i.e. 1111111), please press the F key on your keyboard.
+If you see an EVEN NUMBER (i.e. 4444444), please press the J key on your keyboard.
+
+Please focus your attention and try to answer as accurately and quickly as possible. When you are ready, we will begin the test.
