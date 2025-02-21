@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.1.1),
-    on February 17, 2025, at 19:36
+    on February 21, 2025, at 17:13
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -532,7 +532,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         languageStyle='LTR',
         depth=0.0);
     text_T1ask = visual.TextStim(win=win, name='text_T1ask',
-        text='Odd or even?',
+        text='?',
         font='Open Sans',
         pos=(0, 0), height=0.05, wrapWidth=None, ori=0.0, 
         color=[-1.0000, -1.0000, 1.0000], colorSpace='rgb', opacity=None, 
@@ -556,7 +556,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         languageStyle='LTR',
         depth=0.0);
     text_T2ask = visual.TextStim(win=win, name='text_T2ask',
-        text='Related?',
+        text='?',
         font='Open Sans',
         pos=(0, 0), height=0.05, wrapWidth=None, ori=0.0, 
         color=[-1.0000, -1.0000, 1.0000], colorSpace='rgb', opacity=None, 

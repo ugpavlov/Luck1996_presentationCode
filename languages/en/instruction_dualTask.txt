@@ -7,12 +7,12 @@ Second, decide if the target word is related or unrelated to the context word.
 (e.g. CAT-DOG, and BRIGHT-DARK are related, but CAT-SKY are not related)
 
 Odd/Even
-– For ODD numbers, press the F key when you see the first “?”
-– For EVEN numbers, press the J key when you see the first “?”
+- For ODD numbers, press the F key when you see the first "?"
+- For EVEN numbers, press the J key when you see the first "?"
 
 Unrelated/Related
-– For UNRELATED words, press the F key when you see the “?”
-– For RELATED words, press the J key when you see the “?”
+- For UNRELATED words, press the F key when you see the "?"
+- For RELATED words, press the J key when you see the "?"
 
 Please focus your attention and respond as accurately and swiftly as possible. 
 Press SPACE to start.

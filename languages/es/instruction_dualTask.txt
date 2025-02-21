@@ -1,15 +1,18 @@
-Instructions
+You will see a context word (e.g. CAT).
+Then, you will see a really fast series of letter strings (e.g. FGHBVDT), one after the other.
+One of them contains a repeated digit (e.g. 7777777).
+Another one contains a target word (e.g. XXDOGXX) in red. 
+First, decide if the target number is odd (3,5,7,9) or even (2,4,6,8).
+Second, decide if the target word is related or unrelated to the context word.
+(e.g. CAT-DOG, and BRIGHT-DARK are related, but CAT-SKY are not related)
 
-You will see the stimulus stream in this task. 
+Odd/Even
+- For ODD numbers, press the F key when you see the first "?"
+- For EVEN numbers, press the J key when you see the first "?"
 
-In this block we will ask you to identify the NUMBER string and the RED WORD when they appear in the stimuli stream.
+Unrelated/Related
+- For UNRELATED words, press the F key when you see the "?"
+- For RELATED words, press the J key when you see the "?"
 
-You should decide if the RED WORD was semantically related or unrelated to the context word presented at the beginning of the trial.
-If the RED word was semantically RELATED, please press the F key on your keyboard.
-If the RED word was semantically UNRELATED, please press J on your keyboard.
-
-Also you should indicate whether the NUMBER string was even or odd.
-If you see an ODD NUMBER (i.e. 1111111), please press the F key on your keyboard.
-If you see an EVEN NUMBER (i.e. 4444444), please press the J key on your keyboard.
-
-Please focus your attention and try to answer as accurately and quickly as possible. When you are ready, we will begin the test.
+Please focus your attention and respond as accurately and swiftly as possible. 
+Press SPACE to start.
