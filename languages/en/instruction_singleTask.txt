@@ -1,10 +1,14 @@
-Instructions
+You will see a context word (e.g. CAT). 
+Then, you will see a really fast series of letter strings (e.g. FGHBVDT), one after the other.
+One of them contains a target word (e.g. XXDOGXX) in red. 
+Decide whether this target word is related or unrelated to the context word.
+(e.g. CAT- DOG, and BRIGHT-DARK are related pairs, but CAT-SKY are not related)
 
-You will see the stimulus stream in this task. 
 
-In this block we will ask you to identify the RED WORD as it appears in the stream and decide whether it is semantically related or unrelated to the context word presented at the beginning of the trial.
+Unrelated/Related
+– If you see an UNRELATED word, press the F key when you see  the second “?”
+– If you see a RELATED word, press the J key when you see  the second “?”
 
-If the RED WORD was semantically RELATED, please press the F key on your keyboard.
-If the RED WORD was semantically UNRELATED, please press J on your keyboard.
 
-Please focus your attention and try to answer as accurately and as quickly as possible. When you are ready, we will begin the test.
+Please focus your attention and respond as accurately and swiftly as possible. 
+Press SPACE to start.
