@@ -4,11 +4,9 @@ One of them contains a target word (e.g. XXDOGXX) in red.
 Decide whether this target word is related or unrelated to the context word.
 (e.g. CAT- DOG, and BRIGHT-DARK are related pairs, but CAT-SKY are not related)
 
-
 Unrelated/Related
 – If you see an UNRELATED word, press the F key when you see  the second “?”
 – If you see a RELATED word, press the J key when you see  the second “?”
-
 
 Please focus your attention and respond as accurately and swiftly as possible. 
 Press SPACE to start.
