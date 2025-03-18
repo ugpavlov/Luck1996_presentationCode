@@ -1,0 +1,34 @@
+T0:
+- 10 (Single)
+- 11 (Dual)
+T1:
+- 20 (Single + Even)
+- 21 (Single + Odd)
+- 22 (Dual + Even)
+- 23 (Dual + Odd) 
+Distractors:
+- 30
+T2:
+- 40 (Single + Related)
+- 41 (Single + Unrelated)
+- 42 (Dual + Related)
+- 43 (Dual + Unrelated) 
+AskT1:
+- 50 (?)
+- 51 (Answer Odd + Correct)
+- 52 (Answer Odd + Wrong)
+- 53 (Answer Even + Correct)
+- 54 (Answer Even + Wrong)
+- 55 (Missed)
+AskT2:
+- 60 (?)
+- 61 (Answer Related + Correct)
+- 62 (Answer Related + Wrong)
+- 63 (Answer Unrelated + Correct)
+- 64 (Answer Unrelated + Wrong)
+- 65 (Missed)
+Rest:
+- 100
+End:
+- 200
+
