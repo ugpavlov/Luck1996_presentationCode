@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on Март 18, 2025, at 19:45
+    on Март 19, 2025, at 20:53
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -18,7 +18,7 @@ from psychopy import plugins
 plugins.activatePlugins()
 prefs.hardware['audioLib'] = 'ptb'
 prefs.hardware['audioLatencyMode'] = '3'
-from psychopy import sound, gui, visual, core, data, event, logging, clock, colors, layout, hardware, parallel
+from psychopy import sound, gui, visual, core, data, event, logging, clock, colors, layout, hardware
 from psychopy.tools import environmenttools
 from psychopy.constants import (NOT_STARTED, STARTED, PLAYING, PAUSED,
                                 STOPPED, FINISHED, PRESSED, RELEASED, FOREVER, priority)
@@ -46,7 +46,7 @@ expInfo = {
     'participant': f"{randint(0, 999999):06.0f}",
     'order [1: single-dual or 2: dual-single]': '1',
     'refresh rate (Hz)': '60',
-    'pport address': '0xC000',
+    'port address': '0xC000',
     'language': 'en',
     'date|hid': data.getDateStr(),
     'expName|hid': expName,
@@ -392,6 +392,24 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # Run 'Begin Experiment' code from settings_code
     import random
     import pandas as pd
+    from psychopy import parallel
+    
+    # serial/parallel port address 
+    port_address = expInfo['port address']
+    
+    # COMMENT LINES 10-13 IF YOU USE SERIAL PORT
+    # create parallel port
+    p_port = parallel.ParallelPort(address = port_address)
+    #send pport trigger
+    def send_trigger(triggerCode):
+        win.callOnFlip(p_port.setData, triggerCode)
+    
+    # UNCOMMENT LINES 16-20 IF YOU USE SERIAL PORT
+    ## create serial port
+    #import serial
+    #s_port = serial.Serial(port = port_address)
+    #def send_trigger(triggerCode):
+    #    win.callOnFlip(s_port.write, str.encode(str(triggerCode)))
     
     #local path to language
     local_path = 'languages/'+expInfo['language']
@@ -408,7 +426,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     dur_frames_blank = round(0.050 * int(expInfo['refresh rate (Hz)']))
     
     # set trials order
-    n = 30 # num of related and unrelated trials
+    n = 2 # num of related and unrelated trials
     related_idx = list(range(360))
     unrelated_idx = list(range(360,720))
     random.shuffle(related_idx)
@@ -422,14 +440,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # feedback counters
     counter_T1 = 0
     counter_T2 = 0
-    
-    # create parallel ports for answers
-    pport_address = expInfo['pport address']
-    trigger_ask_T1 = parallel.ParallelPort(address=pport_address)
-    trigger_ans_T1 = parallel.ParallelPort(address=pport_address)
-    trigger_ans_T2 = parallel.ParallelPort(address=pport_address)
-    trigger_missed_T1 = parallel.ParallelPort(address=pport_address)
-    trigger_missed_T2 = parallel.ParallelPort(address=pport_address)
     
     # --- Initialize components for Routine "instructions" ---
     text_instructions = visual.TextStim(win=win, name='text_instructions',
@@ -458,7 +468,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=-1.0);
-    trigger_T0 = parallel.ParallelPort(address='0xC000')
     
     # --- Initialize components for Routine "distractors_T0" ---
     text_distr_T0 = visual.TextStim(win=win, name='text_distr_T0',
@@ -475,7 +484,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=-2.0);
-    trigger_dist_T0 = parallel.ParallelPort(address='0xC000')
     
     # --- Initialize components for Routine "T1_number" ---
     text_T1 = visual.TextStim(win=win, name='text_T1',
@@ -492,7 +500,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=-1.0);
-    trigger_T1 = parallel.ParallelPort(address='0xC000')
     
     # --- Initialize components for Routine "distractors_T1" ---
     text_distr_T1 = visual.TextStim(win=win, name='text_distr_T1',
@@ -509,7 +516,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=-2.0);
-    trigger_dist_T1 = parallel.ParallelPort(address='0xC000')
     
     # --- Initialize components for Routine "T2_probe" ---
     text_T2 = visual.TextStim(win=win, name='text_T2',
@@ -526,7 +532,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=-1.0);
-    trigger_T2 = parallel.ParallelPort(address='0xC000')
     
     # --- Initialize components for Routine "distractors_T2" ---
     text_distr_T2 = visual.TextStim(win=win, name='text_distr_T2',
@@ -543,7 +548,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=-2.0);
-    trigger_dist_T2 = parallel.ParallelPort(address='0xC000')
     
     # --- Initialize components for Routine "blank_1s" ---
     text_blank1s = visual.TextStim(win=win, name='text_blank1s',
@@ -582,7 +586,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         languageStyle='LTR',
         depth=0.0);
     key_resp_T2 = keyboard.Keyboard(deviceName='key_resp_T2')
-    trigger_ask_T2 = parallel.ParallelPort(address='0xC000')
     
     # --- Initialize components for Routine "blank_2s" ---
     text_blank2s = visual.TextStim(win=win, name='text_blank2s',
@@ -602,7 +605,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         languageStyle='LTR',
         depth=-1.0);
     press_to_continue = keyboard.Keyboard(deviceName='press_to_continue')
-    trigger_rest = parallel.ParallelPort(address='0xC000')
     
     # --- Initialize components for Routine "end" ---
     text_thanks = visual.TextStim(win=win, name='text_thanks',
@@ -612,7 +614,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=0.0);
-    trigger_end = parallel.ParallelPort(address='0xC000')
     
     # create some handy timers
     
@@ -975,13 +976,13 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             
             #triggers
             if task == 'single':
-                event_T0 = 10
-                event_T1 = 20 if responseT1 == 'j' else 21
-                event_T2 = 40 if related == 'related' else 41
+                trigger_T0 = 10
+                trigger_T1 = 20 if responseT1 == 'j' else 21
+                trigger_T2 = 40 if related == 'related' else 41
             else:
-                event_T0 = 11
-                event_T1 = 22 if responseT1 == 'j' else 23
-                event_T2 = 44 if related == 'related' else 43
+                trigger_T0 = 11
+                trigger_T1 = 22 if responseT1 == 'j' else 23
+                trigger_T2 = 42 if related == 'related' else 43
             
             # store start times for set_trial
             set_trial.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
@@ -1064,12 +1065,15 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # create an object to store info about Routine T0_context
             T0_context = data.Routine(
                 name='T0_context',
-                components=[context_word, blankContext, trigger_T0],
+                components=[context_word, blankContext],
             )
             T0_context.status = NOT_STARTED
             continueRoutine = True
             # update component parameters for each repeat
             context_word.setText(T0)
+            # Run 'Begin Routine' code from code_T0
+            stimulus_pulse_started = False
+            stimulus_pulse_ended = False
             # store start times for T0_context
             T0_context.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
             T0_context.tStart = globalClock.getTime(format='float')
@@ -1170,35 +1174,17 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                         # update status
                         blankContext.status = FINISHED
                         blankContext.setAutoDraw(False)
-                # *trigger_T0* updates
-                
-                # if trigger_T0 is starting this frame...
-                if trigger_T0.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-                    # keep track of start time/frame for later
-                    trigger_T0.frameNStart = frameN  # exact frame index
-                    trigger_T0.tStart = t  # local t and not account for scr refresh
-                    trigger_T0.tStartRefresh = tThisFlipGlobal  # on global time
-                    win.timeOnFlip(trigger_T0, 'tStartRefresh')  # time at next scr refresh
-                    # add timestamp to datafile
-                    thisExp.timestampOnFlip(win, 'trigger_T0.started')
-                    # update status
-                    trigger_T0.status = STARTED
-                    trigger_T0.status = STARTED
-                    win.callOnFlip(trigger_T0.setData, int(event_T0))
-                
-                # if trigger_T0 is stopping this frame...
-                if trigger_T0.status == STARTED:
-                    # is it time to stop? (based on global clock, using actual start)
-                    if tThisFlipGlobal > trigger_T0.tStartRefresh + 0.005-frameTolerance:
-                        # keep track of stop time/frame for later
-                        trigger_T0.tStop = t  # not accounting for scr refresh
-                        trigger_T0.tStopRefresh = tThisFlipGlobal  # on global time
-                        trigger_T0.frameNStop = frameN  # exact frame index
-                        # add timestamp to datafile
-                        thisExp.timestampOnFlip(win, 'trigger_T0.stopped')
-                        # update status
-                        trigger_T0.status = FINISHED
-                        win.callOnFlip(trigger_T0.setData, int(0))
+                # Run 'Each Frame' code from code_T0
+                #send T0 trigger (10/11)
+                if context_word.status == STARTED and not stimulus_pulse_started:
+                    stimulus_pulse_started = True
+                    stimulus_pulse_start_time = globalClock.getTime()
+                    send_trigger(trigger_T0)
+                #reset trigger (0)      
+                if stimulus_pulse_started and not stimulus_pulse_ended:
+                    if globalClock.getTime() - stimulus_pulse_start_time >= 0.005:
+                        send_trigger(0)
+                        stimulus_pulse_ended = True
                 
                 # check for quit (typically the Esc key)
                 if defaultKeyboard.getKeys(keyList=["escape"]):
@@ -1239,8 +1225,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             T0_context.tStop = globalClock.getTime(format='float')
             T0_context.tStopRefresh = tThisFlipGlobal
             thisExp.addData('T0_context.stopped', T0_context.tStop)
-            if trigger_T0.status == STARTED:
-                win.callOnFlip(trigger_T0.setData, int(0))
             # using non-slip timing so subtract the expected duration of this Routine (unless ended on request)
             if T0_context.maxDurationReached:
                 routineTimer.addTime(-T0_context.maxDuration)
@@ -1284,13 +1268,15 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 # create an object to store info about Routine distractors_T0
                 distractors_T0 = data.Routine(
                     name='distractors_T0',
-                    components=[text_distr_T0, text_blank_distractors_T0, trigger_dist_T0],
+                    components=[text_distr_T0, text_blank_distractors_T0],
                 )
                 distractors_T0.status = NOT_STARTED
                 continueRoutine = True
                 # update component parameters for each repeat
                 # Run 'Begin Routine' code from breakLoop_T0
                 thisExp.addData('distractor_T0',distractors_trial[i])
+                stimulus_pulse_started = False
+                stimulus_pulse_ended = False
                 text_distr_T0.setText(distractors_trial[i])
                 # store start times for distractors_T0
                 distractors_T0.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
@@ -1324,6 +1310,17 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     tThisFlipGlobal = win.getFutureFlipTime(clock=None)
                     frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
                     # update/draw components on each frame
+                    # Run 'Each Frame' code from breakLoop_T0
+                    #send dist_T0 trigger (30)
+                    if text_distr_T0.status == STARTED and not stimulus_pulse_started:
+                        stimulus_pulse_started = True
+                        stimulus_pulse_start_time = globalClock.getTime()
+                        send_trigger(30)
+                    #reset trigger (0)      
+                    if stimulus_pulse_started and not stimulus_pulse_ended:
+                        if globalClock.getTime() - stimulus_pulse_start_time >= 0.005:
+                            send_trigger(0)
+                            stimulus_pulse_ended = True
                     
                     # *text_distr_T0* updates
                     
@@ -1390,35 +1387,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                             # update status
                             text_blank_distractors_T0.status = FINISHED
                             text_blank_distractors_T0.setAutoDraw(False)
-                    # *trigger_dist_T0* updates
-                    
-                    # if trigger_dist_T0 is starting this frame...
-                    if trigger_dist_T0.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-                        # keep track of start time/frame for later
-                        trigger_dist_T0.frameNStart = frameN  # exact frame index
-                        trigger_dist_T0.tStart = t  # local t and not account for scr refresh
-                        trigger_dist_T0.tStartRefresh = tThisFlipGlobal  # on global time
-                        win.timeOnFlip(trigger_dist_T0, 'tStartRefresh')  # time at next scr refresh
-                        # add timestamp to datafile
-                        thisExp.timestampOnFlip(win, 'trigger_dist_T0.started')
-                        # update status
-                        trigger_dist_T0.status = STARTED
-                        trigger_dist_T0.status = STARTED
-                        win.callOnFlip(trigger_dist_T0.setData, int(30))
-                    
-                    # if trigger_dist_T0 is stopping this frame...
-                    if trigger_dist_T0.status == STARTED:
-                        # is it time to stop? (based on global clock, using actual start)
-                        if tThisFlipGlobal > trigger_dist_T0.tStartRefresh + 0.005-frameTolerance:
-                            # keep track of stop time/frame for later
-                            trigger_dist_T0.tStop = t  # not accounting for scr refresh
-                            trigger_dist_T0.tStopRefresh = tThisFlipGlobal  # on global time
-                            trigger_dist_T0.frameNStop = frameN  # exact frame index
-                            # add timestamp to datafile
-                            thisExp.timestampOnFlip(win, 'trigger_dist_T0.stopped')
-                            # update status
-                            trigger_dist_T0.status = FINISHED
-                            win.callOnFlip(trigger_dist_T0.setData, int(0))
                     
                     # check for quit (typically the Esc key)
                     if defaultKeyboard.getKeys(keyList=["escape"]):
@@ -1464,8 +1432,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 if trials_T0_context.thisN == lagT0-2:
                     trials_T0_context.finished = True
                 
-                if trigger_dist_T0.status == STARTED:
-                    win.callOnFlip(trigger_dist_T0.setData, int(0))
                 # the Routine "distractors_T0" was not non-slip safe, so reset the non-slip timer
                 routineTimer.reset()
                 thisExp.nextEntry()
@@ -1480,12 +1446,15 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # create an object to store info about Routine T1_number
             T1_number = data.Routine(
                 name='T1_number',
-                components=[text_T1, text_blank_number_T1, trigger_T1],
+                components=[text_T1, text_blank_number_T1],
             )
             T1_number.status = NOT_STARTED
             continueRoutine = True
             # update component parameters for each repeat
             text_T1.setText(str(int(T1)))
+            # Run 'Begin Routine' code from code_T1
+            stimulus_pulse_started = False
+            stimulus_pulse_ended = False
             # store start times for T1_number
             T1_number.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
             T1_number.tStart = globalClock.getTime(format='float')
@@ -1584,35 +1553,17 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                         # update status
                         text_blank_number_T1.status = FINISHED
                         text_blank_number_T1.setAutoDraw(False)
-                # *trigger_T1* updates
-                
-                # if trigger_T1 is starting this frame...
-                if trigger_T1.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-                    # keep track of start time/frame for later
-                    trigger_T1.frameNStart = frameN  # exact frame index
-                    trigger_T1.tStart = t  # local t and not account for scr refresh
-                    trigger_T1.tStartRefresh = tThisFlipGlobal  # on global time
-                    win.timeOnFlip(trigger_T1, 'tStartRefresh')  # time at next scr refresh
-                    # add timestamp to datafile
-                    thisExp.timestampOnFlip(win, 'trigger_T1.started')
-                    # update status
-                    trigger_T1.status = STARTED
-                    trigger_T1.status = STARTED
-                    win.callOnFlip(trigger_T1.setData, int(event_T1))
-                
-                # if trigger_T1 is stopping this frame...
-                if trigger_T1.status == STARTED:
-                    # is it time to stop? (based on global clock, using actual start)
-                    if tThisFlipGlobal > trigger_T1.tStartRefresh + 0.005-frameTolerance:
-                        # keep track of stop time/frame for later
-                        trigger_T1.tStop = t  # not accounting for scr refresh
-                        trigger_T1.tStopRefresh = tThisFlipGlobal  # on global time
-                        trigger_T1.frameNStop = frameN  # exact frame index
-                        # add timestamp to datafile
-                        thisExp.timestampOnFlip(win, 'trigger_T1.stopped')
-                        # update status
-                        trigger_T1.status = FINISHED
-                        win.callOnFlip(trigger_T1.setData, int(0))
+                # Run 'Each Frame' code from code_T1
+                #send T1 trigger (20/21/22/23)
+                if text_T1.status == STARTED and not stimulus_pulse_started:
+                    stimulus_pulse_started = True
+                    stimulus_pulse_start_time = globalClock.getTime()
+                    send_trigger(trigger_T1)
+                #reset trigger (0)      
+                if stimulus_pulse_started and not stimulus_pulse_ended:
+                    if globalClock.getTime() - stimulus_pulse_start_time >= 0.005:
+                        send_trigger(0)
+                        stimulus_pulse_ended = True
                 
                 # check for quit (typically the Esc key)
                 if defaultKeyboard.getKeys(keyList=["escape"]):
@@ -1653,8 +1604,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             T1_number.tStop = globalClock.getTime(format='float')
             T1_number.tStopRefresh = tThisFlipGlobal
             thisExp.addData('T1_number.stopped', T1_number.tStop)
-            if trigger_T1.status == STARTED:
-                win.callOnFlip(trigger_T1.setData, int(0))
             # the Routine "T1_number" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
             
@@ -1693,7 +1642,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 # create an object to store info about Routine distractors_T1
                 distractors_T1 = data.Routine(
                     name='distractors_T1',
-                    components=[text_distr_T1, text_blank_distractors_T1, trigger_dist_T1],
+                    components=[text_distr_T1, text_blank_distractors_T1],
                 )
                 distractors_T1.status = NOT_STARTED
                 continueRoutine = True
@@ -1705,6 +1654,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 else:
                     i += 1
                     thisExp.addData('distractor_T1',distractors_trial[i])
+                    stimulus_pulse_started = False
+                    stimulus_pulse_ended = False
                 text_distr_T1.setText(distractors_trial[i])
                 # store start times for distractors_T1
                 distractors_T1.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
@@ -1738,6 +1689,18 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     tThisFlipGlobal = win.getFutureFlipTime(clock=None)
                     frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
                     # update/draw components on each frame
+                    # Run 'Each Frame' code from skipLoop_ifLag1
+                    if lagT1 != 1:
+                        #send dist_T1 trigger (30)
+                        if text_distr_T1.status == STARTED and not stimulus_pulse_started:
+                            stimulus_pulse_started = True
+                            stimulus_pulse_start_time = globalClock.getTime()
+                            send_trigger(30)
+                        #reset trigger (0)      
+                        if stimulus_pulse_started and not stimulus_pulse_ended:
+                            if globalClock.getTime() - stimulus_pulse_start_time >= 0.005:
+                                send_trigger(0)
+                                stimulus_pulse_ended = True
                     
                     # *text_distr_T1* updates
                     
@@ -1804,35 +1767,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                             # update status
                             text_blank_distractors_T1.status = FINISHED
                             text_blank_distractors_T1.setAutoDraw(False)
-                    # *trigger_dist_T1* updates
-                    
-                    # if trigger_dist_T1 is starting this frame...
-                    if trigger_dist_T1.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-                        # keep track of start time/frame for later
-                        trigger_dist_T1.frameNStart = frameN  # exact frame index
-                        trigger_dist_T1.tStart = t  # local t and not account for scr refresh
-                        trigger_dist_T1.tStartRefresh = tThisFlipGlobal  # on global time
-                        win.timeOnFlip(trigger_dist_T1, 'tStartRefresh')  # time at next scr refresh
-                        # add timestamp to datafile
-                        thisExp.timestampOnFlip(win, 'trigger_dist_T1.started')
-                        # update status
-                        trigger_dist_T1.status = STARTED
-                        trigger_dist_T1.status = STARTED
-                        win.callOnFlip(trigger_dist_T1.setData, int(30))
-                    
-                    # if trigger_dist_T1 is stopping this frame...
-                    if trigger_dist_T1.status == STARTED:
-                        # is it time to stop? (based on global clock, using actual start)
-                        if tThisFlipGlobal > trigger_dist_T1.tStartRefresh + 0.005-frameTolerance:
-                            # keep track of stop time/frame for later
-                            trigger_dist_T1.tStop = t  # not accounting for scr refresh
-                            trigger_dist_T1.tStopRefresh = tThisFlipGlobal  # on global time
-                            trigger_dist_T1.frameNStop = frameN  # exact frame index
-                            # add timestamp to datafile
-                            thisExp.timestampOnFlip(win, 'trigger_dist_T1.stopped')
-                            # update status
-                            trigger_dist_T1.status = FINISHED
-                            win.callOnFlip(trigger_dist_T1.setData, int(0))
                     
                     # check for quit (typically the Esc key)
                     if defaultKeyboard.getKeys(keyList=["escape"]):
@@ -1876,9 +1810,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 # Run 'End Routine' code from skipLoop_ifLag1
                 if lagT1 == 1 or trials_T1.thisN == lagT1-2:
                     trials_T1.finished = True
-                
-                if trigger_dist_T1.status == STARTED:
-                    win.callOnFlip(trigger_dist_T1.setData, int(0))
                 # the Routine "distractors_T1" was not non-slip safe, so reset the non-slip timer
                 routineTimer.reset()
                 thisExp.nextEntry()
@@ -1893,12 +1824,15 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # create an object to store info about Routine T2_probe
             T2_probe = data.Routine(
                 name='T2_probe',
-                components=[text_T2, text_blank_T2_probe, trigger_T2],
+                components=[text_T2, text_blank_T2_probe],
             )
             T2_probe.status = NOT_STARTED
             continueRoutine = True
             # update component parameters for each repeat
             text_T2.setText(T2)
+            # Run 'Begin Routine' code from code_T2
+            stimulus_pulse_started = False
+            stimulus_pulse_ended = False
             # store start times for T2_probe
             T2_probe.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
             T2_probe.tStart = globalClock.getTime(format='float')
@@ -1997,35 +1931,17 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                         # update status
                         text_blank_T2_probe.status = FINISHED
                         text_blank_T2_probe.setAutoDraw(False)
-                # *trigger_T2* updates
-                
-                # if trigger_T2 is starting this frame...
-                if trigger_T2.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-                    # keep track of start time/frame for later
-                    trigger_T2.frameNStart = frameN  # exact frame index
-                    trigger_T2.tStart = t  # local t and not account for scr refresh
-                    trigger_T2.tStartRefresh = tThisFlipGlobal  # on global time
-                    win.timeOnFlip(trigger_T2, 'tStartRefresh')  # time at next scr refresh
-                    # add timestamp to datafile
-                    thisExp.timestampOnFlip(win, 'trigger_T2.started')
-                    # update status
-                    trigger_T2.status = STARTED
-                    trigger_T2.status = STARTED
-                    win.callOnFlip(trigger_T2.setData, int(event_T2))
-                
-                # if trigger_T2 is stopping this frame...
-                if trigger_T2.status == STARTED:
-                    # is it time to stop? (based on global clock, using actual start)
-                    if tThisFlipGlobal > trigger_T2.tStartRefresh + 0.005-frameTolerance:
-                        # keep track of stop time/frame for later
-                        trigger_T2.tStop = t  # not accounting for scr refresh
-                        trigger_T2.tStopRefresh = tThisFlipGlobal  # on global time
-                        trigger_T2.frameNStop = frameN  # exact frame index
-                        # add timestamp to datafile
-                        thisExp.timestampOnFlip(win, 'trigger_T2.stopped')
-                        # update status
-                        trigger_T2.status = FINISHED
-                        win.callOnFlip(trigger_T2.setData, int(0))
+                # Run 'Each Frame' code from code_T2
+                #send T2 trigger (40/41/42/43)
+                if text_T2.status == STARTED and not stimulus_pulse_started:
+                    stimulus_pulse_started = True
+                    stimulus_pulse_start_time = globalClock.getTime()
+                    send_trigger(trigger_T2)
+                #reset trigger (0)      
+                if stimulus_pulse_started and not stimulus_pulse_ended:
+                    if globalClock.getTime() - stimulus_pulse_start_time >= 0.005:
+                        send_trigger(0)
+                        stimulus_pulse_ended = True
                 
                 # check for quit (typically the Esc key)
                 if defaultKeyboard.getKeys(keyList=["escape"]):
@@ -2066,8 +1982,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             T2_probe.tStop = globalClock.getTime(format='float')
             T2_probe.tStopRefresh = tThisFlipGlobal
             thisExp.addData('T2_probe.stopped', T2_probe.tStop)
-            if trigger_T2.status == STARTED:
-                win.callOnFlip(trigger_T2.setData, int(0))
             # the Routine "T2_probe" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
             
@@ -2106,13 +2020,15 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 # create an object to store info about Routine distractors_T2
                 distractors_T2 = data.Routine(
                     name='distractors_T2',
-                    components=[text_distr_T2, text_blank_distractors_T2, trigger_dist_T2],
+                    components=[text_distr_T2, text_blank_distractors_T2],
                 )
                 distractors_T2.status = NOT_STARTED
                 continueRoutine = True
                 # update component parameters for each repeat
                 # Run 'Begin Routine' code from breakLoop_T2
                 thisExp.addData('distractor_T2',distractors_trial[i])
+                stimulus_pulse_started = False
+                stimulus_pulse_ended = False
                 text_distr_T2.setText(distractors_trial[i])
                 # store start times for distractors_T2
                 distractors_T2.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
@@ -2146,6 +2062,17 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     tThisFlipGlobal = win.getFutureFlipTime(clock=None)
                     frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
                     # update/draw components on each frame
+                    # Run 'Each Frame' code from breakLoop_T2
+                    #send dist_T2 trigger (30)
+                    if text_distr_T2.status == STARTED and not stimulus_pulse_started:
+                        stimulus_pulse_started = True
+                        stimulus_pulse_start_time = globalClock.getTime()
+                        send_trigger(30)
+                    #reset trigger (0)      
+                    if stimulus_pulse_started and not stimulus_pulse_ended:
+                        if globalClock.getTime() - stimulus_pulse_start_time >= 0.005:
+                            send_trigger(0)
+                            stimulus_pulse_ended = True
                     
                     # *text_distr_T2* updates
                     
@@ -2212,35 +2139,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                             # update status
                             text_blank_distractors_T2.status = FINISHED
                             text_blank_distractors_T2.setAutoDraw(False)
-                    # *trigger_dist_T2* updates
-                    
-                    # if trigger_dist_T2 is starting this frame...
-                    if trigger_dist_T2.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
-                        # keep track of start time/frame for later
-                        trigger_dist_T2.frameNStart = frameN  # exact frame index
-                        trigger_dist_T2.tStart = t  # local t and not account for scr refresh
-                        trigger_dist_T2.tStartRefresh = tThisFlipGlobal  # on global time
-                        win.timeOnFlip(trigger_dist_T2, 'tStartRefresh')  # time at next scr refresh
-                        # add timestamp to datafile
-                        thisExp.timestampOnFlip(win, 'trigger_dist_T2.started')
-                        # update status
-                        trigger_dist_T2.status = STARTED
-                        trigger_dist_T2.status = STARTED
-                        win.callOnFlip(trigger_dist_T2.setData, int(30))
-                    
-                    # if trigger_dist_T2 is stopping this frame...
-                    if trigger_dist_T2.status == STARTED:
-                        # is it time to stop? (based on global clock, using actual start)
-                        if tThisFlipGlobal > trigger_dist_T2.tStartRefresh + 0.005-frameTolerance:
-                            # keep track of stop time/frame for later
-                            trigger_dist_T2.tStop = t  # not accounting for scr refresh
-                            trigger_dist_T2.tStopRefresh = tThisFlipGlobal  # on global time
-                            trigger_dist_T2.frameNStop = frameN  # exact frame index
-                            # add timestamp to datafile
-                            thisExp.timestampOnFlip(win, 'trigger_dist_T2.stopped')
-                            # update status
-                            trigger_dist_T2.status = FINISHED
-                            win.callOnFlip(trigger_dist_T2.setData, int(0))
                     
                     # check for quit (typically the Esc key)
                     if defaultKeyboard.getKeys(keyList=["escape"]):
@@ -2286,8 +2184,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 if trials_T2.thisN == lagT2-1:
                     trials_T2.finished = True
                 
-                if trigger_dist_T2.status == STARTED:
-                    win.callOnFlip(trigger_dist_T2.setData, int(0))
                 # the Routine "distractors_T2" was not non-slip safe, so reset the non-slip timer
                 routineTimer.reset()
                 thisExp.nextEntry()
@@ -2434,10 +2330,11 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             key_resp_T1.keys = []
             key_resp_T1.rt = []
             _key_resp_T1_allKeys = []
-            # Run 'Begin Routine' code from code_2
+            # Run 'Begin Routine' code from code_text_T1ask
             if task == 'dual':
                 pressed = False
-                ask_T1_started = False
+                stimulus_pulse_started = False
+                stimulus_pulse_ended = False
             # store start times for Ask_T1
             Ask_T1.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
             Ask_T1.tStart = globalClock.getTime(format='float')
@@ -2552,31 +2449,34 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                             key_resp_T1.corr = 1
                         else:
                             key_resp_T1.corr = 0
-                # Run 'Each Frame' code from code_2
+                # Run 'Each Frame' code from code_text_T1ask
                 if task == 'dual':
-                    # send AskT1(?) trigger
-                    if not ask_T1_started and frameN==0:
-                        ask_T1_started = True
-                        trigger_ask_T1.tStartRefresh = tThisFlipGlobal
-                        win.callOnFlip(trigger_ask_T1.setData, 50)
-                    if ask_T1_started:
-                        if tThisFlipGlobal > trigger_ask_T1.tStartRefresh + 0.004:
-                            win.callOnFlip(trigger_ask_T1.setData, 0)
-                            ask_T1_started = False
+                    # send AskT1(?) trigger (50)
+                    if text_T1ask.status == STARTED and not stimulus_pulse_started:
+                        stimulus_pulse_started = True
+                        stimulus_pulse_start_time = globalClock.getTime()
+                        send_trigger(50)
+                    #reset trigger
+                    if stimulus_pulse_started and not stimulus_pulse_ended:
+                        if globalClock.getTime() - stimulus_pulse_start_time >= 0.005:
+                            send_trigger(0)
+                            stimulus_pulse_ended = True
                 
-                    # send AnswerT1(51/52/53/54) trigger
+                    # send AnswerT1 trigger (51/52/53/54)
                     if key_resp_T1.keys and not pressed:
                         pressed = True
-                        trigger_ans_T1.tStartRefresh = tThisFlipGlobal
+                        stimulus_pulse_start_time = globalClock.getTime()
                         if key_resp_T1.keys == responseT1: 
                             counter_T1 += 1
                             event_ans_T1 = 53 if responseT1 == 'j' else 51
                         else:
                             event_ans_T1 = 54 if responseT1 == 'j' else 52
-                        win.callOnFlip(trigger_ans_T1.setData, event_ans_T1)
+                        send_trigger(event_ans_T1)
+                    #reset trigger
                     if pressed:
-                        if tThisFlipGlobal > trigger_ans_T1.tStartRefresh + 0.004:
-                            win.callOnFlip(trigger_ans_T1.setData, 0)
+                        if globalClock.getTime() - stimulus_pulse_start_time >= 0.005:
+                            send_trigger(0)
+                            pressed = False
                             continueRoutine = False
                 
                 # check for quit (typically the Esc key)
@@ -2632,19 +2532,9 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             if key_resp_T1.keys != None:  # we had a response
                 trial.addData('key_resp_T1.rt', key_resp_T1.rt)
                 trial.addData('key_resp_T1.duration', key_resp_T1.duration)
-            # Run 'End Routine' code from code_2
+            # Run 'End Routine' code from code_text_T1ask
             if task == 'dual':
                 print(f'Corr T1: {key_resp_T1.corr}')
-            #    if key_resp_T2.keys:
-            #        if key_resp_T1.corr: 
-            #            counter_T1 += 1
-            #            event_ans_T1 = 53 if responseT1 == 'j' else 51
-            #        else:
-            #            event_ans_T1 = 54 if responseT1 == 'j' else 52
-            #    else:
-            #        event_ans_T1 = 55
-            #
-            #    trigger_ans_T1.setData(event_ans_T1)
             
                 if (trial.thisN+1)%10 == 0:
                     print(f'\n Accuracy T1: {counter_T1/10}\n')
@@ -2666,8 +2556,9 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             blank_T1T2.status = NOT_STARTED
             continueRoutine = True
             # update component parameters for each repeat
-            # Run 'Begin Routine' code from code_4
+            # Run 'Begin Routine' code from code_trigger55
             trigger_sent = False
+            trigger_reset = False
             # store start times for blank_T1T2
             blank_T1T2.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
             blank_T1T2.tStart = globalClock.getTime(format='float')
@@ -2737,14 +2628,17 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                         # update status
                         text_blankT1T2.status = FINISHED
                         text_blankT1T2.setAutoDraw(False)
-                # Run 'Each Frame' code from code_4
+                # Run 'Each Frame' code from code_trigger55
+                #send trigger if missed answer (55)
                 if not key_resp_T1.keys and not trigger_sent:
                     trigger_sent = True
-                    trigger_missed_T1.tStartRefresh = tThisFlipGlobal
-                    win.callOnFlip(trigger_missed_T1.setData, 55)
-                if trigger_sent:
-                    if tThisFlipGlobal > trigger_missed_T1.tStartRefresh + 0.004:
-                        win.callOnFlip(trigger_missed_T1.setData, 0)
+                    stimulus_pulse_start_time = globalClock.getTime()
+                    send_trigger(55)
+                #reset trigger (0)
+                if trigger_sent and not trigger_reset:
+                    if globalClock.getTime() - stimulus_pulse_start_time >= 0.005:
+                        send_trigger(0)
+                        trigger_reset = True
                 
                 # check for quit (typically the Esc key)
                 if defaultKeyboard.getKeys(keyList=["escape"]):
@@ -2797,7 +2691,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # create an object to store info about Routine Ask_T2
             Ask_T2 = data.Routine(
                 name='Ask_T2',
-                components=[text_T2ask, key_resp_T2, trigger_ask_T2],
+                components=[text_T2ask, key_resp_T2],
             )
             Ask_T2.status = NOT_STARTED
             continueRoutine = True
@@ -2806,8 +2700,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             key_resp_T2.keys = []
             key_resp_T2.rt = []
             _key_resp_T2_allKeys = []
-            # Run 'Begin Routine' code from code
+            # Run 'Begin Routine' code from code_T2_ask
             pressed = False
+            stimulus_pulse_started = False
+            stimulus_pulse_ended = False
             # store start times for Ask_T2
             Ask_T2.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
             Ask_T2.tStart = globalClock.getTime(format='float')
@@ -2919,50 +2815,35 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                             key_resp_T2.corr = 1
                         else:
                             key_resp_T2.corr = 0
-                # Run 'Each Frame' code from code
+                # Run 'Each Frame' code from code_T2_ask
+                # send AskT2(?) trigger (60)
+                if text_T2ask.status == STARTED and not stimulus_pulse_started:
+                    stimulus_pulse_started = True
+                    stimulus_pulse_start_time = globalClock.getTime()
+                    send_trigger(60)
+                #reset trigger
+                if stimulus_pulse_started and not stimulus_pulse_ended:
+                    if globalClock.getTime() - stimulus_pulse_start_time >= 0.005:
+                        send_trigger(0)
+                        stimulus_pulse_ended = True
+                
+                # send AnswerT1(61/62/63/64) trigger
                 if key_resp_T2.keys and not pressed:
                     pressed = True
-                    trigger_ans_T2.tStartRefresh = tThisFlipGlobal
+                    stimulus_pulse_start_time = globalClock.getTime()
                     if key_resp_T2.keys == responseT2: 
                         counter_T2 += 1
                         event_ans_T2 = 61 if related == 'related' else 63
                     else:
                         event_ans_T2 = 62 if related == 'related' else 64
-                    win.callOnFlip(trigger_ans_T2.setData, event_ans_T2)
+                    send_trigger(event_ans_T2)
+                #reset trigger
                 if pressed:
-                    if tThisFlipGlobal > trigger_ans_T2.tStartRefresh + 0.004:
-                        win.callOnFlip(trigger_ans_T2.setData, 0)
+                    if globalClock.getTime() - stimulus_pulse_start_time >= 0.005:
+                        send_trigger(0)
+                        pressed = False
                         continueRoutine = False
                 
-                # *trigger_ask_T2* updates
-                
-                # if trigger_ask_T2 is starting this frame...
-                if trigger_ask_T2.status == NOT_STARTED and tThisFlip >= 0-frameTolerance:
-                    # keep track of start time/frame for later
-                    trigger_ask_T2.frameNStart = frameN  # exact frame index
-                    trigger_ask_T2.tStart = t  # local t and not account for scr refresh
-                    trigger_ask_T2.tStartRefresh = tThisFlipGlobal  # on global time
-                    win.timeOnFlip(trigger_ask_T2, 'tStartRefresh')  # time at next scr refresh
-                    # add timestamp to datafile
-                    thisExp.timestampOnFlip(win, 'trigger_ask_T2.started')
-                    # update status
-                    trigger_ask_T2.status = STARTED
-                    trigger_ask_T2.status = STARTED
-                    win.callOnFlip(trigger_ask_T2.setData, int(60))
-                
-                # if trigger_ask_T2 is stopping this frame...
-                if trigger_ask_T2.status == STARTED:
-                    # is it time to stop? (based on global clock, using actual start)
-                    if tThisFlipGlobal > trigger_ask_T2.tStartRefresh + 0.005-frameTolerance:
-                        # keep track of stop time/frame for later
-                        trigger_ask_T2.tStop = t  # not accounting for scr refresh
-                        trigger_ask_T2.tStopRefresh = tThisFlipGlobal  # on global time
-                        trigger_ask_T2.frameNStop = frameN  # exact frame index
-                        # add timestamp to datafile
-                        thisExp.timestampOnFlip(win, 'trigger_ask_T2.stopped')
-                        # update status
-                        trigger_ask_T2.status = FINISHED
-                        win.callOnFlip(trigger_ask_T2.setData, int(0))
                 
                 # check for quit (typically the Esc key)
                 if defaultKeyboard.getKeys(keyList=["escape"]):
@@ -3017,23 +2898,12 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             if key_resp_T2.keys != None:  # we had a response
                 trial.addData('key_resp_T2.rt', key_resp_T2.rt)
                 trial.addData('key_resp_T2.duration', key_resp_T2.duration)
-            # Run 'End Routine' code from code
+            # Run 'End Routine' code from code_T2_ask
             print(f'Corr T2: {key_resp_T2.corr}')
-            #if key_resp_T2.keys:
-            #    if key_resp_T2.corr: 
-            #        counter_T2 += 1
-            #        event_ans_T2 = 61 if related == 'related' else 63
-            #    else:
-            #        event_ans_T2 = 62 if related == 'related' else 64
-            #else:
-            #    event_ans_T2 = 65
-            #    trigger_ans_T1.setData(65)
             
             if (trial.thisN+1)%10 == 0:
                 print(f'\n Accuracy T2: {counter_T2/10}')
                 counter_T2 = 0
-            if trigger_ask_T2.status == STARTED:
-                win.callOnFlip(trigger_ask_T2.setData, int(0))
             # using non-slip timing so subtract the expected duration of this Routine (unless ended on request)
             if Ask_T2.maxDurationReached:
                 routineTimer.addTime(-Ask_T2.maxDuration)
@@ -3051,8 +2921,9 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             blank_2s.status = NOT_STARTED
             continueRoutine = True
             # update component parameters for each repeat
-            # Run 'Begin Routine' code from code_5
+            # Run 'Begin Routine' code from code_trigger65
             trigger_sent = False
+            trigger_reset = False
             # store start times for blank_2s
             blank_2s.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
             blank_2s.tStart = globalClock.getTime(format='float')
@@ -3119,14 +2990,15 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                         # update status
                         text_blank2s.status = FINISHED
                         text_blank2s.setAutoDraw(False)
-                # Run 'Each Frame' code from code_5
+                # Run 'Each Frame' code from code_trigger65
                 if not key_resp_T2.keys and not trigger_sent:
                     trigger_sent = True
-                    trigger_missed_T2.tStartRefresh = tThisFlipGlobal
-                    win.callOnFlip(trigger_missed_T2.setData, 65)
-                if trigger_sent:
-                    if tThisFlipGlobal > trigger_missed_T2.tStartRefresh + 0.004:
-                        win.callOnFlip(trigger_missed_T2.setData, 0)
+                    stimulus_pulse_start_time = globalClock.getTime()
+                    send_trigger(65)
+                if trigger_sent and not trigger_reset:
+                    if globalClock.getTime() - stimulus_pulse_start_time >= 0.005:
+                        send_trigger(0)
+                        trigger_reset = True
                 
                 # check for quit (typically the Esc key)
                 if defaultKeyboard.getKeys(keyList=["escape"]):
@@ -3186,7 +3058,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         # create an object to store info about Routine rest
         rest = data.Routine(
             name='rest',
-            components=[text_rest, press_to_continue, trigger_rest],
+            components=[text_rest, press_to_continue],
         )
         rest.status = NOT_STARTED
         continueRoutine = True
@@ -3195,6 +3067,9 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         # skip rest after last block
         if block.thisN+1 == 12:
             continueRoutine = False
+        else:
+            stimulus_pulse_started = False
+            stimulus_pulse_ended = False
         text_rest.setText(txt_rest)
         # create starting attributes for press_to_continue
         press_to_continue.keys = []
@@ -3225,13 +3100,25 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         if isinstance(block, data.TrialHandler2) and thisBlock.thisN != block.thisTrial.thisN:
             continueRoutine = False
         rest.forceEnded = routineForceEnded = not continueRoutine
-        while continueRoutine:
+        while continueRoutine and routineTimer.getTime() < 1.0:
             # get current time
             t = routineTimer.getTime()
             tThisFlip = win.getFutureFlipTime(clock=routineTimer)
             tThisFlipGlobal = win.getFutureFlipTime(clock=None)
             frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
             # update/draw components on each frame
+            # Run 'Each Frame' code from code_rest
+            if block.thisN+1 != 12:
+                #send rest trigger (100)
+                if text_rest.status == STARTED and not stimulus_pulse_started:
+                    stimulus_pulse_started = True
+                    stimulus_pulse_start_time = globalClock.getTime()
+                    send_trigger(100)
+                #reset trigger (0)      
+                if stimulus_pulse_started and not stimulus_pulse_ended:
+                    if globalClock.getTime() - stimulus_pulse_start_time >= 0.005:
+                        send_trigger(0)
+                        stimulus_pulse_ended = True
             
             # *text_rest* updates
             
@@ -3253,6 +3140,20 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 # update params
                 pass
             
+            # if text_rest is stopping this frame...
+            if text_rest.status == STARTED:
+                # is it time to stop? (based on global clock, using actual start)
+                if tThisFlipGlobal > text_rest.tStartRefresh + 1-frameTolerance:
+                    # keep track of stop time/frame for later
+                    text_rest.tStop = t  # not accounting for scr refresh
+                    text_rest.tStopRefresh = tThisFlipGlobal  # on global time
+                    text_rest.frameNStop = frameN  # exact frame index
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'text_rest.stopped')
+                    # update status
+                    text_rest.status = FINISHED
+                    text_rest.setAutoDraw(False)
+            
             # *press_to_continue* updates
             waitOnFlip = False
             
@@ -3271,6 +3172,20 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 waitOnFlip = True
                 win.callOnFlip(press_to_continue.clock.reset)  # t=0 on next screen flip
                 win.callOnFlip(press_to_continue.clearEvents, eventType='keyboard')  # clear events on next screen flip
+            
+            # if press_to_continue is stopping this frame...
+            if press_to_continue.status == STARTED:
+                # is it time to stop? (based on global clock, using actual start)
+                if tThisFlipGlobal > press_to_continue.tStartRefresh + 1-frameTolerance:
+                    # keep track of stop time/frame for later
+                    press_to_continue.tStop = t  # not accounting for scr refresh
+                    press_to_continue.tStopRefresh = tThisFlipGlobal  # on global time
+                    press_to_continue.frameNStop = frameN  # exact frame index
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'press_to_continue.stopped')
+                    # update status
+                    press_to_continue.status = FINISHED
+                    press_to_continue.status = FINISHED
             if press_to_continue.status == STARTED and not waitOnFlip:
                 theseKeys = press_to_continue.getKeys(keyList=['space'], ignoreKeys=["escape"], waitRelease=False)
                 _press_to_continue_allKeys.extend(theseKeys)
@@ -3280,35 +3195,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     press_to_continue.duration = _press_to_continue_allKeys[-1].duration
                     # a response ends the routine
                     continueRoutine = False
-            # *trigger_rest* updates
-            
-            # if trigger_rest is starting this frame...
-            if trigger_rest.status == NOT_STARTED and tThisFlip >= 0-frameTolerance:
-                # keep track of start time/frame for later
-                trigger_rest.frameNStart = frameN  # exact frame index
-                trigger_rest.tStart = t  # local t and not account for scr refresh
-                trigger_rest.tStartRefresh = tThisFlipGlobal  # on global time
-                win.timeOnFlip(trigger_rest, 'tStartRefresh')  # time at next scr refresh
-                # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'trigger_rest.started')
-                # update status
-                trigger_rest.status = STARTED
-                trigger_rest.status = STARTED
-                win.callOnFlip(trigger_rest.setData, int(100))
-            
-            # if trigger_rest is stopping this frame...
-            if trigger_rest.status == STARTED:
-                # is it time to stop? (based on global clock, using actual start)
-                if tThisFlipGlobal > trigger_rest.tStartRefresh + 0.005-frameTolerance:
-                    # keep track of stop time/frame for later
-                    trigger_rest.tStop = t  # not accounting for scr refresh
-                    trigger_rest.tStopRefresh = tThisFlipGlobal  # on global time
-                    trigger_rest.frameNStop = frameN  # exact frame index
-                    # add timestamp to datafile
-                    thisExp.timestampOnFlip(win, 'trigger_rest.stopped')
-                    # update status
-                    trigger_rest.status = FINISHED
-                    win.callOnFlip(trigger_rest.setData, int(0))
             
             # check for quit (typically the Esc key)
             if defaultKeyboard.getKeys(keyList=["escape"]):
@@ -3356,10 +3242,13 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         if press_to_continue.keys != None:  # we had a response
             block.addData('press_to_continue.rt', press_to_continue.rt)
             block.addData('press_to_continue.duration', press_to_continue.duration)
-        if trigger_rest.status == STARTED:
-            win.callOnFlip(trigger_rest.setData, int(0))
-        # the Routine "rest" was not non-slip safe, so reset the non-slip timer
-        routineTimer.reset()
+        # using non-slip timing so subtract the expected duration of this Routine (unless ended on request)
+        if rest.maxDurationReached:
+            routineTimer.addTime(-rest.maxDuration)
+        elif rest.forceEnded:
+            routineTimer.reset()
+        else:
+            routineTimer.addTime(-1.000000)
         thisExp.nextEntry()
         
     # completed 1.0 repeats of 'block'
@@ -3372,12 +3261,16 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # create an object to store info about Routine end
     end = data.Routine(
         name='end',
-        components=[text_thanks, trigger_end],
+        components=[text_thanks],
     )
     end.status = NOT_STARTED
     continueRoutine = True
     # update component parameters for each repeat
     text_thanks.setText(txt_thanks)
+    # Run 'Begin Routine' code from code_finish
+    #s_port.close()
+    stimulus_pulse_started = False
+    stimulus_pulse_ended = False
     # store start times for end
     end.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
     end.tStart = globalClock.getTime(format='float')
@@ -3441,35 +3334,17 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 # update status
                 text_thanks.status = FINISHED
                 text_thanks.setAutoDraw(False)
-        # *trigger_end* updates
-        
-        # if trigger_end is starting this frame...
-        if trigger_end.status == NOT_STARTED and tThisFlip >= 0-frameTolerance:
-            # keep track of start time/frame for later
-            trigger_end.frameNStart = frameN  # exact frame index
-            trigger_end.tStart = t  # local t and not account for scr refresh
-            trigger_end.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(trigger_end, 'tStartRefresh')  # time at next scr refresh
-            # add timestamp to datafile
-            thisExp.timestampOnFlip(win, 'trigger_end.started')
-            # update status
-            trigger_end.status = STARTED
-            trigger_end.status = STARTED
-            win.callOnFlip(trigger_end.setData, int(200))
-        
-        # if trigger_end is stopping this frame...
-        if trigger_end.status == STARTED:
-            # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > trigger_end.tStartRefresh + 0.005-frameTolerance:
-                # keep track of stop time/frame for later
-                trigger_end.tStop = t  # not accounting for scr refresh
-                trigger_end.tStopRefresh = tThisFlipGlobal  # on global time
-                trigger_end.frameNStop = frameN  # exact frame index
-                # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'trigger_end.stopped')
-                # update status
-                trigger_end.status = FINISHED
-                win.callOnFlip(trigger_end.setData, int(0))
+        # Run 'Each Frame' code from code_finish
+        #send finish trigger (200)
+        if text_thanks.status == STARTED and not stimulus_pulse_started:
+            stimulus_pulse_started = True
+            stimulus_pulse_start_time = globalClock.getTime()
+            send_trigger(200)
+        #reset trigger (0)      
+        if stimulus_pulse_started and not stimulus_pulse_ended:
+            if globalClock.getTime() - stimulus_pulse_start_time >= 0.005:
+                send_trigger(0)
+                stimulus_pulse_ended = True
         
         # check for quit (typically the Esc key)
         if defaultKeyboard.getKeys(keyList=["escape"]):
@@ -3510,8 +3385,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     end.tStop = globalClock.getTime(format='float')
     end.tStopRefresh = tThisFlipGlobal
     thisExp.addData('end.stopped', end.tStop)
-    if trigger_end.status == STARTED:
-        win.callOnFlip(trigger_end.setData, int(0))
     # using non-slip timing so subtract the expected duration of this Routine (unless ended on request)
     if end.maxDurationReached:
         routineTimer.addTime(-end.maxDuration)

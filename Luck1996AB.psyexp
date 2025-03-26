@@ -8,7 +8,7 @@
     <Param val="u'data/%s_%s_%s' % (expInfo['participant'], expName, expInfo['date'])" valType="code" updates="None" name="Data filename"/>
     <Param val="True" valType="bool" updates="None" name="Enable Escape"/>
     <Param val="" valType="str" updates="None" name="End Message"/>
-    <Param val="{'participant': 'f&quot;{randint(0, 999999):06.0f}&quot;', 'order [1: single-dual or 2: dual-single]': '1', 'refresh rate (Hz)': '60', 'pport address': '0xC000', 'language': 'en'}" valType="code" updates="None" name="Experiment info"/>
+    <Param val="{'participant': 'f&quot;{randint(0, 999999):06.0f}&quot;', 'order [1: single-dual or 2: dual-single]': '1', 'refresh rate (Hz)': '60', 'port address': '0xC000', 'language': 'en'}" valType="code" updates="None" name="Experiment info"/>
     <Param val="True" valType="bool" updates="None" name="Force stereo"/>
     <Param val="True" valType="bool" updates="None" name="Full-screen window"/>
     <Param val="" valType="str" updates="None" name="HTML path"/>
@@ -233,23 +233,23 @@
         <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
-      <ParallelOutComponent name="trigger_T2" plugin="None">
-        <Param val="0xC000" valType="str" updates="None" name="address"/>
+      <CodeComponent name="code_T2" plugin="None">
+        <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="stimulus_pulse_started = False&amp;#10;stimulus_pulse_ended = False" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="Py" valType="str" updates="None" name="Code Type"/>
+        <Param val="#send T2 trigger (40/41/42/43)&amp;#10;if text_T2.status == STARTED and not stimulus_pulse_started:&amp;#10;    stimulus_pulse_started = True&amp;#10;    stimulus_pulse_start_time = globalClock.getTime()&amp;#10;    send_trigger(trigger_T2)&amp;#10;#reset trigger (0)      &amp;#10;if stimulus_pulse_started and not stimulus_pulse_ended:&amp;#10;    if globalClock.getTime() - stimulus_pulse_start_time &gt;= 0.005:&amp;#10;        send_trigger(0)&amp;#10;        stimulus_pulse_ended = True" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Routine"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="trigger_T2" valType="code" updates="None" name="name"/>
-        <Param val="EIO" valType="str" updates="None" name="register"/>
-        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="$event_T2" valType="code" updates="None" name="startData"/>
-        <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val="0.0" valType="code" updates="None" name="startVal"/>
-        <Param val="0" valType="code" updates="None" name="stopData"/>
-        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
-        <Param val="0.005" valType="code" updates="constant" name="stopVal"/>
-        <Param val="True" valType="bool" updates="constant" name="syncScreen"/>
-        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-      </ParallelOutComponent>
+        <Param val="code_T2" valType="code" updates="None" name="name"/>
+      </CodeComponent>
     </Routine>
     <Routine name="Ask_T1">
       <RoutineSettingsComponent name="Ask_T1" plugin="None">
@@ -315,57 +315,23 @@
         <Param val="True" valType="bool" updates="constant" name="storeCorrect"/>
         <Param val="True" valType="bool" updates="constant" name="syncScreenRefresh"/>
       </KeyboardComponent>
-      <CodeComponent name="code_2" plugin="None">
+      <CodeComponent name="code_text_T1ask" plugin="None">
         <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
         <Param val="if ((task === &quot;single&quot;)) {&amp;#10;    continueRoutine = false;&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="if task == 'dual':&amp;#10;    pressed = False&amp;#10;    ask_T1_started = False" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="if task == 'dual':&amp;#10;    pressed = False&amp;#10;    stimulus_pulse_started = False&amp;#10;    stimulus_pulse_ended = False" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Py" valType="str" updates="None" name="Code Type"/>
-        <Param val="if task == 'dual':&amp;#10;    # send AskT1(?) trigger&amp;#10;    if not ask_T1_started and frameN==0:&amp;#10;        ask_T1_started = True&amp;#10;        trigger_ask_T1.tStartRefresh = tThisFlipGlobal&amp;#10;        win.callOnFlip(trigger_ask_T1.setData, 50)&amp;#10;    if ask_T1_started:&amp;#10;        if tThisFlipGlobal &gt; trigger_ask_T1.tStartRefresh + 0.004:&amp;#10;            win.callOnFlip(trigger_ask_T1.setData, 0)&amp;#10;            ask_T1_started = False&amp;#10;&amp;#10;    # send AnswerT1(51/52/53/54) trigger&amp;#10;    if key_resp_T1.keys and not pressed:&amp;#10;        pressed = True&amp;#10;        trigger_ans_T1.tStartRefresh = tThisFlipGlobal&amp;#10;        if key_resp_T1.keys == responseT1: &amp;#10;            counter_T1 += 1&amp;#10;            event_ans_T1 = 53 if responseT1 == 'j' else 51&amp;#10;        else:&amp;#10;            event_ans_T1 = 54 if responseT1 == 'j' else 52&amp;#10;        win.callOnFlip(trigger_ans_T1.setData, event_ans_T1)&amp;#10;    if pressed:&amp;#10;        if tThisFlipGlobal &gt; trigger_ans_T1.tStartRefresh + 0.004:&amp;#10;            win.callOnFlip(trigger_ans_T1.setData, 0)&amp;#10;            continueRoutine = False" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="if task == 'dual':&amp;#10;    # send AskT1(?) trigger (50)&amp;#10;    if text_T1ask.status == STARTED and not stimulus_pulse_started:&amp;#10;        stimulus_pulse_started = True&amp;#10;        stimulus_pulse_start_time = globalClock.getTime()&amp;#10;        send_trigger(50)&amp;#10;    #reset trigger&amp;#10;    if stimulus_pulse_started and not stimulus_pulse_ended:&amp;#10;        if globalClock.getTime() - stimulus_pulse_start_time &gt;= 0.005:&amp;#10;            send_trigger(0)&amp;#10;            stimulus_pulse_ended = True&amp;#10;&amp;#10;    # send AnswerT1 trigger (51/52/53/54)&amp;#10;    if key_resp_T1.keys and not pressed:&amp;#10;        pressed = True&amp;#10;        stimulus_pulse_start_time = globalClock.getTime()&amp;#10;        if key_resp_T1.keys == responseT1: &amp;#10;            counter_T1 += 1&amp;#10;            event_ans_T1 = 53 if responseT1 == 'j' else 51&amp;#10;        else:&amp;#10;            event_ans_T1 = 54 if responseT1 == 'j' else 52&amp;#10;        send_trigger(event_ans_T1)&amp;#10;    #reset trigger&amp;#10;    if pressed:&amp;#10;        if globalClock.getTime() - stimulus_pulse_start_time &gt;= 0.005:&amp;#10;            send_trigger(0)&amp;#10;            pressed = False&amp;#10;            continueRoutine = False" valType="extendedCode" updates="constant" name="Each Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
         <Param val="if ((task === &quot;dual&quot;)) {&amp;#10;    console.log(`Corr T1: ${key_resp_T1.corr}`);&amp;#10;    if (key_resp_T1.corr) {&amp;#10;        counter_T1 += 1;&amp;#10;        trigger_ans_T1.setData(event_T0);&amp;#10;    }&amp;#10;    if ((((trial.thisN + 1) % 10) === 0)) {&amp;#10;        console.log(`&amp;#10;Accuracy T1: ${(counter_T1 / 10)}`&amp;#10;);&amp;#10;        counter_T1 = 0;&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
-        <Param val="if task == 'dual':&amp;#10;    print(f'Corr T1: {key_resp_T1.corr}')&amp;#10;#    if key_resp_T2.keys:&amp;#10;#        if key_resp_T1.corr: &amp;#10;#            counter_T1 += 1&amp;#10;#            event_ans_T1 = 53 if responseT1 == 'j' else 51&amp;#10;#        else:&amp;#10;#            event_ans_T1 = 54 if responseT1 == 'j' else 52&amp;#10;#    else:&amp;#10;#        event_ans_T1 = 55&amp;#10;#&amp;#10;#    trigger_ans_T1.setData(event_ans_T1)&amp;#10;&amp;#10;    if (trial.thisN+1)%10 == 0:&amp;#10;        print(f'\n Accuracy T1: {counter_T1/10}\n')&amp;#10;        counter_T1 = 0" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="if task == 'dual':&amp;#10;    print(f'Corr T1: {key_resp_T1.corr}')&amp;#10;&amp;#10;    if (trial.thisN+1)%10 == 0:&amp;#10;        print(f'\n Accuracy T1: {counter_T1/10}\n')&amp;#10;        counter_T1 = 0" valType="extendedCode" updates="constant" name="End Routine"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="code_2" valType="code" updates="None" name="name"/>
+        <Param val="code_text_T1ask" valType="code" updates="None" name="name"/>
       </CodeComponent>
-      <ParallelOutComponent name="trigger_ask_T1" plugin="None">
-        <Param val="0xC000" valType="str" updates="None" name="address"/>
-        <Param val="True" valType="bool" updates="None" name="disabled"/>
-        <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="trigger_ask_T1" valType="code" updates="None" name="name"/>
-        <Param val="EIO" valType="str" updates="None" name="register"/>
-        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="50" valType="code" updates="None" name="startData"/>
-        <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val="0" valType="code" updates="None" name="startVal"/>
-        <Param val="0" valType="code" updates="None" name="stopData"/>
-        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
-        <Param val="0.005" valType="code" updates="constant" name="stopVal"/>
-        <Param val="True" valType="bool" updates="constant" name="syncScreen"/>
-        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-      </ParallelOutComponent>
-      <ParallelOutComponent name="trigger_ans_T1" plugin="None">
-        <Param val="0xC000" valType="str" updates="None" name="address"/>
-        <Param val="True" valType="bool" updates="None" name="disabled"/>
-        <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="trigger_ans_T1" valType="code" updates="None" name="name"/>
-        <Param val="EIO" valType="str" updates="None" name="register"/>
-        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="event_ans_T1" valType="code" updates="None" name="startData"/>
-        <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="condition" valType="str" updates="None" name="startType"/>
-        <Param val="key_resp_T1.keys" valType="code" updates="None" name="startVal"/>
-        <Param val="0" valType="code" updates="None" name="stopData"/>
-        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
-        <Param val="0.005" valType="code" updates="constant" name="stopVal"/>
-        <Param val="True" valType="bool" updates="constant" name="syncScreen"/>
-        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-      </ParallelOutComponent>
     </Routine>
     <Routine name="Ask_T2">
       <RoutineSettingsComponent name="Ask_T2" plugin="None">
@@ -431,57 +397,23 @@
         <Param val="True" valType="bool" updates="constant" name="storeCorrect"/>
         <Param val="True" valType="bool" updates="constant" name="syncScreenRefresh"/>
       </KeyboardComponent>
-      <CodeComponent name="code" plugin="None">
+      <CodeComponent name="code_T2_ask" plugin="None">
         <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="pressed = False" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="pressed = False&amp;#10;stimulus_pulse_started = False&amp;#10;stimulus_pulse_ended = False" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Py" valType="str" updates="None" name="Code Type"/>
-        <Param val="# send AnswerT1(51/52/53/54) trigger&amp;#10;if key_resp_T2.keys and not pressed:&amp;#10;    pressed = True&amp;#10;    trigger_ans_T2.tStartRefresh = tThisFlipGlobal&amp;#10;    if key_resp_T2.keys == responseT2: &amp;#10;        counter_T2 += 1&amp;#10;        event_ans_T2 = 61 if related == 'related' else 63&amp;#10;    else:&amp;#10;        event_ans_T2 = 62 if related == 'related' else 64&amp;#10;    win.callOnFlip(trigger_ans_T2.setData, event_ans_T2)&amp;#10;if pressed:&amp;#10;    if tThisFlipGlobal &gt; trigger_ans_T2.tStartRefresh + 0.004:&amp;#10;        win.callOnFlip(trigger_ans_T2.setData, 0)&amp;#10;        continueRoutine = False&amp;#10;" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="# send AskT2(?) trigger (60)&amp;#10;if text_T2ask.status == STARTED and not stimulus_pulse_started:&amp;#10;    stimulus_pulse_started = True&amp;#10;    stimulus_pulse_start_time = globalClock.getTime()&amp;#10;    send_trigger(60)&amp;#10;#reset trigger&amp;#10;if stimulus_pulse_started and not stimulus_pulse_ended:&amp;#10;    if globalClock.getTime() - stimulus_pulse_start_time &gt;= 0.005:&amp;#10;        send_trigger(0)&amp;#10;        stimulus_pulse_ended = True&amp;#10;&amp;#10;# send AnswerT1(61/62/63/64) trigger&amp;#10;if key_resp_T2.keys and not pressed:&amp;#10;    pressed = True&amp;#10;    stimulus_pulse_start_time = globalClock.getTime()&amp;#10;    if key_resp_T2.keys == responseT2: &amp;#10;        counter_T2 += 1&amp;#10;        event_ans_T2 = 61 if related == 'related' else 63&amp;#10;    else:&amp;#10;        event_ans_T2 = 62 if related == 'related' else 64&amp;#10;    send_trigger(event_ans_T2)&amp;#10;#reset trigger&amp;#10;if pressed:&amp;#10;    if globalClock.getTime() - stimulus_pulse_start_time &gt;= 0.005:&amp;#10;        send_trigger(0)&amp;#10;        pressed = False&amp;#10;        continueRoutine = False&amp;#10;" valType="extendedCode" updates="constant" name="Each Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
-        <Param val="print(f'Corr T2: {key_resp_T2.corr}')&amp;#10;#if key_resp_T2.keys:&amp;#10;#    if key_resp_T2.corr: &amp;#10;#        counter_T2 += 1&amp;#10;#        event_ans_T2 = 61 if related == 'related' else 63&amp;#10;#    else:&amp;#10;#        event_ans_T2 = 62 if related == 'related' else 64&amp;#10;#else:&amp;#10;#    event_ans_T2 = 65&amp;#10;#    trigger_ans_T1.setData(65)&amp;#10;&amp;#10;if (trial.thisN+1)%10 == 0:&amp;#10;    print(f'\n Accuracy T2: {counter_T2/10}')&amp;#10;    counter_T2 = 0" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="print(f'Corr T2: {key_resp_T2.corr}')&amp;#10;&amp;#10;if (trial.thisN+1)%10 == 0:&amp;#10;    print(f'\n Accuracy T2: {counter_T2/10}')&amp;#10;    counter_T2 = 0" valType="extendedCode" updates="constant" name="End Routine"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="code" valType="code" updates="None" name="name"/>
+        <Param val="code_T2_ask" valType="code" updates="None" name="name"/>
       </CodeComponent>
-      <ParallelOutComponent name="trigger_ask_T2" plugin="None">
-        <Param val="0xC000" valType="str" updates="None" name="address"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="trigger_ask_T2" valType="code" updates="None" name="name"/>
-        <Param val="EIO" valType="str" updates="None" name="register"/>
-        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="60" valType="code" updates="None" name="startData"/>
-        <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val="0" valType="code" updates="None" name="startVal"/>
-        <Param val="0" valType="code" updates="None" name="stopData"/>
-        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
-        <Param val="0.005" valType="code" updates="constant" name="stopVal"/>
-        <Param val="True" valType="bool" updates="constant" name="syncScreen"/>
-        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-      </ParallelOutComponent>
-      <ParallelOutComponent name="trigger_ans_T2" plugin="None">
-        <Param val="0xC000" valType="str" updates="None" name="address"/>
-        <Param val="True" valType="bool" updates="None" name="disabled"/>
-        <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="trigger_ans_T2" valType="code" updates="None" name="name"/>
-        <Param val="EIO" valType="str" updates="None" name="register"/>
-        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="event_ans_T2" valType="code" updates="None" name="startData"/>
-        <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="condition" valType="str" updates="None" name="startType"/>
-        <Param val="key_resp_T2.keys" valType="code" updates="None" name="startVal"/>
-        <Param val="0" valType="code" updates="None" name="stopData"/>
-        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
-        <Param val="0.005" valType="code" updates="constant" name="stopVal"/>
-        <Param val="True" valType="bool" updates="constant" name="syncScreen"/>
-        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-      </ParallelOutComponent>
     </Routine>
     <Routine name="T0_context">
       <RoutineSettingsComponent name="T0_context" plugin="None">
@@ -554,23 +486,23 @@
         <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
-      <ParallelOutComponent name="trigger_T0" plugin="None">
-        <Param val="0xC000" valType="str" updates="None" name="address"/>
+      <CodeComponent name="code_T0" plugin="None">
+        <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="stimulus_pulse_started = False&amp;#10;stimulus_pulse_ended = False" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="Py" valType="str" updates="None" name="Code Type"/>
+        <Param val="#send T0 trigger (10/11)&amp;#10;if context_word.status == STARTED and not stimulus_pulse_started:&amp;#10;    stimulus_pulse_started = True&amp;#10;    stimulus_pulse_start_time = globalClock.getTime()&amp;#10;    send_trigger(trigger_T0)&amp;#10;#reset trigger (0)      &amp;#10;if stimulus_pulse_started and not stimulus_pulse_ended:&amp;#10;    if globalClock.getTime() - stimulus_pulse_start_time &gt;= 0.005:&amp;#10;        send_trigger(0)&amp;#10;        stimulus_pulse_ended = True" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Routine"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="trigger_T0" valType="code" updates="None" name="name"/>
-        <Param val="EIO" valType="str" updates="None" name="register"/>
-        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="$event_T0" valType="code" updates="None" name="startData"/>
-        <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val="0.0" valType="code" updates="None" name="startVal"/>
-        <Param val="0" valType="code" updates="None" name="stopData"/>
-        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
-        <Param val="0.005" valType="code" updates="constant" name="stopVal"/>
-        <Param val="True" valType="bool" updates="constant" name="syncScreen"/>
-        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-      </ParallelOutComponent>
+        <Param val="code_T0" valType="code" updates="None" name="name"/>
+      </CodeComponent>
     </Routine>
     <Routine name="distractors_T1">
       <RoutineSettingsComponent name="distractors_T1" plugin="None">
@@ -595,14 +527,14 @@
         <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
         <Param val="console.log(&quot;dist&quot;, distractors_trial.length, &quot;lagT1&quot;, (lagT1 - 1));&amp;#10;if ((lagT1 === 1)) {&amp;#10;    continueRoutine = false;&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="if lagT1 == 1:&amp;#10;     continueRoutine = False&amp;#10;     thisExp.addData('distractor_T1','')&amp;#10;else:&amp;#10;    i += 1&amp;#10;    thisExp.addData('distractor_T1',distractors_trial[i])" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="if lagT1 == 1:&amp;#10;     continueRoutine = False&amp;#10;     thisExp.addData('distractor_T1','')&amp;#10;else:&amp;#10;    i += 1&amp;#10;    thisExp.addData('distractor_T1',distractors_trial[i])&amp;#10;    stimulus_pulse_started = False&amp;#10;    stimulus_pulse_ended = False" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Py" valType="str" updates="None" name="Code Type"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="if lagT1 != 1:&amp;#10;    #send dist_T1 trigger (30)&amp;#10;    if text_distr_T1.status == STARTED and not stimulus_pulse_started:&amp;#10;        stimulus_pulse_started = True&amp;#10;        stimulus_pulse_start_time = globalClock.getTime()&amp;#10;        send_trigger(30)&amp;#10;    #reset trigger (0)      &amp;#10;    if stimulus_pulse_started and not stimulus_pulse_ended:&amp;#10;        if globalClock.getTime() - stimulus_pulse_start_time &gt;= 0.005:&amp;#10;            send_trigger(0)&amp;#10;            stimulus_pulse_ended = True" valType="extendedCode" updates="constant" name="Each Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
         <Param val="if (((lagT1 === 1) || (trials_T1.thisN === (lagT1 - 2)))) {&amp;#10;    trials_T1.finished = true;&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
-        <Param val="if lagT1 == 1 or trials_T1.thisN == lagT1-2:&amp;#10;    trials_T1.finished = True&amp;#10;" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="if lagT1 == 1 or trials_T1.thisN == lagT1-2:&amp;#10;    trials_T1.finished = True" valType="extendedCode" updates="constant" name="End Routine"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="skipLoop_ifLag1" valType="code" updates="None" name="name"/>
       </CodeComponent>
@@ -660,23 +592,6 @@
         <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
-      <ParallelOutComponent name="trigger_dist_T1" plugin="None">
-        <Param val="0xC000" valType="str" updates="None" name="address"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="trigger_dist_T1" valType="code" updates="None" name="name"/>
-        <Param val="EIO" valType="str" updates="None" name="register"/>
-        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="30" valType="code" updates="None" name="startData"/>
-        <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val="0.0" valType="code" updates="None" name="startVal"/>
-        <Param val="0" valType="code" updates="None" name="stopData"/>
-        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
-        <Param val="0.005" valType="code" updates="constant" name="stopVal"/>
-        <Param val="True" valType="bool" updates="constant" name="syncScreen"/>
-        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-      </ParallelOutComponent>
     </Routine>
     <Routine name="rest">
       <RoutineSettingsComponent name="rest" plugin="None">
@@ -701,9 +616,9 @@
         <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="# skip rest after last block&amp;#10;if block.thisN+1 == 12:&amp;#10;    continueRoutine = False" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="# skip rest after last block&amp;#10;if block.thisN+1 == 12:&amp;#10;    continueRoutine = False&amp;#10;else:&amp;#10;    stimulus_pulse_started = False&amp;#10;    stimulus_pulse_ended = False" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Py" valType="str" updates="None" name="Code Type"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="if block.thisN+1 != 12:&amp;#10;    #send rest trigger (100)&amp;#10;    if text_rest.status == STARTED and not stimulus_pulse_started:&amp;#10;        stimulus_pulse_started = True&amp;#10;        stimulus_pulse_start_time = globalClock.getTime()&amp;#10;        send_trigger(100)&amp;#10;    #reset trigger (0)      &amp;#10;    if stimulus_pulse_started and not stimulus_pulse_ended:&amp;#10;        if globalClock.getTime() - stimulus_pulse_start_time &gt;= 0.005:&amp;#10;            send_trigger(0)&amp;#10;            stimulus_pulse_ended = True" valType="extendedCode" updates="constant" name="Each Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
@@ -759,23 +674,6 @@
         <Param val="False" valType="bool" updates="constant" name="storeCorrect"/>
         <Param val="True" valType="bool" updates="constant" name="syncScreenRefresh"/>
       </KeyboardComponent>
-      <ParallelOutComponent name="trigger_rest" plugin="None">
-        <Param val="0xC000" valType="str" updates="None" name="address"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="trigger_rest" valType="code" updates="None" name="name"/>
-        <Param val="EIO" valType="str" updates="None" name="register"/>
-        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="100" valType="code" updates="None" name="startData"/>
-        <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val="0" valType="code" updates="None" name="startVal"/>
-        <Param val="0" valType="code" updates="None" name="stopData"/>
-        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
-        <Param val="0.005" valType="code" updates="constant" name="stopVal"/>
-        <Param val="True" valType="bool" updates="constant" name="syncScreen"/>
-        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-      </ParallelOutComponent>
     </Routine>
     <Routine name="distractors_T2">
       <RoutineSettingsComponent name="distractors_T2" plugin="None">
@@ -800,10 +698,10 @@
         <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
         <Param val="psychoJS.experiment.addData(&quot;distractor_T2&quot;, distractors_trial[i]);&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="thisExp.addData('distractor_T2',distractors_trial[i])" valType="extendedCode" updates="constant" name="Begin Routine"/>
-        <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="thisExp.addData('distractor_T2',distractors_trial[i])&amp;#10;stimulus_pulse_started = False&amp;#10;stimulus_pulse_ended = False" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="Py" valType="str" updates="None" name="Code Type"/>
+        <Param val="#send dist_T2 trigger (30)&amp;#10;if text_distr_T2.status == STARTED and not stimulus_pulse_started:&amp;#10;    stimulus_pulse_started = True&amp;#10;    stimulus_pulse_start_time = globalClock.getTime()&amp;#10;    send_trigger(30)&amp;#10;#reset trigger (0)      &amp;#10;if stimulus_pulse_started and not stimulus_pulse_ended:&amp;#10;    if globalClock.getTime() - stimulus_pulse_start_time &gt;= 0.005:&amp;#10;        send_trigger(0)&amp;#10;        stimulus_pulse_ended = True" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="if (((text_distr_T2.status === PsychoJS.Status.STARTED) &amp;&amp; (! stimulus_pulse_started))) {&amp;#10;    stimulus_pulse_started = true;&amp;#10;    stimulus_pulse_start_time = globalClock.getTime();&amp;#10;    send_trigger(30);&amp;#10;}&amp;#10;if ((stimulus_pulse_started &amp;&amp; (! stimulus_pulse_ended))) {&amp;#10;    if (((globalClock.getTime() - stimulus_pulse_start_time) &gt;= 0.005)) {&amp;#10;        send_trigger(0);&amp;#10;        stimulus_pulse_ended = true;&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Each JS Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
         <Param val="i += 1;&amp;#10;if ((trials_T2.thisN === (lagT2 - 1))) {&amp;#10;    trials_T2.finished = true;&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
@@ -865,23 +763,6 @@
         <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
-      <ParallelOutComponent name="trigger_dist_T2" plugin="None">
-        <Param val="0xC000" valType="str" updates="None" name="address"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="trigger_dist_T2" valType="code" updates="None" name="name"/>
-        <Param val="EIO" valType="str" updates="None" name="register"/>
-        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="30" valType="code" updates="None" name="startData"/>
-        <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val="0.0" valType="code" updates="None" name="startVal"/>
-        <Param val="0" valType="code" updates="None" name="stopData"/>
-        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
-        <Param val="0.005" valType="code" updates="constant" name="stopVal"/>
-        <Param val="True" valType="bool" updates="constant" name="syncScreen"/>
-        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-      </ParallelOutComponent>
     </Routine>
     <Routine name="distractors_T0">
       <RoutineSettingsComponent name="distractors_T0" plugin="None">
@@ -906,9 +787,9 @@
         <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
         <Param val="psychoJS.experiment.addData(&quot;distractor_T0&quot;, distractors_trial[i]);&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="thisExp.addData('distractor_T0',distractors_trial[i])" valType="extendedCode" updates="constant" name="Begin Routine"/>
-        <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="thisExp.addData('distractor_T0',distractors_trial[i])&amp;#10;stimulus_pulse_started = False&amp;#10;stimulus_pulse_ended = False" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="Py" valType="str" updates="None" name="Code Type"/>
+        <Param val="#send dist_T0 trigger (30)&amp;#10;if text_distr_T0.status == STARTED and not stimulus_pulse_started:&amp;#10;    stimulus_pulse_started = True&amp;#10;    stimulus_pulse_start_time = globalClock.getTime()&amp;#10;    send_trigger(30)&amp;#10;#reset trigger (0)      &amp;#10;if stimulus_pulse_started and not stimulus_pulse_ended:&amp;#10;    if globalClock.getTime() - stimulus_pulse_start_time &gt;= 0.005:&amp;#10;        send_trigger(0)&amp;#10;        stimulus_pulse_ended = True" valType="extendedCode" updates="constant" name="Each Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
@@ -971,23 +852,6 @@
         <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
-      <ParallelOutComponent name="trigger_dist_T0" plugin="None">
-        <Param val="0xC000" valType="str" updates="None" name="address"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="trigger_dist_T0" valType="code" updates="None" name="name"/>
-        <Param val="EIO" valType="str" updates="None" name="register"/>
-        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="30" valType="code" updates="None" name="startData"/>
-        <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val="0.0" valType="code" updates="None" name="startVal"/>
-        <Param val="0" valType="code" updates="None" name="stopData"/>
-        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
-        <Param val="0.005" valType="code" updates="constant" name="stopVal"/>
-        <Param val="True" valType="bool" updates="constant" name="syncScreen"/>
-        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-      </ParallelOutComponent>
     </Routine>
     <Routine name="T1_number">
       <RoutineSettingsComponent name="T1_number" plugin="None">
@@ -1060,23 +924,23 @@
         <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
-      <ParallelOutComponent name="trigger_T1" plugin="None">
-        <Param val="0xC000" valType="str" updates="None" name="address"/>
+      <CodeComponent name="code_T1" plugin="None">
+        <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="stimulus_pulse_started = False&amp;#10;stimulus_pulse_ended = False" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="Py" valType="str" updates="None" name="Code Type"/>
+        <Param val="#send T1 trigger (20/21/22/23)&amp;#10;if text_T1.status == STARTED and not stimulus_pulse_started:&amp;#10;    stimulus_pulse_started = True&amp;#10;    stimulus_pulse_start_time = globalClock.getTime()&amp;#10;    send_trigger(trigger_T1)&amp;#10;#reset trigger (0)      &amp;#10;if stimulus_pulse_started and not stimulus_pulse_ended:&amp;#10;    if globalClock.getTime() - stimulus_pulse_start_time &gt;= 0.005:&amp;#10;        send_trigger(0)&amp;#10;        stimulus_pulse_ended = True" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Routine"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="trigger_T1" valType="code" updates="None" name="name"/>
-        <Param val="EIO" valType="str" updates="None" name="register"/>
-        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="$event_T1" valType="code" updates="None" name="startData"/>
-        <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val="0.0" valType="code" updates="None" name="startVal"/>
-        <Param val="0" valType="code" updates="None" name="stopData"/>
-        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
-        <Param val="0.005" valType="code" updates="constant" name="stopVal"/>
-        <Param val="True" valType="bool" updates="constant" name="syncScreen"/>
-        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-      </ParallelOutComponent>
+        <Param val="code_T1" valType="code" updates="None" name="name"/>
+      </CodeComponent>
     </Routine>
     <Routine name="T1_num">
       <RoutineSettingsComponent name="T1_num" plugin="None">
@@ -1146,7 +1010,7 @@
         <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="distractors_trial = list(distractors_df.dist[dist_idx:dist_idx+18])&amp;#10;i = 0 # distractor index&amp;#10;print(f'\nTrial #{trial.thisN+1}')&amp;#10;&amp;#10;#triggers&amp;#10;if task == 'single':&amp;#10;    event_T0 = 10&amp;#10;    event_T1 = 20 if responseT1 == 'j' else 21&amp;#10;    event_T2 = 40 if related == 'related' else 41&amp;#10;else:&amp;#10;    event_T0 = 11&amp;#10;    event_T1 = 22 if responseT1 == 'j' else 23&amp;#10;    event_T2 = 44 if related == 'related' else 43&amp;#10;" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="distractors_trial = list(distractors_df.dist[dist_idx:dist_idx+18])&amp;#10;i = 0 # distractor index&amp;#10;print(f'\nTrial #{trial.thisN+1}')&amp;#10;&amp;#10;#triggers&amp;#10;if task == 'single':&amp;#10;    trigger_T0 = 10&amp;#10;    trigger_T1 = 20 if responseT1 == 'j' else 21&amp;#10;    trigger_T2 = 40 if related == 'related' else 41&amp;#10;else:&amp;#10;    trigger_T0 = 11&amp;#10;    trigger_T1 = 22 if responseT1 == 'j' else 23&amp;#10;    trigger_T2 = 42 if related == 'related' else 43&amp;#10;" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Py" valType="str" updates="None" name="Code Type"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
@@ -1202,23 +1066,23 @@
         <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
-      <ParallelOutComponent name="trigger_end" plugin="None">
-        <Param val="0xC000" valType="str" updates="None" name="address"/>
+      <CodeComponent name="code_end" plugin="None">
+        <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="stimulus_pulse_started = false;&amp;#10;stimulus_pulse_ended = false;&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="stimulus_pulse_started = False&amp;#10;stimulus_pulse_ended = False" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="Py" valType="str" updates="None" name="Code Type"/>
+        <Param val="#send finish trigger (200)&amp;#10;if text_thanks.status == STARTED and not stimulus_pulse_started:&amp;#10;    stimulus_pulse_started = True&amp;#10;    stimulus_pulse_start_time = globalClock.getTime()&amp;#10;    send_trigger(200)&amp;#10;#reset trigger (0)      &amp;#10;if stimulus_pulse_started and not stimulus_pulse_ended:&amp;#10;    if globalClock.getTime() - stimulus_pulse_start_time &gt;= 0.005:&amp;#10;        send_trigger(0)&amp;#10;        stimulus_pulse_ended = True" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="if (((text_thanks.status === PsychoJS.Status.STARTED) &amp;&amp; (! stimulus_pulse_started))) {&amp;#10;    stimulus_pulse_started = true;&amp;#10;    stimulus_pulse_start_time = globalClock.getTime();&amp;#10;    send_trigger(trigger_T2);&amp;#10;}&amp;#10;if ((stimulus_pulse_started &amp;&amp; (! stimulus_pulse_ended))) {&amp;#10;    if (((globalClock.getTime() - stimulus_pulse_start_time) &gt;= 0.005)) {&amp;#10;        send_trigger(0);&amp;#10;        stimulus_pulse_ended = true;&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="#s_port.close()" valType="extendedCode" updates="constant" name="End Routine"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="trigger_end" valType="code" updates="None" name="name"/>
-        <Param val="EIO" valType="str" updates="None" name="register"/>
-        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="200" valType="code" updates="None" name="startData"/>
-        <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val="0" valType="code" updates="None" name="startVal"/>
-        <Param val="0" valType="code" updates="None" name="stopData"/>
-        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
-        <Param val="0.005" valType="code" updates="constant" name="stopVal"/>
-        <Param val="True" valType="bool" updates="constant" name="syncScreen"/>
-        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-      </ParallelOutComponent>
+        <Param val="code_end" valType="code" updates="None" name="name"/>
+      </CodeComponent>
     </Routine>
     <Routine name="set_block">
       <RoutineSettingsComponent name="set_block" plugin="None">
@@ -1240,7 +1104,7 @@
       <CodeComponent name="settings_code" plugin="None">
         <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
-        <Param val="import random&amp;#10;import pandas as pd&amp;#10;&amp;#10;#local path to language&amp;#10;local_path = 'languages/'+expInfo['language']&amp;#10;&amp;#10;with open(f'{local_path}/rest.txt', 'r') as file:&amp;#10;    txt_rest = file.read()&amp;#10;&amp;#10;with open(f'{local_path}/thanks.txt', 'r') as file:&amp;#10;    txt_thanks = file.read()&amp;#10;&amp;#10;# duration in frames&amp;#10;#dur_frames = round(0.083 * int(expInfo['refresh rate (Hz)']))&amp;#10;dur_frames_stim = round(0.033 * int(expInfo['refresh rate (Hz)']))&amp;#10;dur_frames_blank = round(0.050 * int(expInfo['refresh rate (Hz)']))&amp;#10;&amp;#10;# set trials order&amp;#10;n = 30 # num of related and unrelated trials&amp;#10;related_idx = list(range(360))&amp;#10;unrelated_idx = list(range(360,720))&amp;#10;random.shuffle(related_idx)&amp;#10;random.shuffle(unrelated_idx)&amp;#10;&amp;#10;# read file with distractors &amp;#10;distractors_df = pd.read_csv(f'{local_path}/distractors.csv')&amp;#10;distractors_df = distractors_df.sample(frac = 1)&amp;#10;dist_idx = 0&amp;#10;&amp;#10;# feedback counters&amp;#10;counter_T1 = 0&amp;#10;counter_T2 = 0&amp;#10;&amp;#10;# create parallel ports for answers&amp;#10;pport_address = expInfo['pport address']&amp;#10;trigger_ask_T1 = parallel.ParallelPort(address=pport_address)&amp;#10;trigger_ans_T1 = parallel.ParallelPort(address=pport_address)&amp;#10;trigger_ans_T2 = parallel.ParallelPort(address=pport_address)&amp;#10;trigger_missed_T1 = parallel.ParallelPort(address=pport_address)&amp;#10;trigger_missed_T2 = parallel.ParallelPort(address=pport_address)" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="import random&amp;#10;import pandas as pd&amp;#10;from psychopy import parallel&amp;#10;&amp;#10;# serial/parallel port address &amp;#10;port_address = expInfo['port address']&amp;#10;&amp;#10;# COMMENT LINES 10-13 IF YOU USE SERIAL PORT&amp;#10;# create parallel port&amp;#10;p_port = parallel.ParallelPort(address = port_address)&amp;#10;#send pport trigger&amp;#10;def send_trigger(triggerCode):&amp;#10;    win.callOnFlip(p_port.setData, triggerCode)&amp;#10;&amp;#10;# UNCOMMENT LINES 16-20 IF YOU USE SERIAL PORT and 1ST LINE IN &quot;End Routine&quot; IN ROUTINE &quot;end&quot;&amp;#10;## create serial port&amp;#10;#import serial&amp;#10;#s_port = serial.Serial(port = port_address)&amp;#10;#def send_trigger(triggerCode):&amp;#10;#    win.callOnFlip(s_port.write, str.encode(str(triggerCode)))&amp;#10;&amp;#10;#local path to language&amp;#10;local_path = 'languages/'+expInfo['language']&amp;#10;&amp;#10;with open(f'{local_path}/rest.txt', 'r') as file:&amp;#10;    txt_rest = file.read()&amp;#10;&amp;#10;with open(f'{local_path}/thanks.txt', 'r') as file:&amp;#10;    txt_thanks = file.read()&amp;#10;&amp;#10;# duration in frames&amp;#10;#dur_frames = round(0.083 * int(expInfo['refresh rate (Hz)']))&amp;#10;dur_frames_stim = round(0.033 * int(expInfo['refresh rate (Hz)']))&amp;#10;dur_frames_blank = round(0.050 * int(expInfo['refresh rate (Hz)']))&amp;#10;&amp;#10;# set trials order&amp;#10;n = 30 # num of related and unrelated trials&amp;#10;related_idx = list(range(360))&amp;#10;unrelated_idx = list(range(360,720))&amp;#10;random.shuffle(related_idx)&amp;#10;random.shuffle(unrelated_idx)&amp;#10;&amp;#10;# read file with distractors &amp;#10;distractors_df = pd.read_csv(f'{local_path}/distractors.csv')&amp;#10;distractors_df = distractors_df.sample(frac = 1)&amp;#10;dist_idx = 0&amp;#10;&amp;#10;# feedback counters&amp;#10;counter_T1 = 0&amp;#10;counter_T2 = 0" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
         <Param val="/* Syntax Error: Fix Python code */" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
         <Param val="# set blocks order&amp;#10;task = task1 if expInfo['order [1: single-dual or 2: dual-single]']=='1' else task2&amp;#10;        &amp;#10;# choose rows for this trial&amp;#10;trials_in_block = related_idx[-n:] + unrelated_idx[-n:]&amp;#10;shuffle(trials_in_block)&amp;#10;related_idx = related_idx[:len(related_idx)-n]&amp;#10;unrelated_idx = unrelated_idx[:len(unrelated_idx)-n]&amp;#10;&amp;#10;# log&amp;#10;print(f'\nBlock #{block.thisN+1}\nTask: {task}\n')" valType="extendedCode" updates="constant" name="Begin Routine"/>
@@ -1305,9 +1169,9 @@
         <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="trigger_sent = False" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="trigger_sent = False&amp;#10;trigger_reset = False" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Py" valType="str" updates="None" name="Code Type"/>
-        <Param val="if not key_resp_T1.keys and not trigger_sent:&amp;#10;    trigger_sent = True&amp;#10;    trigger_missed_T1.tStartRefresh = tThisFlipGlobal&amp;#10;    win.callOnFlip(trigger_missed_T1.setData, 55)&amp;#10;if trigger_sent:&amp;#10;    if tThisFlipGlobal &gt; trigger_missed_T1.tStartRefresh + 0.004:&amp;#10;        win.callOnFlip(trigger_missed_T1.setData, 0)" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="#send trigger if missed answer (55)&amp;#10;if not key_resp_T1.keys and not trigger_sent:&amp;#10;    trigger_sent = True&amp;#10;    stimulus_pulse_start_time = globalClock.getTime()&amp;#10;    send_trigger(55)&amp;#10;#reset trigger (0)&amp;#10;if trigger_sent and not trigger_reset:&amp;#10;    if globalClock.getTime() - stimulus_pulse_start_time &gt;= 0.005:&amp;#10;        send_trigger(0)&amp;#10;        trigger_reset = True" valType="extendedCode" updates="constant" name="Each Frame"/>
         <Param val="if ((! key_resp_T1.keys)) {&amp;#10;    trigger_missed_T1;&amp;#10;    psychoJS.window.callOnFlip(trigger_missed_T1.setData, &quot;&quot;);&amp;#10;}&amp;#10;if ((key_resp_T2.keys &amp;&amp; (! pressed))) {&amp;#10;    pressed = true;&amp;#10;    trigger_ans_T2.tStartRefresh = tThisFlipGlobal;&amp;#10;    if ((key_resp_T2.keys === responseT2)) {&amp;#10;        counter_T2 += 1;&amp;#10;        event_ans_T2 = ((related === &quot;related&quot;) ? 61 : 63);&amp;#10;    } else {&amp;#10;        event_ans_T2 = ((related === &quot;related&quot;) ? 62 : 64);&amp;#10;    }&amp;#10;    psychoJS.window.callOnFlip(trigger_ans_T2.setData, event_ans_T2);&amp;#10;}&amp;#10;if (pressed) {&amp;#10;    if ((tThisFlipGlobal &gt; (trigger_test.tStartRefresh + 0.004))) {&amp;#10;        psychoJS.window.callOnFlip(trigger_test.setData, 0);&amp;#10;        continueRoutine = false;&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Each JS Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
@@ -1367,9 +1231,9 @@
         <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
         <Param val="trigger_sent = false;&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="trigger_sent = False" valType="extendedCode" updates="constant" name="Begin Routine"/>
-        <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
-        <Param val="if not key_resp_T2.keys and not trigger_sent:&amp;#10;    trigger_sent = True&amp;#10;    trigger_missed_T2.tStartRefresh = tThisFlipGlobal&amp;#10;    win.callOnFlip(trigger_missed_T2.setData, 65)&amp;#10;if trigger_sent:&amp;#10;    if tThisFlipGlobal &gt; trigger_missed_T2.tStartRefresh + 0.004:&amp;#10;        win.callOnFlip(trigger_missed_T2.setData, 0)" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="trigger_sent = False&amp;#10;trigger_reset = False" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="Py" valType="str" updates="None" name="Code Type"/>
+        <Param val="if not key_resp_T2.keys and not trigger_sent:&amp;#10;    trigger_sent = True&amp;#10;    stimulus_pulse_start_time = globalClock.getTime()&amp;#10;    send_trigger(65)&amp;#10;if trigger_sent and not trigger_reset:&amp;#10;    if globalClock.getTime() - stimulus_pulse_start_time &gt;= 0.005:&amp;#10;        send_trigger(0)&amp;#10;        trigger_reset = True" valType="extendedCode" updates="constant" name="Each Frame"/>
         <Param val="if (((! key_resp_T2.keys) &amp;&amp; (! trigger_sent))) {&amp;#10;    trigger_sent = true;&amp;#10;    trigger_missed_T2.tStartRefresh = tThisFlipGlobal;&amp;#10;    psychoJS.window.callOnFlip(trigger_missed_T2.setData, 65);&amp;#10;}&amp;#10;if (trigger_sent) {&amp;#10;    if ((tThisFlipGlobal &gt; (trigger_missed_T2.tStartRefresh + 0.004))) {&amp;#10;        psychoJS.window.callOnFlip(trigger_missed_T2.setData, 0);&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Each JS Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
@@ -1444,12 +1308,12 @@
       <CodeComponent name="code_3" plugin="None">
         <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
-        <Param val="pport_address = expInfo['pport address']&amp;#10;trigger_test = parallel.ParallelPort(address=pport_address)&amp;#10;trial_clock = core.Clock()" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="pport_address = expInfo['pport address']&amp;#10;trigger_test = parallel.ParallelPort(address=pport_address)" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="pport_address = expInfo[&quot;pport address&quot;];&amp;#10;trigger_ask_T1 = new parallel.ParallelPort({&quot;address&quot;: pport_address});&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
         <Param val="pressed = False" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Py" valType="str" updates="None" name="Code Type"/>
-        <Param val="if key_test.keys == 'space' and not pressed:&amp;#10;    if key_test.corr:&amp;#10;        print('CORR')&amp;#10;    pressed = True&amp;#10;    trigger_test.tStartRefresh = tThisFlipGlobal&amp;#10;    win.callOnFlip(trigger_test.setData, 100)&amp;#10;if pressed:&amp;#10;    if tThisFlipGlobal &gt; trigger_test.tStartRefresh + 0.004:&amp;#10;        print(f'trigger 0 {tThisFlipGlobal-trigger_test.tStartRefresh - 0.004}')&amp;#10;        win.callOnFlip(trigger_test.setData, 0)&amp;#10;        continueRoutine=False&amp;#10;" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="if key_test.keys == 'space' and not pressed:&amp;#10;    if key_test.corr:&amp;#10;        print('CORR')&amp;#10;    pressed = True&amp;#10;    trigger_test.tStartRefresh = tThisFlipGlobal&amp;#10;    stimulus_pulse_start_time = globalClock.getTime()&amp;#10;    send_trigger(100)&amp;#10;if pressed:&amp;#10;    if globalClock.getTime() - stimulus_pulse_start_time &gt;= 0.005:&amp;#10;        print(f'globalClock {globalClock.getTime() - stimulus_pulse_start_time}')&amp;#10;    if tThisFlipGlobal &gt; trigger_test.tStartRefresh + 0.004:&amp;#10;        print(f'tStartRefresh {tThisFlipGlobal-trigger_test.tStartRefresh - 0.004}')&amp;#10;        send_trigger(0)&amp;#10;        continueRoutine=False&amp;#10;" valType="extendedCode" updates="constant" name="Each Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
