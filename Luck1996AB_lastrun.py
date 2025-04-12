@@ -1,8 +1,8 @@
 ﻿#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
-This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on Март 19, 2025, at 20:53
+This experiment was created using PsychoPy3 Experiment Builder (v2024.2.5),
+    on Апрель 12, 2025, at 20:59
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -39,13 +39,14 @@ deviceManager = hardware.DeviceManager()
 # ensure that relative paths start from the same directory as this script
 _thisDir = os.path.dirname(os.path.abspath(__file__))
 # store info about the experiment session
-psychopyVersion = '2024.2.4'
+psychopyVersion = '2024.2.5'
 expName = 'AB'  # from the Builder filename that created this script
 # information about this experiment
 expInfo = {
     'participant': f"{randint(0, 999999):06.0f}",
     'order [1: single-dual or 2: dual-single]': '1',
     'refresh rate (Hz)': '60',
+    'port(parallel/serial/cedrus)': 'parallel',
     'port address': '0xC000',
     'language': 'en',
     'date|hid': data.getDateStr(),
@@ -129,7 +130,7 @@ def setupData(expInfo, dataDir=None):
     thisExp = data.ExperimentHandler(
         name=expName, version='',
         extraInfo=expInfo, runtimeInfo=None,
-        originPath='C:\\Users\\Neurolab\\Desktop\\Luck1996_presentationCode\\Luck1996AB_lastrun.py',
+        originPath='C:\\Users\\Александра Косаченко\\Documents\\GitHub\\Luck1996_presentationCode\\Luck1996AB_lastrun.py',
         savePickle=True, saveWideText=True,
         dataFileName=dataDir + os.sep + filename, sortColumns='time'
     )
@@ -392,24 +393,33 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # Run 'Begin Experiment' code from settings_code
     import random
     import pandas as pd
-    from psychopy import parallel
     
     # serial/parallel port address 
     port_address = expInfo['port address']
+    port_type = expInfo['port(parallel/serial/cedrus)']
     
-    # COMMENT LINES 10-13 IF YOU USE SERIAL PORT
-    # create parallel port
-    p_port = parallel.ParallelPort(address = port_address)
-    #send pport trigger
-    def send_trigger(triggerCode):
-        win.callOnFlip(p_port.setData, triggerCode)
-    
-    # UNCOMMENT LINES 16-20 IF YOU USE SERIAL PORT
-    ## create serial port
-    #import serial
-    #s_port = serial.Serial(port = port_address)
-    #def send_trigger(triggerCode):
-    #    win.callOnFlip(s_port.write, str.encode(str(triggerCode)))
+    if port_type == 'parallel':
+        from psychopy import parallel
+        # create parallel port
+        p_port = parallel.ParallelPort(address = port_address)
+        #send pport trigger
+        def send_trigger(triggerCode):
+            win.callOnFlip(p_port.setData, triggerCode)
+    elif port_type == 'serial':
+        # create serial port
+        import serial
+        s_port = serial.Serial(port = port_address)
+        def send_trigger(triggerCode):
+            win.callOnFlip(s_port.write, str.encode(str(triggerCode)))
+    elif port_type == 'cedrus':
+        import pyxid2
+        import time
+        # get a list of all attached XID devices
+        devices = pyxid2.get_xid_devices()
+        dev = devices[0] # get the first device to use
+        dev.set_pulse_duration(300)
+        def send_trigger(triggerCode):
+            win.callOnFlip(dev.activate_line, triggerCode)
     
     #local path to language
     local_path = 'languages/'+expInfo['language']
@@ -426,7 +436,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     dur_frames_blank = round(0.050 * int(expInfo['refresh rate (Hz)']))
     
     # set trials order
-    n = 2 # num of related and unrelated trials
+    n = 30 # num of related and unrelated trials
     related_idx = list(range(360))
     unrelated_idx = list(range(360,720))
     random.shuffle(related_idx)
@@ -3100,7 +3110,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         if isinstance(block, data.TrialHandler2) and thisBlock.thisN != block.thisTrial.thisN:
             continueRoutine = False
         rest.forceEnded = routineForceEnded = not continueRoutine
-        while continueRoutine and routineTimer.getTime() < 1.0:
+        while continueRoutine:
             # get current time
             t = routineTimer.getTime()
             tThisFlip = win.getFutureFlipTime(clock=routineTimer)
@@ -3140,20 +3150,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 # update params
                 pass
             
-            # if text_rest is stopping this frame...
-            if text_rest.status == STARTED:
-                # is it time to stop? (based on global clock, using actual start)
-                if tThisFlipGlobal > text_rest.tStartRefresh + 1-frameTolerance:
-                    # keep track of stop time/frame for later
-                    text_rest.tStop = t  # not accounting for scr refresh
-                    text_rest.tStopRefresh = tThisFlipGlobal  # on global time
-                    text_rest.frameNStop = frameN  # exact frame index
-                    # add timestamp to datafile
-                    thisExp.timestampOnFlip(win, 'text_rest.stopped')
-                    # update status
-                    text_rest.status = FINISHED
-                    text_rest.setAutoDraw(False)
-            
             # *press_to_continue* updates
             waitOnFlip = False
             
@@ -3172,20 +3168,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 waitOnFlip = True
                 win.callOnFlip(press_to_continue.clock.reset)  # t=0 on next screen flip
                 win.callOnFlip(press_to_continue.clearEvents, eventType='keyboard')  # clear events on next screen flip
-            
-            # if press_to_continue is stopping this frame...
-            if press_to_continue.status == STARTED:
-                # is it time to stop? (based on global clock, using actual start)
-                if tThisFlipGlobal > press_to_continue.tStartRefresh + 1-frameTolerance:
-                    # keep track of stop time/frame for later
-                    press_to_continue.tStop = t  # not accounting for scr refresh
-                    press_to_continue.tStopRefresh = tThisFlipGlobal  # on global time
-                    press_to_continue.frameNStop = frameN  # exact frame index
-                    # add timestamp to datafile
-                    thisExp.timestampOnFlip(win, 'press_to_continue.stopped')
-                    # update status
-                    press_to_continue.status = FINISHED
-                    press_to_continue.status = FINISHED
             if press_to_continue.status == STARTED and not waitOnFlip:
                 theseKeys = press_to_continue.getKeys(keyList=['space'], ignoreKeys=["escape"], waitRelease=False)
                 _press_to_continue_allKeys.extend(theseKeys)
@@ -3242,13 +3224,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         if press_to_continue.keys != None:  # we had a response
             block.addData('press_to_continue.rt', press_to_continue.rt)
             block.addData('press_to_continue.duration', press_to_continue.duration)
-        # using non-slip timing so subtract the expected duration of this Routine (unless ended on request)
-        if rest.maxDurationReached:
-            routineTimer.addTime(-rest.maxDuration)
-        elif rest.forceEnded:
-            routineTimer.reset()
-        else:
-            routineTimer.addTime(-1.000000)
+        # the Routine "rest" was not non-slip safe, so reset the non-slip timer
+        routineTimer.reset()
         thisExp.nextEntry()
         
     # completed 1.0 repeats of 'block'
@@ -3267,8 +3244,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     continueRoutine = True
     # update component parameters for each repeat
     text_thanks.setText(txt_thanks)
-    # Run 'Begin Routine' code from code_finish
-    #s_port.close()
+    # Run 'Begin Routine' code from code_end
     stimulus_pulse_started = False
     stimulus_pulse_ended = False
     # store start times for end
@@ -3334,7 +3310,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 # update status
                 text_thanks.status = FINISHED
                 text_thanks.setAutoDraw(False)
-        # Run 'Each Frame' code from code_finish
+        # Run 'Each Frame' code from code_end
         #send finish trigger (200)
         if text_thanks.status == STARTED and not stimulus_pulse_started:
             stimulus_pulse_started = True
@@ -3385,6 +3361,9 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     end.tStop = globalClock.getTime(format='float')
     end.tStopRefresh = tThisFlipGlobal
     thisExp.addData('end.stopped', end.tStop)
+    # Run 'End Routine' code from code_end
+    if port_type == 'serial':
+        s_port.close()
     # using non-slip timing so subtract the expected duration of this Routine (unless ended on request)
     if end.maxDurationReached:
         routineTimer.addTime(-end.maxDuration)
