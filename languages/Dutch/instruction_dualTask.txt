@@ -1,18 +1,19 @@
-You will see a context word (e.g. CAT).
-Then, you will see a really fast series of letter strings (e.g. FGHBVDT), one after the other.
-One of them contains a repeated digit (e.g. 7777777).
-Another one contains a target word (e.g. XXDOGXX) in red. 
-First, decide if the target number is odd (3,5,7,9) or even (2,4,6,8).
-Second, decide if the target word is related or unrelated to the context word.
-(e.g. CAT-DOG, and BRIGHT-DARK are related, but CAT-SKY are not related)
+Je zal eerst een contextwoord zien verschijnen (bijv. KAT) 
+Daarna verschijnt een zeer snelle reeks van lettergrepen (bijv. FGHBVDT), één voor één. 
+Eén van die reeksen bevat een herhaald cijfer (bijv. 7777777)
+Een andere bevat een doelwoord (bijv.XXHONDX) in het rood. 
 
-Odd/Even
-- For ODD numbers, press the F key when you see the first "?"
-- For EVEN numbers, press the J key when you see the first "?"
+Stap 1: Bepaal of het doelcijfer oneven (3, 5, 7, 9) of even (2, 3, 6, 8) is. 
+Stap 2: Bepaal of het doelwoord (bijv.XXHONDX) verwant of niet verwant is aan het contextwoord 
+(Bijvoorbeeld: KAT-HOND en FEL-DONKER zijn verwant maar KAT-HEMEL zijn niet verwant). 
+ 
+Oneven/Even
+- Bij ONEVEN cijfers, druk of op de F-toets zodra je het eerste "?" ziet.
+- Bij EVEN cijfers, druk op de J-toets, zodra je het eerste "?" ziet. 
 
-Unrelated/Related
-- For UNRELATED words, press the F key when you see the "?"
-- For RELATED words, press the J key when you see the "?"
+Verwant/Niet verwant
+- Bij NIET VERWANTE woorden, druk op de F-toets zodra je het "?" ziet.
+- Bij VERWANTE woorden, druk op de J-toets zodra je het "?" ziet.
 
-Please focus your attention and respond as accurately and swiftly as possible. 
-Press SPACE to start.
+Richt je aandacht goed en reageer zo nauwkeurig en snel mogelijk.
+Druk op SPATIE om te beginnen.

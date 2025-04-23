@@ -1,12 +1,13 @@
-You will see a context word (e.g. CAT). 
-Then, you will see a really fast series of letter strings (e.g. FGHBVDT), one after the other.
-One of them contains a target word (e.g. XXDOGXX) in red. 
-Decide whether this target word is related or unrelated to the context word.
-(e.g. CAT- DOG, and BRIGHT-DARK are related pairs, but CAT-SKY are not related)
+Je ziet eerst een contextwoord (bijv. KAT).
+Daarna zie je een zeer snelle reeks van letterreeksen (bijv. FGHBVDT), één voor één.
+Eén van deze reeksen bevat een doelwoord (bijv. XXHONDX) in het rood.
 
-Unrelated/Related
-- If you see an UNRELATED word, press the F key when you see the "?"
-- If you see a RELATED word, press the J key when you see the "?"
+Bepaal of dit doelwoord verwant of niet verwant is aan het contextwoord.
+(Bijvoorbeeld: KAT–HOND en FEL–DONKER zijn verwante paren, maar KAT–HEMEL zijn niet verwant.)
 
-Please focus your attention and respond as accurately and swiftly as possible. 
-Press SPACE to start.
+Verwant/Niet verwant
+- Bij NIET VERWANTE woorden, druk op de F-toets zodra je het "?" ziet.
+- Bij VERWANTE woorden, druk op de J-toets zodra je het "?" ziet.
+
+Richt je aandacht goed en reageer zo nauwkeurig en snel mogelijk.
+Druk op SPATIE om te beginnen.
