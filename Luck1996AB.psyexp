@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" ?>
-<PsychoPy2experiment encoding="utf-8" version="2024.2.4">
+<PsychoPy2experiment encoding="utf-8" version="2024.1.5">
   <Settings>
     <Param val="3" valType="str" updates="None" name="Audio latency priority"/>
     <Param val="ptb" valType="str" updates="None" name="Audio lib"/>
@@ -26,7 +26,7 @@
     <Param val="False" valType="bool" updates="None" name="Show mouse"/>
     <Param val="height" valType="str" updates="None" name="Units"/>
     <Param val="" valType="str" updates="None" name="Use version"/>
-    <Param val="[1470, 956]" valType="list" updates="None" name="Window size (pixels)"/>
+    <Param val="[1440, 900]" valType="list" updates="None" name="Window size (pixels)"/>
     <Param val="none" valType="str" updates="None" name="backgroundFit"/>
     <Param val="" valType="str" updates="None" name="backgroundImg"/>
     <Param val="avg" valType="str" updates="None" name="blendMode"/>
@@ -70,7 +70,7 @@
     <Param val="1000" valType="num" updates="None" name="plPupilRemoteTimeoutMs"/>
     <Param val="False" valType="bool" updates="None" name="plPupillometryOnly"/>
     <Param val="psychopy_iohub_surface" valType="str" updates="None" name="plSurfaceName"/>
-    <Param val="1" valType="code" updates="None" name="runMode"/>
+    <Param val="0" valType="code" updates="None" name="runMode"/>
     <Param val="False" valType="bool" updates="None" name="rush"/>
     <Param val="time" valType="str" updates="None" name="sortColumns"/>
     <Param val="" valType="str" updates="None" name="tbLicenseFile"/>
@@ -534,7 +534,7 @@
         <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
         <Param val="if (((lagT1 === 1) || (trials_T1.thisN === (lagT1 - 2)))) {&amp;#10;    trials_T1.finished = true;&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
-        <Param val="" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="i += 1" valType="extendedCode" updates="constant" name="End Routine"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="code_trigger_distrT1" valType="code" updates="None" name="name"/>
       </CodeComponent>
@@ -811,7 +811,7 @@
         <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
-        <Param val="" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="i += 1" valType="extendedCode" updates="constant" name="End Routine"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="code_save_distrT0" valType="code" updates="None" name="name"/>
       </CodeComponent>
@@ -1027,7 +1027,7 @@
         <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="distractors_trial = list(distractors_df.dist[dist_idx:dist_idx+18])&amp;#10;i = 0 # distractor index&amp;#10;print(f'\nTrial #{trial.thisN+1}')&amp;#10;&amp;#10;#triggers&amp;#10;if task == 'single':&amp;#10;    trigger_T0 = 10&amp;#10;    trigger_T1 = 20 if responseT1 == 'j' else 21&amp;#10;    trigger_T2 = 40 if related == 'related' else 41&amp;#10;elif task == 'dual':&amp;#10;    trigger_T0 = 11&amp;#10;    trigger_T1 = 22 if responseT1 == 'j' else 23&amp;#10;    trigger_T2 = 42 if related == 'related' else 43&amp;#10;" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="distractors_trial = list(distractors_df.dist[dist_idx:dist_idx+18])&amp;#10;i = 0 # distractor index&amp;#10;print(f'\nTrial #{trial.thisN+1}')&amp;#10;&amp;#10;#triggers&amp;#10;if task == 'single':&amp;#10;    trigger_T0 = 10&amp;#10;    trigger_T1 = 20 if responseT1 == 'j' else 21&amp;#10;    trigger_T2 = 40 if related == 'related' else 41&amp;#10;elif task == 'dual':&amp;#10;    trigger_T0 = 11&amp;#10;    trigger_T1 = 22 if responseT1 == 'j' else 23&amp;#10;    trigger_T2 = 42 if related == 'related' else 43" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Py" valType="str" updates="None" name="Code Type"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
