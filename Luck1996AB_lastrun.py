@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.1.5),
-    on Wed Jun 11 21:51:00 2025
+    on Fri Jun 13 17:44:27 2025
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -395,9 +395,9 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         txt_thanks = file.read()
     
     # duration in frames
-    #dur_frames = round(0.083 * int(expInfo['refresh rate (Hz)']))
-    dur_frames_stim = round(0.033 * int(expInfo['refresh rate (Hz)']))
-    dur_frames_blank = round(0.050 * int(expInfo['refresh rate (Hz)']))
+    refreshRate = int(expInfo['refresh rate (Hz)'])
+    dur_frames_stim = round(0.033 * refreshRate)
+    dur_frames_blank = round(0.050 * refreshRate)
     
     # set trials order
     n = 30 # num of related and unrelated trials
@@ -425,7 +425,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     #    p_port = parallel.ParallelPort(address = port_address)
         #send pport trigger
         def send_trigger(triggerCode):
-            print(triggerCode)
+            print(triggerCode) #for testing
     #        win.callOnFlip(p_port.setData, triggerCode)
     elif port_type in ['serial','ghent']:
         import serial
@@ -1044,7 +1044,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 
                 # if context_word is stopping this frame...
                 if context_word.status == STARTED:
-                    if frameN >= (context_word.frameNStart + 60):
+                    if frameN >= (context_word.frameNStart + refreshRate):
                         # keep track of stop time/frame for later
                         context_word.tStop = t  # not accounting for scr refresh
                         context_word.tStopRefresh = tThisFlipGlobal  # on global time
@@ -1058,7 +1058,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 # *blankContext* updates
                 
                 # if blankContext is starting this frame...
-                if blankContext.status == NOT_STARTED and frameN >= 60:
+                if blankContext.status == NOT_STARTED and frameN >= refreshRate:
                     # keep track of start time/frame for later
                     blankContext.frameNStart = frameN  # exact frame index
                     blankContext.tStart = t  # local t and not account for scr refresh
@@ -1077,7 +1077,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 
                 # if blankContext is stopping this frame...
                 if blankContext.status == STARTED:
-                    if frameN >= (blankContext.frameNStart + 60):
+                    if frameN >= (blankContext.frameNStart + refreshRate):
                         # keep track of stop time/frame for later
                         blankContext.tStop = t  # not accounting for scr refresh
                         blankContext.tStopRefresh = tThisFlipGlobal  # on global time
