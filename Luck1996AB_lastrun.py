@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.1.5),
-    on Mon Jul 14 14:27:44 2025
+    on Fri Jul 18 16:56:20 2025
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -46,7 +46,7 @@ expInfo = {
     'participant': '000',
     'order [1: single-dual or 2: dual-single]': '1',
     'refresh rate (Hz)': '60',
-    'port(parallel/serial/cedrus/ghent)': 'parallel',
+    'port(noEEGtest/parallel/serial/cedrus/ghent)': 'noEEGtest',
     'port address': '0xC000',
     'language': 'en',
     'date|hid': data.getDateStr(),
@@ -64,7 +64,7 @@ or run the experiment with `--pilot` as an argument. To change what pilot
 PILOTING = core.setPilotModeFromArgs()
 # start off with values from experiment settings
 _fullScr = True
-_winSize = [800, 600]
+_winSize = [1470, 956]
 _loggingLevel = logging.getLevel('exp')
 # if in pilot mode, apply overrides according to preferences
 if PILOTING:
@@ -417,19 +417,22 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # Run 'Begin Experiment' code from set_EEG
     # serial/parallel port address 
     port_address = expInfo['port address']
-    port_type = expInfo['port(parallel/serial/cedrus/ghent)']
+    port_type = expInfo['port(noEEGtest/parallel/serial/cedrus/ghent)']
     
-    if port_type == 'parallel':
+    if port_type == 'noEEGtest': #for testing
+        def send_trigger(triggerCode):
+            print(triggerCode) 
+        def send_trigger_now(triggerCode):
+            print(triggerCode)
+    elif port_type == 'parallel':
         from psychopy import parallel
         # create parallel port
         p_port = parallel.ParallelPort(address = port_address)
         #send pport trigger
         def send_trigger(triggerCode):
-            print(triggerCode) #for testing
-    #        win.callOnFlip(p_port.setData, triggerCode)
+            win.callOnFlip(p_port.setData, triggerCode)
         def send_trigger_now(triggerCode):
-            print(triggerCode) #for testing
-    #        p_port.setData(triggerCode)
+            p_port.setData(triggerCode)
     elif port_type in ['serial','ghent']:
         import serial
         if port_type == 'ghent':
@@ -928,11 +931,17 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             if task == 'single':
                 trigger_T0 = 10
                 trigger_T1 = 20 if responseT1 == 'j' else 21
-                trigger_T2 = 40 if related == 'related' else 41
+                if related == 'unrelated':
+                    trigger_T2 = 101 if lagT1 == 1 else (103 if lagT1 == 3 else 107)
+                elif related == 'related':
+                    trigger_T2 = 111 if lagT1 == 1 else (113 if lagT1 == 3 else 117)
             elif task == 'dual':
                 trigger_T0 = 11
                 trigger_T1 = 22 if responseT1 == 'j' else 23
-                trigger_T2 = 42 if related == 'related' else 43
+                if related == 'unrelated':
+                    trigger_T2 = 201 if lagT1 == 1 else (203 if lagT1 == 3 else 207)
+                elif related == 'related':
+                    trigger_T2 = 211 if lagT1 == 1 else (213 if lagT1 == 3 else 217)
             # keep track of which components have finished
             set_trialComponents = []
             for thisComponent in set_trialComponents:

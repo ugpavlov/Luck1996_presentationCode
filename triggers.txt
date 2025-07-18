@@ -9,10 +9,18 @@ T1:
 Distractors:
 - 30
 T2:
-- 40 (Single + Related)
-- 41 (Single + Unrelated)
-- 42 (Dual + Related)
-- 43 (Dual + Unrelated) 
+- 101 (Single + Unrelated + Lag1)
+- 103 (Single + Unrelated + Lag3)
+- 107 (Single + Unrelated + Lag7)
+- 111 (Single + Related + Lag1)
+- 113 (Single + Related + Lag3)
+- 117 (Single + Related + Lag7)
+- 201 (Dual + Unrelated + Lag1)
+- 203 (Dual + Unrelated + Lag3)
+- 207 (Dual + Unrelated + Lag7)
+- 211 (Dual + Related + Lag1)
+- 213 (Dual + Related + Lag3)
+- 217 (Dual + Related + Lag7)
 AskT1:
 - 50 (?)
 - 51 (Answer Odd + Correct)
