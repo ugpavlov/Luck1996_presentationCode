@@ -197,7 +197,7 @@
         <Param val="code_trigger_T2" valType="code" updates="None" name="name"/>
       </CodeComponent>
       <TextComponent name="text_T2" plugin="None">
-        <Param val="red" valType="color" updates="constant" name="color"/>
+        <Param val="[0.035, -1, -1]" valType="color" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
